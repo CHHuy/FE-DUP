@@ -1,0 +1,90 @@
+.background-wrapper {
+  background-image: url('../images/background_1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  @media (max-width: 320px) {
+    background-position: 50%;
+    height: auto;
+  }
+}
+
+.main-login {
+  @include flexbox();
+  @include align-items(center);
+  @include flex-direction(column);
+  margin-top: 5rem;
+
+  .main-logo {
+    img {
+      height: 150px;
+      @include media-breakpoint-down(md){
+        height: auto;
+      }
+    }
+  }
+
+  .user-login {
+    @include flexbox();
+    @include align-items(center);
+    @include flex-direction(column);
+    margin-top: 3rem;
+
+    .h3 {
+      color: #ffffff;
+      padding: 10px 0;
+    }
+
+    i {
+      color: #ffffff;
+    }
+
+    a.Fb-login, a.G-login {
+      width: 220px;
+      background-color: #ffffff;
+      padding: 2px 10px;
+      border-radius: 18px;
+      font-size: 18px;
+      color: #365f53;
+      cursor: pointer;
+      text-decoration: none;
+      i {
+        color: #365f53;
+        padding: 0 5px;
+      }
+
+      &:hover {
+        transition-duration: 0.5s;
+        background-color: #365f53;
+        color: #ffffff;
+        i {
+          transition-duration: 0.5s;
+          color: #ffffff;
+        }
+      }
+    }
+
+    a.G-login {
+      margin-top: 10px;
+    }
+    a.regist-account{
+      margin-top: 10px;
+      text-decoration: underline;
+      font-style: italic;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+  .login-term{
+    margin-top: 5rem;
+    color: #ffffff;
+    @include media-breakpoint-down(sm){
+      .h3{
+        font-size: 16px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+}

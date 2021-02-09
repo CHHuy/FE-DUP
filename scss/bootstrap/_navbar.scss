@@ -1,0 +1,15 @@
+.navbar{
+  @include media-breakpoint-down(md){
+    @include flex-direction(row-reverse);
+  }
+  .navbar-collapse{
+    ul.navbar-nav{
+      li.nav-item{
+        a.nav-link{
+          padding: 0.5rem 1.2rem;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
