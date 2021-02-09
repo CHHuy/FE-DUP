@@ -1,19 +1,20 @@
+html, body, .wrapper{
+  height: 100%;
+}
 .background-wrapper {
-  background-image: url('../images/background_1.png');
-  background-repeat: no-repeat;
+  background: url('../images/background_1.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
-  @media (max-width: 320px) {
-    background-position: 50%;
-    height: auto;
-  }
+  height: 100%;
 }
 
 .main-login {
   @include flexbox();
   @include align-items(center);
   @include flex-direction(column);
-  margin-top: 5rem;
+  padding-top: 5rem;
 
   .main-logo {
     img {
@@ -75,16 +76,18 @@
       cursor: pointer;
     }
   }
-  .login-term{
-    margin-top: 5rem;
-    color: #ffffff;
-    @include media-breakpoint-down(sm){
-      .h3{
-        font-size: 16px;
-      }
-      p{
-        font-size: 12px;
-      }
+}
+.login-term{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  color: #ffffff;
+  @include media-breakpoint-down(sm){
+    .h3{
+      font-size: 16px;
+    }
+    p{
+      font-size: 12px;
     }
   }
 }
+

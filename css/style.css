@@ -10677,18 +10677,17 @@ Content
 /* ==========================================================================
 Footer
 ========================================================================== */
-.background-wrapper {
-  background-image: url("../images/background_1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+html, body, .wrapper {
+  height: 100%;
 }
 
-@media (max-width: 320px) {
-  .background-wrapper {
-    background-position: 50%;
-    height: auto;
-  }
+.background-wrapper {
+  background: url("../images/background_1.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
 }
 
 .main-login {
@@ -10708,7 +10707,7 @@ Footer
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
 .main-login .main-logo img {
@@ -10789,16 +10788,17 @@ Footer
   cursor: pointer;
 }
 
-.main-login .login-term {
-  margin-top: 5rem;
+.login-term {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   color: #ffffff;
 }
 
 @media (max-width: 767.98px) {
-  .main-login .login-term .h3 {
+  .login-term .h3 {
     font-size: 16px;
   }
-  .main-login .login-term p {
+  .login-term p {
     font-size: 12px;
   }
 }
