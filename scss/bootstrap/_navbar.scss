@@ -1,13 +1,39 @@
-.navbar{
-  @include media-breakpoint-down(md){
+.navbar-toggler-icon {
+  background-image: escape-svg($navbar-dark-toggler-icon-bg);
+}
+
+.header-mobile {
+  .navbar {
     @include flex-direction(row-reverse);
+
+    .navbar-brand {
+      margin-right: 0;
+      margin-left: 1rem;
+      padding: 0;
+      font-size: 0;
+    }
+
+    ul.navbar-nav {
+      .active {
+        a.nav-link {
+          font-weight: bold;
+          color: $primary-color;
+        }
+      }
+
+      a.nav-link {
+        color: $primary-color;
+      }
+    }
   }
-  .navbar-collapse{
-    ul.navbar-nav{
-      li.nav-item{
-        a.nav-link{
-          padding: 0.5rem 1.2rem;
-          font-size: 18px;
+}
+
+.header {
+  .navbar {
+    ul.navbar-nav {
+      a.nav-link {
+        @include media-breakpoint-up(lg) {
+          padding: 0.5rem 1.5rem;
         }
       }
     }

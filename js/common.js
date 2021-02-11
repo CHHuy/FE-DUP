@@ -52,9 +52,19 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     });
   }
 
+  /* ==================================================
+# Show/Hide search
+===================================================*/
+  function showHideSearch() {
+    $('.search-toggle').on('click', function(event) {
+      $('.search-box').toggle('fast')
+    })
+  }
+
   function init() {
     scrollToAnchor();
     getBarwidth();
+    showHideSearch();
   }
 
   $(document).ready(function () {

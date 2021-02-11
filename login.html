@@ -108,7 +108,7 @@
   <link rel="stylesheet" href="customs/style.css">
 </head>
 
-<body>
+<body class="body-login">
 <div class="app-loading">
   <div class="bouncing-loader">
     <div></div>
@@ -117,10 +117,71 @@
   </div>
 </div>
 <div class="wrapper" id="site_wrapper">
+  <div class="header-mobile" id="headerMobile">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-mobile.png">
+      </a>
+      <div class="header-mb-item d-block d-md-none">
+        <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-lg"></i></a>
+      </div>
+      <div class="header-mb-item d-block d-md-none">
+        <ul class="language-switch">
+          <li id="v-click-mobile" class="button-lang current-lang"><a href="">VI</a></li>
+          <li id="e-click-mobile" class="button-lang"><a href="">EN</a></li>
+        </ul>
+      </div>
+      <div class="header-mb-item d-block d-md-none">
+        <a class="u-login" href="#">
+          Login
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVuMobile" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              DỊCH VỤ
+              <span class="sr-only">(current)</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVuMobile">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyenMobile" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              ĐỘC QUYỀN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyenMobile">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DỰ ÁN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CHUYÊN VIÊN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TIN TỨC</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <div class="background-wrapper">
     <div class="container">
-      <header class="header" id="header">
-        <div class="sub-header d-none d-sm-flex">
+      <div class="header-login d-none d-md-block" id="headerLogin">
+        <div class="sub-header">
           <div class="sub-header-item">
             <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-xs"></i> +84 70 7777
               117</a>
@@ -139,29 +200,11 @@
           </div>
         </div>
         <div class="sub-header">
-          <nav class="navbar navbar-expand-lg navbar-dark">
+          <nav class="navbar navbar-expand-md navbar-dark">
             <a class="navbar-brand" href="#">
               <img src="images/logo.png">
             </a>
-            <div class="sub-header-item d-block d-sm-none">
-              <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-lg"></i></a>
-            </div>
-            <div class="sub-header-item d-block d-sm-none">
-              <ul class="language-switch">
-                <li id="v-click-mobile" class="button-lang current-lang"><a href="">VI</a></li>
-                <li id="e-click-mobile" class="button-lang"><a href="">EN</a></li>
-              </ul>
-            </div>
-            <div class="sub-header-item d-block d-sm-none">
-              <a class="u-login" href="#">
-                Login
-              </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
@@ -199,7 +242,7 @@
             </div>
           </nav>
         </div>
-      </header>
+      </div>
       <main class="main" id="main">
         <div class="main-login">
           <div class="main-logo">
