@@ -1,3 +1,111 @@
 /* ==========================================================================
 Footer
 ========================================================================== */
+.footer {
+
+  .footer-hotline-info-mobile {
+    .list-group {
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+    }
+
+    .list-group-flush {
+      .list-group-item {
+        @include media-breakpoint-down(sm) {
+          padding: 0 10px !important;
+          .hotline-name {
+            font-size: 12px !important;
+          }
+          .hotline-contact {
+            font-size: 12px !important;
+          }
+        }
+        border-width: 0 1px 0 0;
+        padding: 0 25px;
+        margin: 20px 0;
+        text-align: center;
+
+        .hotline-name {
+          font-size: 18px;
+          color: #000000;
+        }
+
+        .hotline-contact {
+          font-size: 18px;
+          color: #000000;
+          font-weight: bold;
+        }
+      }
+
+      .list-group-item:nth-last-child(1) {
+        border-width: 0;
+      }
+
+      .list-group-item:nth-last-child(3) {
+        @include media-breakpoint-down(sm) {
+          border-width: 0;
+
+        }
+      }
+    }
+    .info-mobile{
+      .dropdown{
+        .dropdown-toggle{
+          &::after{
+            
+          }
+        }
+      }
+    }
+  }
+
+  .footer-info {
+    padding: 50px 0;
+    background-color: #365f53;
+
+    .list-group {
+      border: none;
+      background-color: transparent;
+
+      p.list-group-item {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: default;
+      }
+
+      a.list-group-item {
+        text-transform: capitalize;
+      }
+
+      .list-group-item {
+        border: none;
+        background-color: transparent;
+        color: #ffffff;
+      }
+    }
+
+    .social-media {
+      width: 100%;
+      text-align: end;
+      border-bottom: 1px solid #ffffff;
+      line-height: 0.1em;
+      margin: 50px 0 20px;
+
+      a {
+        background: #365f53;
+        padding: 5px 0 5px 20px;
+
+        i {
+          line-height: 0.1em;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .footer-info-mobile {
+
+  }
+}
