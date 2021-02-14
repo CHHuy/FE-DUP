@@ -104,7 +104,7 @@ Header
       @media (min-width: 768px) {
         @include flexbox();
         @include flex-basis(auto);
-        @include justify-content(center);
+        @include justify-content(flex-end);
       }
     }
   }
@@ -243,8 +243,8 @@ Header
       font-weight: bold;
     }
 
-    .u-login{
-      font-weight: bold;
+    .navigation-tag{
+      font-weight: 300;
     }
   }
 }

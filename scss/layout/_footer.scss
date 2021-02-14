@@ -45,15 +45,54 @@ Footer
       .list-group-item:nth-last-child(3) {
         @include media-breakpoint-down(sm) {
           border-width: 0;
-
+        }
+      }
+      @media (max-width: 400px){
+        .list-group-item:nth-last-child(2) {
+          border-width: 0;
+        }
+        .list-group-item:nth-last-child(3) {
+          border-width: 0 1px 0 0;
+        }
+        .list-group-item:nth-last-child(4) {
+          border-width: 0;
         }
       }
     }
     .info-mobile{
-      .dropdown{
-        .dropdown-toggle{
-          &::after{
-            
+      margin-bottom: 1rem;
+      .card{
+        border: none;
+        .card-header{
+          background-color: transparent;
+          border: none;
+          .btn{
+            display: block;
+            width: 100%;
+            text-align: start;
+            border-bottom: 1px solid $primary-color;
+            border-radius: 0;
+            color: $primary-color;
+            padding: 0.375rem 0;
+            i{
+              float: right;
+              line-height: 1.5;
+            }
+            &:focus{
+              box-shadow: none;
+            }
+          }
+          .btn-link:focus, .btn-link:hover{
+            text-decoration: none;
+          }
+        }
+        .card-body{
+          padding: 0 1.25rem;
+          .list-group{
+            .list-group-item{
+              padding: 0 0;
+              border: none;
+            }
           }
         }
       }
@@ -106,6 +145,40 @@ Footer
   }
 
   .footer-info-mobile {
-
+    height: 100%;
+    padding: 30px 0;
+    background-color: #365f53;
+    p{
+      color: #ffffff;
+    }
+    .footer-logo{
+      img{
+        height: 30px;
+      }
+    }
+    .social-media{
+      padding: 10px 0;
+      a{
+        padding: 5px 10px 5px 0;
+        i{
+          color: #ffffff;
+        }
+      }
+    }
+    .app-store{
+      a{
+        display: block;
+        width: 130px;
+        text-align: center;
+      }
+      .google-store{
+        height: 50px;
+        width: 130px;
+      }
+      .apple-store{
+        height: 35px;
+        width: 110px;
+      }
+    }
   }
 }

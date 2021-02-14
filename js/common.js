@@ -11,8 +11,8 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
 
 }
 
-(function ($) {
-  'use strict';
+(function($) {
+  'use strict'
 
 
   /* ==================================================
@@ -20,26 +20,26 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   ===================================================*/
   function getBarwidth() {
     // Create the measurement node
-    let scrollDiv = document.createElement('div');
-    scrollDiv.className = 'scrollbar-measure';
-    document.body.appendChild(scrollDiv);
+    let scrollDiv = document.createElement('div')
+    scrollDiv.className = 'scrollbar-measure'
+    document.body.appendChild(scrollDiv)
 
     // Get the scrollbar width
-    let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
     //console.warn(scrollbarWidth); // Mac:  15
 
     // Delete the DIV
-    document.body.removeChild(scrollDiv);
-    return scrollbarWidth;
+    document.body.removeChild(scrollDiv)
+    return scrollbarWidth
   }
 
   /* ==================================================
   # Smooth Scroll
   ===================================================*/
   function scrollToAnchor() {
-    $('.js-scroll-to').on('click', function (event) {
-      let $anchor = $(this);
-      let headerH = '0';
+    $('.js-scroll-to').on('click', function(event) {
+      let $anchor = $(this)
+      let headerH = '0'
       $('html, body')
         .stop()
         .animate(
@@ -47,9 +47,9 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
             scrollTop: $($anchor.attr('href')).offset().top - headerH + 'px'
           },
           1000
-        );
-      event.preventDefault();
-    });
+        )
+      event.preventDefault()
+    })
   }
 
   /* ==================================================
@@ -61,18 +61,31 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     })
   }
 
-  function init() {
-    scrollToAnchor();
-    getBarwidth();
-    showHideSearch();
+  function slickVertical() {
+    if ($(window).width() <= 576) {
+      $('.js-slick-vertical').slick({
+        vertical: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        verticalSwiping: true,
+        arrows: true
+      })
+    }
   }
 
-  $(document).ready(function () {
-    init();
-  }); // end document ready function
+  function init() {
+    scrollToAnchor()
+    getBarwidth()
+    showHideSearch()
+    slickVertical()
+  }
 
-  $(window).on('scroll', function () {
-  });
+  $(document).ready(function() {
+    init()
+  }) // end document ready function
+
+  $(window).on('scroll', function() {
+  })
 
   // if ($('.x-toTop').length) {
   //   let scrollTrigger = 100, // px
@@ -90,4 +103,4 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   //   });
   // }
 
-})(jQuery); // End jQuery
+})(jQuery) // End jQuery
