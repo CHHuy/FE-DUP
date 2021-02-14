@@ -10666,7 +10666,7 @@ Header
   top: 0;
   right: 64%;
   background-color: #194637;
-  transform: skew(-20deg);
+  transform: skew(-50deg);
 }
 
 @media (max-width: 767.98px) {
@@ -11560,6 +11560,106 @@ html, body, .wrapper {
 .DQ-agent-list .list-agent-list ul.list-unstyled li.media .media-body .advisor-contact a:hover {
   background-color: #497F70;
   color: #ffffff;
+}
+
+.search-filter {
+  padding: 2rem 0 2rem 0;
+}
+
+.search-filter form {
+  text-align: center;
+}
+
+.search-filter form .form-row {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.search-filter form .form-row .form-group {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .search-filter form .form-row .form-group {
+    border-right: 1px solid;
+    padding: 0 3rem;
+  }
+  .search-filter form .form-row .form-group:nth-last-child(1) {
+    border-width: 0;
+  }
+}
+
+.search-filter form .form-row .form-group label {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #497F70;
+}
+
+.search-filter form .form-row .form-group select {
+  border: none;
+  font-style: italic;
+  font-weight: 300;
+  color: #000000;
+}
+
+.search-filter form .form-row .form-group select:focus {
+  box-shadow: none;
+}
+
+.search-filter form button {
+  color: #ffffff;
+  background-color: #497F70;
+  border-radius: 15px;
+  border-color: #497F70;
+  padding: 0 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.search-filter form button:hover {
+  background-color: #2a5447;
+  border-color: #2a5447;
+}
+
+.search-result {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-result .search-map {
+  width: 50%;
+}
+
+.search-result .search-map img {
+  width: 100%;
+  height: 100%;
+}
+
+.search-result .result {
+  width: 50%;
+}
+
+.search-result .result .list-group .list-group-item .card {
+  border: none;
+}
+
+.search-result .result .list-group .list-group-item .card .card-body .card-title {
+  color: #497F70;
+  text-transform: capitalize;
+}
+
+.search-result .result .list-group .list-group-item .card .card-body .img-interact img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
