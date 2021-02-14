@@ -18,22 +18,25 @@
   }
 
   .advisor-body {
-    .advisor-list-row{
-      .slick-prev{
+    .advisor-list-row {
+      .slick-prev {
         top: -15px;
         left: 50%;
-        &:before{
+
+        &:before {
           content: '\f151';
           color: #000000;
           font-family: "Font Awesome 5 Free";
           font-size: 25px;
         }
       }
-      .slick-next{
+
+      .slick-next {
         top: unset;
         bottom: -15px;
         left: 50%;
-        &:before{
+
+        &:before {
           content: '\f150';
           color: #000000;
           font-family: "Font Awesome 5 Free";
@@ -41,6 +44,7 @@
         }
       }
     }
+
     .advisor-list-col {
       @include media-breakpoint-down(sm) {
         padding: 1rem 0 2rem 0;
@@ -134,17 +138,21 @@
           }
           .card-body {
             padding: 0 0;
+
             .card-title {
               font-size: 14px;
               margin: 5px 0;
             }
-            .card-text{
+
+            .card-text {
               font-size: 10px;
               margin: 5px 0;
             }
-            .list-group{
+
+            .list-group {
               text-align: center;
-              .list-group-item{
+
+              .list-group-item {
                 font-size: 10px;
               }
             }
@@ -152,6 +160,7 @@
         }
       }
     }
+
     .advisor-more {
       text-align: center;
       display: block;
