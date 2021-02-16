@@ -1,8 +1,62 @@
 .search-filter {
   padding: 2rem 0 2rem 0;
+  .h2{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+  .mobile-filter {
+    .form-group{
+      margin-bottom: 2rem;
+    }
+    label {
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .input-group-text {
+      border-color: #ffffff;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+      background-color: #ffffff;
+    }
+
+    input {
+      border-color: #ffffff;
+      background-clip: unset;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .price-range-mobile {
+      background: transparent;
+      border-radius: 0;
+      border-width: 0 0 1px 0;
+      text-align-last: center;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn {
+      color: #ffffff;
+      border-radius: 15px;
+      padding: 0 20px;
+      background-color: #2a5447;
+      border-color: #2a5447;
+      color: #ffffff;
+    }
+  }
 
   form {
     text-align: center;
+
     .form-row {
       @include justify-content(center);
       text-align: center;
@@ -18,23 +72,27 @@
             border-width: 0;
           }
         }
-        label{
+
+        label {
           font-size: 18px;
           text-transform: uppercase;
           color: $primary-color;
         }
+
         select {
           border: none;
           font-style: italic;
           font-weight: 300;
           color: #000000;
+
           &:focus {
             box-shadow: none;
           }
         }
       }
     }
-    button{
+
+    button {
       color: #ffffff;
       background-color: $primary-color;
       border-radius: 15px;
@@ -42,43 +100,139 @@
       padding: 0 20px;
       font-weight: 300;
       text-transform: uppercase;
-      &:hover{
+
+      &:hover {
         background-color: #2a5447;
         border-color: #2a5447;
+        color: #ffffff;
+      }
+
+      &:focus {
+        background-color: #2a5447;
+        border-color: #2a5447;
+        color: #ffffff;
+        box-shadow: none;
       }
     }
   }
 }
-.search-result{
+
+.search-result {
   @include flexbox();
-  .search-map{
+
+  .search-map {
     width: 50%;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  .result{
+
+  .result {
     width: 50%;
-    .list-group{
-      .list-group-item{
-        .card{
+
+    .list-group-result {
+      margin-bottom: 1rem;
+
+      .list-group-item:nth-child(4) {
+        .card-body {
+          border-bottom: none !important;
+        }
+      }
+
+      .list-group-item {
+        border: none;
+        padding: 0.75rem 2rem;
+
+        .card {
           border: none;
-          .card-body{
-            .card-title{
+
+          .card-body {
+            border-bottom: 1px solid #000000;
+            padding: 0 0 2rem 0;
+
+            .card-title {
               color: $primary-color;
               text-transform: capitalize;
             }
-            .card-info{
+
+            .card-info {
 
             }
-            .img-interact{
-              img{
+
+            .img-interact {
+              position: relative;
+
+              img {
                 width: 100%;
                 border-radius: 10px;
               }
+
+              .heart-interact {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                padding: 5px;
+
+                i {
+                  color: #ffffff;
+
+                  &:hover {
+                    color: $primary-color;
+                  }
+
+                  &:active {
+                    color: $primary-color;
+                    background-color: $primary-color;
+                  }
+                }
+
+              }
+
+              .dropmenu-interact {
+                position: absolute;
+                top: 35%;
+                right: 0;
+
+                .btn {
+                  &:focus {
+                    box-shadow: none;
+                  }
+
+                  i {
+                    color: #ffffff;
+                  }
+                }
+              }
+
+              .price-box {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: #ffffff;
+                padding: 10px;
+                background-color: $primary-color;
+                border-bottom-right-radius: 10px;
+
+                span {
+                  font-weight: bold;
+                }
+              }
             }
           }
+        }
+      }
+
+      .load-more {
+        text-align: center;
+        padding: 10px;
+
+        a {
+          color: #ffffff;
+          background-color: $primary-color;
+          padding: 5px 20px;
+          border-radius: 15px;
         }
       }
     }

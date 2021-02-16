@@ -11566,6 +11566,60 @@ html, body, .wrapper {
   padding: 2rem 0 2rem 0;
 }
 
+.search-filter .h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.search-filter .mobile-filter .form-group {
+  margin-bottom: 2rem;
+}
+
+.search-filter .mobile-filter label {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.search-filter .mobile-filter .input-group-text {
+  border-color: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: #ffffff;
+}
+
+.search-filter .mobile-filter input {
+  border-color: #ffffff;
+  background-clip: unset;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.search-filter .mobile-filter input:focus {
+  box-shadow: none;
+}
+
+.search-filter .mobile-filter .price-range-mobile {
+  background: transparent;
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  text-align-last: center;
+}
+
+.search-filter .mobile-filter .price-range-mobile:focus {
+  box-shadow: none;
+}
+
+.search-filter .mobile-filter .btn {
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 0 20px;
+  background-color: #2a5447;
+  border-color: #2a5447;
+  color: #ffffff;
+}
+
 .search-filter form {
   text-align: center;
 }
@@ -11625,6 +11679,14 @@ html, body, .wrapper {
 .search-filter form button:hover {
   background-color: #2a5447;
   border-color: #2a5447;
+  color: #ffffff;
+}
+
+.search-filter form button:focus {
+  background-color: #2a5447;
+  border-color: #2a5447;
+  color: #ffffff;
+  box-shadow: none;
 }
 
 .search-result {
@@ -11648,18 +11710,100 @@ html, body, .wrapper {
   width: 50%;
 }
 
-.search-result .result .list-group .list-group-item .card {
+.search-result .result .list-group-result {
+  margin-bottom: 1rem;
+}
+
+.search-result .result .list-group-result .list-group-item:nth-child(4) .card-body {
+  border-bottom: none !important;
+}
+
+.search-result .result .list-group-result .list-group-item {
+  border: none;
+  padding: 0.75rem 2rem;
+}
+
+.search-result .result .list-group-result .list-group-item .card {
   border: none;
 }
 
-.search-result .result .list-group .list-group-item .card .card-body .card-title {
+.search-result .result .list-group-result .list-group-item .card .card-body {
+  border-bottom: 1px solid #000000;
+  padding: 0 0 2rem 0;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .card-title {
   color: #497F70;
   text-transform: capitalize;
 }
 
-.search-result .result .list-group .list-group-item .card .card-body .img-interact img {
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact {
+  position: relative;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact img {
   width: 100%;
   border-radius: 10px;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 5px;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact i {
+  color: #ffffff;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact i:hover {
+  color: #497F70;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact i:active {
+  color: #497F70;
+  background-color: #497F70;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact {
+  position: absolute;
+  top: 35%;
+  right: 0;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact .btn:focus {
+  box-shadow: none;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact .btn i {
+  color: #ffffff;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .price-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #497F70;
+  border-bottom-right-radius: 10px;
+}
+
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .price-box span {
+  font-weight: bold;
+}
+
+.search-result .result .list-group-result .load-more {
+  text-align: center;
+  padding: 10px;
+}
+
+.search-result .result .list-group-result .load-more a {
+  color: #ffffff;
+  background-color: #497F70;
+  padding: 5px 20px;
+  border-radius: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
