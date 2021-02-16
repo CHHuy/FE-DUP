@@ -11739,6 +11739,21 @@ html, body, .wrapper {
 
 .search-result .result .list-group-result .list-group-item .card .card-body .img-interact {
   position: relative;
+  /*.dropmenu-interact {
+                position: absolute;
+                top: 35%;
+                right: 0;
+
+                .btn {
+                  &:focus {
+                    box-shadow: none;
+                  }
+
+                  i {
+                    color: #ffffff;
+                  }
+                }
+              }*/
 }
 
 .search-result .result .list-group-result .list-group-item .card .card-body .img-interact img {
@@ -11766,17 +11781,13 @@ html, body, .wrapper {
   background-color: #497F70;
 }
 
-.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact {
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .option-interact {
   position: absolute;
-  top: 35%;
-  right: 0;
+  top: 40%;
+  right: 15px;
 }
 
-.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact .btn:focus {
-  box-shadow: none;
-}
-
-.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .dropmenu-interact .btn i {
+.search-result .result .list-group-result .list-group-item .card .card-body .img-interact .option-interact i {
   color: #ffffff;
 }
 

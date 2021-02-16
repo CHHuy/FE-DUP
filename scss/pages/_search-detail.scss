@@ -189,8 +189,15 @@
                 }
 
               }
-
-              .dropmenu-interact {
+              .option-interact{
+                position: absolute;
+                top: 40%;
+                right: 15px;
+                i {
+                  color: #ffffff;
+                }
+              }
+              /*.dropmenu-interact {
                 position: absolute;
                 top: 35%;
                 right: 0;
@@ -204,7 +211,7 @@
                     color: #ffffff;
                   }
                 }
-              }
+              }*/
 
               .price-box {
                 position: absolute;
