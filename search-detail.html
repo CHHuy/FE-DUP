@@ -100,6 +100,23 @@
       animation-delay: 0.4s;
     }
   </style>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: -25.344, lng: 131.036 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
@@ -148,9 +165,8 @@
               DỊCH VỤ
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVuMobile">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Bán</a>
+              <a class="dropdown-item" href="#">Cho thuê</a>
             </div>
           </li>
           <li class="nav-item dropdown active">
@@ -212,9 +228,8 @@
                   DỊCH VỤ
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Bán</a>
+                  <a class="dropdown-item" href="#">Cho thuê</a>
                 </div>
               </li>
               <li class="nav-item dropdown active">
@@ -257,103 +272,103 @@
   </div>
   <main class="main" id="main">
     <div class="container">
-      <div class="search-filter">
-        <h2 class="h2 d-md-none">Tiện ích nội khu</h2>
-        <form class="d-md-none mobile-filter">
-          <div class="form-group">
-            <label for="inputKeyword">Từ khoá tìm kiếm</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input type="text" id="inputKeyword" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Nhà bán giá rẻ">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputBDS">Loại hình bất động sản</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input type="text" id="inputBDS" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Nhà cho thuê">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputLocation">Vị trí</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input type="text" id="inputLocation" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Quận 2">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="filterPriceRange">Khung giá</label>
-            <select class="form-control price-range-mobile" id="PriceRange">
-              <option>1-2 tỷ</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <button type="submit" class="btn">Tìm kiếm</button>
-        </form>
-        <form class="d-none d-md-block">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="filterKeyword">Từ khoá tìm kiếm</label>
-              <select class="form-control" id="filterKeyword">
-                <option>Bất động sản giá tốt</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filterBDS">Loại hình BĐS</label>
-              <select class="form-control" id="filterBDS">
-                <option>Thuê</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filterLocation">Vị trí</label>
-              <select class="form-control" id="filterLocation">
-                <option>Quận 1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="filterPriceRange">Khung giá</label>
-              <select class="form-control" id="filterPriceRange">
-                <option>1-2 tỷ</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn">Tìm kiếm</button>
-        </form>
-      </div>
-      <div class="search-result d-none d-md-flex">
-        <div class="search-map">
-          <img src="images/map.png" alt="">
+      <div class="search-result">
+        <div class="search-map d-none d-md-block">
+          <!--The div element for the map -->
+          <div id="map"></div>
         </div>
         <div class="result">
+          <div class="search-filter">
+            <h2 class="h2 d-md-none">Tiện ích nội khu</h2>
+            <form class="d-md-none mobile-filter">
+              <div class="form-group">
+                <label for="inputKeyword">Từ khoá tìm kiếm</label>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                  <input type="text" id="inputKeyword" class="form-control" aria-label="Small"
+                         aria-describedby="inputGroup-sizing-sm" placeholder="Nhà bán giá rẻ">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputBDS">Loại hình bất động sản</label>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                  <input type="text" id="inputBDS" class="form-control" aria-label="Small"
+                         aria-describedby="inputGroup-sizing-sm" placeholder="Nhà cho thuê">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLocation">Vị trí</label>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+                  <input type="text" id="inputLocation" class="form-control" aria-label="Small"
+                         aria-describedby="inputGroup-sizing-sm" placeholder="Quận 2">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="filterPriceRange">Khung giá</label>
+                <select class="form-control price-range-mobile" id="PriceRange">
+                  <option>1-2 tỷ</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <button type="submit" class="btn">Tìm kiếm</button>
+            </form>
+            <form class="d-none d-md-block">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="filterKeyword">Từ khoá tìm kiếm</label>
+                  <select class="form-control" id="filterKeyword">
+                    <option>Bất động sản giá tốt</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterBDS">Loại hình BĐS</label>
+                  <select class="form-control" id="filterBDS">
+                    <option>Thuê</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterLocation">Vị trí</label>
+                  <select class="form-control" id="filterLocation">
+                    <option>Quận 1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterPriceRange">Khung giá</label>
+                  <select class="form-control" id="filterPriceRange">
+                    <option>1-2 tỷ</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn">Tìm kiếm</button>
+            </form>
+          </div>
           <div class="list-group list-group-result">
             <div class="list-group-item">
               <div class="card">
@@ -542,6 +557,11 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="d-sm-none">
+          <button class="btn-switch">
+            Map
+          </button>
         </div>
       </div>
     </div>
@@ -739,9 +759,13 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+  async
+></script>
 
 <!-- Core JavaScript -->
-<!--<script src="dist/core.min.js"></script>-->
+<script src="dist/core.min.js"></script>
 <script src="third_party/modernizr.min.js"></script>
 <!-- End Core JavaScript -->
 

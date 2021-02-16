@@ -73,11 +73,20 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     }
   }
 
+  function btnSwitch(){
+    $('body').on('click', '.btn-switch', function() {
+      $('.search-map').toggleClass('d-none');
+      $('.result').toggleClass('d-none');
+      $(this).text($(this).text() == 'List' ? 'Map' : 'List');
+    })
+  }
+
   function init() {
     scrollToAnchor()
     getBarwidth()
     showHideSearch()
     slickVertical()
+    btnSwitch()
   }
 
   $(document).ready(function() {
