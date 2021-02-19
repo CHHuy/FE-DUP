@@ -11873,4 +11873,303 @@ html, body, .wrapper {
   padding: 5px 10px;
 }
 
+.DV-Ban {
+  padding: 30px 0;
+}
+
+.DV-Ban .dv-header .sup-header .header-price {
+  color: #497F70;
+  font-size: 20px;
+}
+
+.DV-Ban .dv-header .sup-header .header-price span {
+  font-weight: bold;
+}
+
+.DV-Ban .dv-header .h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #497F70;
+}
+
+.DV-Ban .dv-header .sub-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.DV-Ban .dv-header .sub-header .header-tag a {
+  text-decoration: underline;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a {
+  color: #497F70;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: 1px solid #497F70;
+  text-decoration: none;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a i {
+  color: #497F70;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:hover {
+  color: #ffffff;
+  background-color: #497F70;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:hover i {
+  color: #ffffff;
+}
+
+.DV-Ban .dv-body {
+  padding: 30px 0;
+}
+
+.DV-Ban .dv-body .image-section {
+  width: 60%;
+}
+
+.DV-Ban .dv-body .image-section img:focus {
+  outline: none;
+}
+
+.DV-Ban .dv-body .image-section .image-show img {
+  width: 100%;
+  height: 650px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.DV-Ban .dv-body .image-section .image-slide {
+  margin-top: 10px;
+}
+
+.DV-Ban .dv-body .image-section .image-slide img {
+  padding: 2px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.DV-Ban .dv-body .image-section .image-slide button.slick-prev {
+  display: none;
+}
+
+.DV-Ban .dv-body .image-section .image-slide button.slick-next:before {
+  color: #000;
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.DV-Ban .dv-body .info-section {
+  width: 40%;
+  padding: 0 0 0 20px;
+}
+
+.DV-Ban .dv-body .info-section .house-info .nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+
+.DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link {
+  font-weight: bold;
+  color: #497F70;
+  border-radius: 0;
+  border-color: #497F70;
+}
+
+.DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link:hover {
+  border-color: #497F70;
+}
+
+.DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link.active {
+  background-color: #497F70 !important;
+  color: #ffffff;
+}
+
+.DV-Ban .dv-body .info-section .house-info .nav-tabs {
+  border-bottom: 1px solid #497F70;
+}
+
+.DV-Ban .dv-body .info-section .house-info .tab-pane {
+  background-color: #497F70;
+  padding: 15px 0 25px 0;
+}
+
+.DV-Ban .dv-body .info-section .house-info .tab-pane ul.list-group {
+  padding: 0 25px;
+}
+
+.DV-Ban .dv-body .info-section .house-info .tab-pane ul.list-group li.list-group-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.DV-Ban .dv-body .info-section .house-info .tab-pane ul.list-group li.list-group-item .respond-content {
+  font-style: italic;
+}
+
+.DV-Ban .dv-body .info-section .contact-info {
+  margin-top: 10px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .card-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .card-info .card-img-avatar {
+  width: 90px;
+  height: 90px;
+  margin-right: 2rem;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .card-info .card-body {
+  padding: 0 0;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .card-info .card-body .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  color: #497F70;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .card-info .card-body p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .contact-information {
+  margin-top: 10px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .contact-information p {
+  color: #497F70;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .contact-information a {
+  color: #000000;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .contact-information a i {
+  color: #497F70;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message p {
+  color: #497F70;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 5px 0;
+  font-weight: 400;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .form-group {
+  margin-bottom: 5px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .form-group input {
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .form-group textarea {
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .submit-message {
+  margin-top: 1rem;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .submit-message span {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .send-message form .submit-message button {
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: #497F70;
+  padding: 1px 10px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent .list-agent-item {
+  text-align: center;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent .list-agent-item img {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent .list-agent-item p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-prev {
+  display: none;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-next {
+  right: 0;
+  top: 34%;
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-next:before {
+  color: #000;
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
 /*# sourceMappingURL=style.css.map */
