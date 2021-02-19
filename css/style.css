@@ -12172,4 +12172,319 @@ html, body, .wrapper {
   font-weight: 900;
 }
 
+.DV-Ban .dv-body .dv-body-content .h5 {
+  color: #497F70;
+  text-transform: uppercase;
+}
+
+.DV-Ban .dv-body .dv-body-content .video-tour {
+  margin-top: 1rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .video-tour i {
+  color: red;
+}
+
+.DV-Ban .dv-body .dv-body-content .video-tour span {
+  vertical-align: super;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .nav .nav-item a.nav-link {
+  border: 1px solid #f1f1f1;
+  border-radius: 0;
+  color: #000000;
+  padding: 5px 2.5rem;
+  font-weight: bold;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .nav .nav-item a.nav-link.active {
+  background-color: #f1f1f1;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .tab-content {
+  background-color: #f1f1f1;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .tab-content ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside .tab-content ul li {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .location {
+  margin-top: 1rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .location .map-location {
+  margin-top: 1rem;
+  width: 100%;
+  height: 500px;
+}
+
+.DV-Ban .dv-body .dv-body-content .location .map-location img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album {
+  margin-top: 1rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album img:focus {
+  outline: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-show img {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide {
+  padding: 0 10rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide img {
+  width: 100%;
+  height: 150px;
+  margin: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-prev {
+  left: 10%;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-prev:before {
+  color: #000;
+  font-size: 2rem;
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-next {
+  right: 10%;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-next:before {
+  color: #000;
+  font-size: 2rem;
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion span {
+  font-weight: 400;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter {
+  margin-top: 10px;
+  padding-right: 4rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item {
+  margin-right: 10px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item .nav-link {
+  border: 1px solid #497F70;
+  color: #497F70;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 0 25px;
+  font-size: 12px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item .nav-link.active {
+  color: #ffffff;
+  background-color: #497F70;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item:focus {
+  outline: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item p {
+  margin: 1rem 0;
+  padding: 0 5px;
+  font-weight: 400;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .special-item {
+  width: 50%;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .special-item img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item {
+  width: 50%;
+  margin-left: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a {
+  margin-bottom: 1rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a:focus {
+  outline: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a i {
+  color: #000000;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
+  display: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next {
+  top: 40%;
+  right: -50px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next:before {
+  color: #000;
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table th {
+  border: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table td {
+  border: none;
+  font-weight: 400;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table thead {
+  border-bottom: 1px solid;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table thead tr th {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table tbody tr td span.time {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside {
+  margin-top: 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .nav {
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .nav .nav-item a.nav-link {
+  border: 1px solid #f1f1f1;
+  border-radius: 0;
+  color: #000000;
+  padding: 5px 2.5rem;
+  font-weight: bold;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .nav .nav-item a.nav-link.active {
+  background-color: #f1f1f1;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content {
+  background-color: #f1f1f1;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row {
+  margin: 0;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row .col:nth-last-child(1) {
+  border-right: none;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row .col {
+  padding: 0 15px;
+  margin: 15px 0;
+  border-right: 1px solid;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row .col .list-group p.list-group-item {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row .col .list-group .list-group-item {
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  padding: 0.2rem 1.25rem;
+  color: #000000;
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=style.css.map */
