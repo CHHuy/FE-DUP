@@ -132,8 +132,8 @@
         </ul>
       </div>
       <div class="header-mb-item d-block d-md-none">
-        <a class="u-login" href="#">
-          Login
+        <a class="navigation-tag" href="#">
+          Dịch vụ / Bán
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -257,14 +257,14 @@
     <div class="container">
       <div class="DV-Ban">
         <div class="dv-header">
-          <div class="sup-header">
+          <div class="sup-header d-none d-md-block">
             <div class="header-price mr-4 d-inline-block">VND <span>9.000.000.000</span></div>
             <i class="fas fa-bed fa-sm mr-2"><span class="ml-2">03</span></i>
             <i class="fas fa-bath fa-sm mr-2"><span class="ml-2">03</span></i>
             <i class="fas fa-arrows-alt-h fa-sm mr-2"><span class="ml-2">142m<sup>2</sup></span></i>
           </div>
           <h3 class="h3">3 Phòng ngủ | The Sun Avenue | 28 Mai Chí Thọ, Phường An Phú, Quận 2</h3>
-          <div class="sub-header">
+          <div class="sub-header d-none d-lg-flex">
             <div class="header-tag">
               <a href="#" class="mr-4">Vị trí</a>
               <a href="#" class="mr-4">Thông tin dự án</a>
@@ -279,7 +279,7 @@
           </div>
         </div>
         <div class="dv-body">
-          <div class="d-flex">
+          <div class="d-lg-flex">
             <div class="image-section">
               <div class="image-show slider-for">
                 <img src="images/house.jpg" alt="">
@@ -355,34 +355,44 @@
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">
                         <div class="request-content">
-                          Trạng thái
+                          Số tầng
                         </div>
                         <div class="respond-content">
-                          Đang rao bán
+                          23
                         </div>
                       </li>
                       <li class="list-group-item">
                         <div class="request-content">
-                          Ngày rao bán
+                          Tổng số căn hộ
                         </div>
                         <div class="respond-content">
-                          25/12/2020
+                          1340
                         </div>
                       </li>
                       <li class="list-group-item">
                         <div class="request-content">
-                          Số phòng ngủ
+                          Số tầng giữ xe
                         </div>
                         <div class="respond-content">
-                          3 phòng ngủ
+                          3
                         </div>
                       </li>
                       <li class="list-group-item">
                         <div class="request-content">
-                          Trạng bị nội thất
+                          Năm bàn giao
                         </div>
                         <div class="respond-content">
-                          Có
+                          2018
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="request-content">
+                          Ghi chú:
+                        </div>
+                        <div class="respond-content">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequatur eos ex, libero
+                          non nulla vero? A deleniti eos labore praesentium! Consequatur eligendi magni molestias
+                          numquam placeat sunt temporibus voluptates?
                         </div>
                       </li>
                     </ul>
@@ -390,7 +400,7 @@
                 </div>
               </div>
               <div class="contact-info">
-                <div class="card-info">
+                <div class="card-info d-none d-lg-flex">
                   <img class="card-img-top card-img-avatar" src="images/advisor_avatar.png" alt="">
                   <div class="card-body">
                     <h5 class="card-title">Chế Hoàng Hi</h5>
@@ -398,13 +408,37 @@
                     <p>Mã nhân viên | <span>51703010</span></p>
                   </div>
                 </div>
-                <div class="contact-information">
+                <div class="contact-information d-none d-lg-block">
                   <p class="mb-2">Thông tin liên hệ</p>
                   <div>
                     <a href="tel:+84 00000000" class="contact-mobile"><i class="fas fa-phone-alt mr-2"></i>070 007 7777</a>
                   </div>
                   <div>
                     <a href="mailto:abc.lis@gmail.com" class="contact-mail"><i class="far fa-envelope mr-2"></i>abc.lis@gmail.com</a>
+                  </div>
+                </div>
+                <div class="card-contact-mobile d-lg-none">
+                  <div class="card-info justify-content-center">
+                    <img class="card-img-top card-img-avatar" src="images/advisor_avatar.png" alt="">
+                  </div>
+                  <div class="row">
+                    <div class="col card-info">
+                      <div class="card-body">
+                        <h5 class="card-title">Chế Hoàng Hi</h5>
+                        <p>Tư vấn viên cao cấp</p>
+                        <p>Mã nhân viên | <span>51703010</span></p>
+                      </div>
+                    </div>
+                    <div class="col contact-information">
+                      <p class="mb-2">Thông tin liên hệ</p>
+                      <div>
+                        <a href="tel:+84 00000000" class="contact-mobile"><i class="fas fa-phone-alt mr-2"></i>070 007
+                          7777</a>
+                      </div>
+                      <div>
+                        <a href="mailto:abc.lis@gmail.com" class="contact-mail"><i class="far fa-envelope mr-2"></i>abc.lis@gmail.com</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="send-message mt-3">
@@ -454,14 +488,14 @@
             </div>
           </div>
           <div class="dv-body-content">
-            <div class="video-tour">
+            <div class="video-tour d-none d-md-block">
               <h5 class="h5">Video tour</h5>
               <a href="https://www.youtube.com/user/LiveinSaigon"><i class="fab fa-youtube mr-2 fa-2x"></i><span>https://www.youtube.com/user/LiveinSaigon</span></a>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam consectetur culpa debitis
                 ducimus esse fugit hic incidunt, iure magni, minus nam nihil officia quis repellendus sint totam,
                 veritatis vero.</p>
             </div>
-            <div class="utilities-inside">
+            <div class="utilities-inside d-none d-md-block">
               <h5 class="h5">Tiện ích trong nhà</h5>
               <ul class="nav nav-tabs" id="utilitiesTab" role="tablist">
                 <li class="nav-item">
@@ -554,6 +588,15 @@
             </div>
             <div class="location">
               <h5 class="h5">Vị trí</h5>
+              <div class="slick-multiple d-lg-none">
+                <div><a href="#" class="chosen-tag">Trường học</a></div>
+                <div><a href="#">Bệnh viện</a></div>
+                <div><a href="#">Công viên</a></div>
+                <div><a href="#">Siêu thị</a></div>
+                <div><a href="#">Trường học Q1</a></div>
+                <div><a href="#">Trường học Q2</a></div>
+                <div><a href="#">Trường học Q3</a></div>
+              </div>
               <div class="map-location">
                 <img src="images/map.png" alt="">
               </div>
@@ -818,7 +861,7 @@
                 </div>
               </div>
             </div>
-            <div class="history-account">
+            <div class="history-account d-none d-md-block">
               <h5 class="h5">Lịch sử tài khoản</h5>
               <table class="table">
                 <thead>
@@ -831,7 +874,8 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td>20/12/2020</th>
+                  <td>20/12/2020
+                  </th>
                   <td>Chủ sỡ hứu | Ông Văn Tè</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
@@ -843,7 +887,8 @@
                     <span class="time ml-2">1 tháng trước</span></td>
                 </tr>
                 <tr>
-                  <td>20/12/2020</th>
+                  <td>20/12/2020
+                  </th>
                   <td>Chủ sỡ hứu | Ông Văn Bông</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
@@ -855,7 +900,8 @@
                     <span class="time ml-2">Hiện tại</span></td>
                 </tr>
                 <tr>
-                  <td>20/12/2020</th>
+                  <td>20/12/2020
+                  </th>
                   <td>Chủ sỡ hứu | Ông Văn Vỹ</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
@@ -870,7 +916,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="utilities-outside">
+            <div class="utilities-outside d-none d-md-block">
               <h5 class="h5">Tiện ích ngoại khu</h5>
               <ul class="nav nav-tabs" id="utilitiesOutTab" role="tablist">
                 <li class="nav-item">
@@ -878,7 +924,8 @@
                      aria-controls="school" aria-selected="true">Trường học</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="hospital-tab" data-toggle="tab" href="#hospital" role="tab" aria-controls="hospital"
+                  <a class="nav-link" id="hospital-tab" data-toggle="tab" href="#hospital" role="tab"
+                     aria-controls="hospital"
                      aria-selected="false">Toilet</a>
                 </li>
                 <li class="nav-item">

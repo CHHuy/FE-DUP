@@ -90,6 +90,11 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     $('.slick-single').slick({
       fade: true,
     });
+    $('.slick-multiple').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    });
   }
 
   function slickAgentList(){

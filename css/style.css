@@ -11893,6 +11893,13 @@ html, body, .wrapper {
   color: #497F70;
 }
 
+@media (max-width: 767.98px) {
+  .DV-Ban .dv-header .h3 {
+    color: #ffffff !important;
+    font-size: 18px;
+  }
+}
+
 .DV-Ban .dv-header .sub-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11937,6 +11944,12 @@ html, body, .wrapper {
   padding: 30px 0;
 }
 
+@media (max-width: 767.98px) {
+  .DV-Ban .dv-body {
+    padding: 15px 0;
+  }
+}
+
 .DV-Ban .dv-body .image-section {
   width: 60%;
 }
@@ -11963,8 +11976,17 @@ html, body, .wrapper {
   object-fit: cover;
 }
 
-.DV-Ban .dv-body .image-section .image-slide button.slick-prev {
-  display: none;
+@media (min-width: 992px) {
+  .DV-Ban .dv-body .image-section .image-slide button.slick-prev {
+    display: none !important;
+  }
+}
+
+.DV-Ban .dv-body .image-section .image-slide button.slick-prev:before {
+  color: #000;
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .DV-Ban .dv-body .image-section .image-slide button.slick-next:before {
@@ -12027,6 +12049,10 @@ html, body, .wrapper {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 5px 0;
   color: #ffffff;
   background-color: transparent;
@@ -12156,8 +12182,17 @@ html, body, .wrapper {
   text-transform: uppercase;
 }
 
-.DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-prev {
-  display: none;
+@media (min-width: 992px) {
+  .DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-prev {
+    display: none !important;
+  }
+}
+
+.DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-prev:before {
+  color: #000;
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-next {
@@ -12208,6 +12243,13 @@ html, body, .wrapper {
   color: #000000;
   padding: 5px 2.5rem;
   font-weight: bold;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .utilities-inside .nav .nav-item a.nav-link {
+    padding: 5px 1rem;
+    font-size: 14px;
+  }
 }
 
 .DV-Ban .dv-body .dv-body-content .utilities-inside .nav .nav-item a.nav-link.active {
@@ -12273,6 +12315,18 @@ html, body, .wrapper {
 
 .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide {
   padding: 0 10rem;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide {
+    padding: 0 2rem;
+  }
+  .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-prev {
+    left: 0 !important;
+  }
+  .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide button.slick-next {
+    right: 0 !important;
+  }
 }
 
 .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-slide img {
@@ -12368,7 +12422,13 @@ html, body, .wrapper {
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item {
   width: 50%;
-  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item {
+    padding-left: 1rem;
+  }
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a {
@@ -12390,7 +12450,22 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
-  display: none;
+  top: 40%;
+  left: -50px;
+}
+
+@media (min-width: 768px) {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
+    display: none !important;
+  }
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev:before {
+  color: #000;
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next {
@@ -12417,6 +12492,13 @@ html, body, .wrapper {
 .DV-Ban .dv-body .dv-body-content .history-account .table td {
   border: none;
   font-weight: 400;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .history-account .table td {
+    padding: 0.4rem 0.2rem !important;
+    font-size: 13px !important;
+  }
 }
 
 .DV-Ban .dv-body .dv-body-content .history-account .table thead {
@@ -12448,6 +12530,13 @@ html, body, .wrapper {
   color: #000000;
   padding: 5px 2.5rem;
   font-weight: bold;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .utilities-outside .nav .nav-item a.nav-link {
+    padding: 5px 1rem;
+    font-size: 14px;
+  }
 }
 
 .DV-Ban .dv-body .dv-body-content .utilities-outside .nav .nav-item a.nav-link.active {
@@ -12485,6 +12574,52 @@ html, body, .wrapper {
   padding: 0.2rem 1.25rem;
   color: #000000;
   text-transform: capitalize;
+}
+
+@media (max-width: 1199.98px) {
+  .DV-Ban .dv-body .dv-body-content .utilities-outside .tab-content .row .col .list-group .list-group-item {
+    padding: 0.2rem 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .DV-Ban .dv-body .d-lg-flex .image-section {
+    width: 100%;
+  }
+  .DV-Ban .dv-body .d-lg-flex .image-section .image-show img {
+    height: 450px;
+  }
+  .DV-Ban .dv-body .d-lg-flex .image-section .image-slide img {
+    height: 150px;
+  }
+  .DV-Ban .dv-body .d-lg-flex .info-section {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .DV-Ban .dv-body .card-contact-mobile {
+    margin: 1rem 0;
+  }
+  .DV-Ban .dv-body .card-contact-mobile .card-img-avatar {
+    margin: 1rem 0 !important;
+  }
+  .DV-Ban .dv-body .card-contact-mobile .contact-information {
+    border-left: 1px solid;
+  }
+  .DV-Ban .dv-body .slick-multiple a {
+    color: #497F70;
+    background-color: #ffffff;
+    border: 1px solid #497F70;
+    border-radius: 15px;
+    padding: 2px 10px;
+    text-decoration: none;
+  }
+  .DV-Ban .dv-body .slick-multiple a.chosen-tag {
+    background-color: #497F70;
+    color: #ffffff;
+  }
+  .DV-Ban .dv-body .slick-multiple button.slick-next:before {
+    color: #000000;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
