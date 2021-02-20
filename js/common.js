@@ -72,6 +72,27 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       })
     }
   }
+  function slickArticleRelated() {
+    $('.article-related-js').slick({
+      arrows: true,
+      slidesToShow: 4,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 2,
+            centerPadding: '40px',
+          }
+        }
+      ]
+    });
+  }
   function slickSlider(){
     $('.slider-for').slick({
       slidesToShow: 1,
@@ -113,6 +134,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     btnSwitch()
     slickSlider()
     slickAgentList()
+    slickArticleRelated()
   }
 
   $(document).ready(function() {
