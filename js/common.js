@@ -108,7 +108,16 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       focusOnSelect: true,
       arrows: true
     });
+    $('.slick-single').slick({
+      fade: true,
+    });
+    $('.slick-multiple').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    });
   }
+
   function slickAgentList(){
     $('.slick-agent').slick({
       infinite: true,
