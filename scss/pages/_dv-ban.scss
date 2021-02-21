@@ -607,10 +607,13 @@
 
           .tab-content {
             .tab-pane {
-              .slick-single {
+              .slick-suggest {
                 .slick-item {
                   @include flexbox();
-
+                  a:hover{
+                    text-decoration: none;
+                    color: #007bff !important;
+                  }
                   &:focus {
                     outline: none;
                   }
@@ -622,6 +625,11 @@
                   }
                   .mobile-item {
                     position: relative;
+                    img{
+                      border-radius: 10px;
+                      width: 100%;
+                      height: 300px;
+                    }
                     .heart-interact {
                       position: absolute;
                       top: 0.5rem;
@@ -671,6 +679,7 @@
                   .normal-item {
                     width: 50%;
                     padding-left: 2rem;
+                    align-self: center;
                     @include media-breakpoint-down(lg) {
                       padding-left: 1rem;
                     }
@@ -694,7 +703,22 @@
                     }
                   }
                 }
-
+                .slick-dots{
+                  bottom: unset !important;
+                  top: 0 !important;
+                  left: 53%;
+                  width: 50%;
+                  text-align: start !important;
+                  li{
+                    margin: 0 0;
+                    button{
+                      padding: 0;
+                    }
+                    button:before{
+                      font-size: 10px;
+                    }
+                  }
+                }
                 button.slick-prev {
                   top: 40%;
                   left: -50px;

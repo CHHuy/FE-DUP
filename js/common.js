@@ -105,6 +105,21 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       arrows: true,
     });
   }
+  function slickSuggest(){
+    $('.slick-suggest').slick({
+      fade: true,
+      dots: true,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            dots: false
+          }
+        },
+      ]
+    });
+  }
 
   function btnSwitch(){
     $('body').on('click', '.btn-switch', function() {
@@ -114,6 +129,17 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     });
   }
 
+  function ratingaStar(){
+    $('.my-rating').starRating({
+      initialRating: 4,
+      strokeColor: '#894A00',
+      strokeWidth: 10,
+      starSize: 20,
+      callback: function(currentRating, $el){
+        // make a server call here
+      }
+    });
+  }
   function init() {
     scrollToAnchor()
     getBarwidth()
@@ -122,6 +148,8 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     btnSwitch()
     slickSlider()
     slickAgentList()
+    slickSuggest()
+    ratingaStar()
     slickArticleRelated()
   }
 

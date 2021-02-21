@@ -11985,6 +11985,15 @@ body,
   color: #ffffff;
 }
 
+.DV-Ban .dv-header .sub-header .header-option a:active {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:active i {
+  color: #ffffff;
+}
+
 .DV-Ban .dv-body {
   padding: 30px 0;
 }
@@ -12573,7 +12582,7 @@ body,
   background-color: #497f70;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -12581,41 +12590,52 @@ body,
   display: flex;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item:focus {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item a:hover {
+  text-decoration: none;
+  color: #007bff !important;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item:focus {
   outline: none;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item p {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item p {
   margin: 1rem 0;
   padding: 0 5px;
   font-weight: 400;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item {
   position: relative;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .heart-interact {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   padding: 5px;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact i {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .heart-interact i {
   color: #ffffff;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact i:hover {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .heart-interact i:hover {
   color: #497f70;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact i:active {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .heart-interact i:active {
   color: #497f70;
   background-color: #497f70;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .price-box {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .price-box {
   position: absolute;
   bottom: 55px;
   right: -1px;
@@ -12625,73 +12645,94 @@ body,
   border-bottom-right-radius: 10px;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .price-box span {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .price-box span {
   font-weight: bold;
 }
 
 @media (max-width: 767.98px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .price-box {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .mobile-item .price-box {
     font-size: 12px;
   }
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .special-item {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .special-item {
   width: 50%;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .special-item img {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .special-item img {
   width: 100%;
   height: 500px;
   border-radius: 10px;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item {
   width: 50%;
   padding-left: 2rem;
+  align-self: center;
 }
 
 @media (max-width: 1199.98px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item {
     padding-left: 1rem;
   }
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item a {
   margin-bottom: 1rem;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a:focus {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item a:focus {
   outline: none;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item a i {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item a i {
   color: #000000;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .normal-item img {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-item .normal-item img {
   width: 100%;
   height: 400px;
   border-radius: 10px;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-dots {
+  bottom: unset !important;
+  top: 0 !important;
+  left: 53%;
+  width: 50%;
+  text-align: start !important;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-dots li {
+  margin: 0 0;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-dots li button {
+  padding: 0;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest .slick-dots li button:before {
+  font-size: 10px;
+}
+
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
   top: 40%;
   left: -50px;
 }
 
 @media (max-width: 767.98px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
     left: -25px !important;
   }
 }
 
 @media (min-width: 768px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
     display: none !important;
   }
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev:before {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev:before {
   color: #000;
   content: '\f053';
   font-family: 'Font Awesome 5 Free';
@@ -12699,24 +12740,24 @@ body,
   font-weight: 900;
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-next {
   top: 40%;
   right: -50px;
 }
 
 @media (max-width: 1199.98px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-next {
     right: -35px !important;
   }
 }
 
 @media (max-width: 767.98px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next {
+  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-next {
     right: -25px !important;
   }
 }
 
-.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next:before {
+.DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-next:before {
   color: #000;
   content: '\f054';
   font-family: 'Font Awesome 5 Free';
@@ -13642,7 +13683,7 @@ body,
 .agent-filter form .form-row .form-group label {
   font-size: 18px;
   text-transform: uppercase;
-  color: #497F70;
+  color: #497f70;
 }
 
 .agent-filter form .form-row .form-group select {
@@ -13658,9 +13699,9 @@ body,
 
 .agent-filter form button {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
   border-radius: 15px;
-  border-color: #497F70;
+  border-color: #497f70;
   padding: 0 20px;
   font-weight: 300;
   text-transform: uppercase;
