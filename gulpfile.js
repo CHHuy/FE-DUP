@@ -34,7 +34,8 @@ const paths = {
   scriptsCore: {
     src: [
       'third_party/modernizr.min.js',
-      'third_party/slick/slick.min.js'
+      'third_party/slick/slick.min.js',
+      'third_party/star-rating-svg-master/dist/jquery.star-rating-svg.min.js',
     ],
     dest: 'dist/'
   },

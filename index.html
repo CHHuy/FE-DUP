@@ -100,6 +100,23 @@
       animation-delay: 0.4s;
     }
   </style>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: -25.344, lng: 131.036 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+  </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
@@ -273,7 +290,7 @@
               <a href="#" class="mr-4">Gợi ý thêm</a>
             </div>
             <div class="header-option">
-              <a href="#" class="mr-3"><i class="fas fa-heart pr-1"></i><span>Save</span></a>
+              <a href="#" class="mr-3 active"><i class="fas fa-heart pr-1"></i><span>Save</span></a>
               <a href="#"><i class="fas fa-share-alt pr-1"></i><span>Share</span></a>
             </div>
           </div>
@@ -281,8 +298,8 @@
         <div class="dv-body">
           <div class="d-lg-flex">
             <div class="image-section">
-              <div class="tour-banner">Tour xem nhà hôm nay | 8:00 - 17:00</div>
-              <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+              <div class="tour-banner d-lg-none">Tour xem nhà hôm nay | 8:00 - 17:00</div>
+              <a href="#" class="heart-interact d-lg-none"><i class="fas fa-heart fa-lg"></i></a>
               <div class="image-show slider-for">
                 <img src="images/house.jpg" alt="">
                 <img src="images/house-2.jpg" alt="">
@@ -605,7 +622,7 @@
                 <div><a href="#">Trung học</a></div>
               </div>
               <div class="map-location">
-                <img src="images/map.png" alt="">
+                <div id="map"></div>
               </div>
             </div>
             <div class="utilities-inside-area">
@@ -983,12 +1000,9 @@
                   <td>Chủ sỡ hứu | Ông Văn Tè</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="time ml-2">1 tháng trước</span></td>
+                    <div class="my-rating"></div>
+                    <span class="time ml-2">1 tháng trước</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>20/12/2020
@@ -996,12 +1010,9 @@
                   <td>Chủ sỡ hứu | Ông Văn Bông</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="time ml-2">Hiện tại</span></td>
+                    <div class="my-rating"></div>
+                    <span class="time ml-2">1 tháng trước</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>20/12/2020
@@ -1009,12 +1020,8 @@
                   <td>Chủ sỡ hứu | Ông Văn Vỹ</td>
                   <td><span>3.000.000.000</span> vnd</td>
                   <td>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="time ml-2">Hiện tại</span>
+                    <div class="my-rating"></div>
+                    <span class="time ml-2">1 tháng trước</span>
                   </td>
                 </tr>
                 </tbody>
@@ -1448,7 +1455,10 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+  async
+></script>
 <!-- Core JavaScript -->
 <script src="dist/core.min.js"></script>
 <script src="third_party/modernizr.min.js"></script>

@@ -7,10 +7,10 @@
     @include flex-direction(row-reverse);
     @media (max-width: 320.98px) {
       padding: 1rem 5px 1rem 0;
-      .navbar-toggler{
+      .navbar-toggler {
         padding: 0.25rem 5px;
       }
-      .navbar-nav{
+      .navbar-nav {
         padding: 10px;
       }
     }
@@ -36,7 +36,8 @@
   }
 }
 
-.header, .header-login {
+.header,
+.header-login {
   .navbar {
     padding: 0.5rem 0;
 
@@ -52,7 +53,7 @@
         color: #ffffff;
         padding: 0.5rem 0;
         margin: 0.5rem 0.5rem;
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           margin: 0.5rem 1.5rem;
         }
       }

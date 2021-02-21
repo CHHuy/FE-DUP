@@ -14,6 +14,7 @@
 @import url(../fonts/fontawesome/css/all.min.css);
 @import url(../third_party/slick/slick-theme.css);
 @import url(../third_party/slick/slick.css);
+@import url(../third_party/star-rating-svg-master/src/css/star-rating-svg.css);
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9786,7 +9787,7 @@ body {
 }
 
 .header-mobile .dropdown-menu .dropdown-item {
-  color: #497F70;
+  color: #497f70;
   font-weight: 300;
 }
 
@@ -9849,30 +9850,34 @@ body {
 
 .header-mobile .navbar ul.navbar-nav .active a.nav-link {
   font-weight: bold;
-  color: #497F70;
+  color: #497f70;
 }
 
 .header-mobile .navbar ul.navbar-nav a.nav-link {
-  color: #497F70;
+  color: #497f70;
 }
 
-.header .navbar, .header-login .navbar {
+.header .navbar,
+.header-login .navbar {
   padding: 0.5rem 0;
 }
 
-.header .navbar ul.navbar-nav li.active a.nav-link, .header-login .navbar ul.navbar-nav li.active a.nav-link {
+.header .navbar ul.navbar-nav li.active a.nav-link,
+.header-login .navbar ul.navbar-nav li.active a.nav-link {
   border-bottom: 2px solid #ffffff;
   font-weight: bold;
 }
 
-.header .navbar ul.navbar-nav a.nav-link, .header-login .navbar ul.navbar-nav a.nav-link {
+.header .navbar ul.navbar-nav a.nav-link,
+.header-login .navbar ul.navbar-nav a.nav-link {
   color: #ffffff;
   padding: 0.5rem 0;
   margin: 0.5rem 0.5rem;
 }
 
 @media (min-width: 992px) {
-  .header .navbar ul.navbar-nav a.nav-link, .header-login .navbar ul.navbar-nav a.nav-link {
+  .header .navbar ul.navbar-nav a.nav-link,
+  .header-login .navbar ul.navbar-nav a.nav-link {
     margin: 0.5rem 1.5rem;
   }
 }
@@ -10721,11 +10726,13 @@ Header
   }
 }
 
-.header, .header-login {
+.header,
+.header-login {
   position: relative;
 }
 
-.header .sub-header:nth-child(1), .header-login .sub-header:nth-child(1) {
+.header .sub-header:nth-child(1),
+.header-login .sub-header:nth-child(1) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -10739,32 +10746,38 @@ Header
   padding-top: 2rem;
 }
 
-.header .sub-header:nth-child(2) .sub-header-item ul.language-switch, .header-login .sub-header:nth-child(2) .sub-header-item ul.language-switch {
+.header .sub-header:nth-child(2) .sub-header-item ul.language-switch,
+.header-login .sub-header:nth-child(2) .sub-header-item ul.language-switch {
   padding: 0 10px;
 }
 
-.header .sub-header:nth-child(2) .sub-header-item .u-login, .header-login .sub-header:nth-child(2) .sub-header-item .u-login {
+.header .sub-header:nth-child(2) .sub-header-item .u-login,
+.header-login .sub-header:nth-child(2) .sub-header-item .u-login {
   padding: 0 5px 0 0;
   font-weight: bold;
 }
 
-.header .sub-header:nth-child(2) .sub-header-item .phone-number, .header-login .sub-header:nth-child(2) .sub-header-item .phone-number {
+.header .sub-header:nth-child(2) .sub-header-item .phone-number,
+.header-login .sub-header:nth-child(2) .sub-header-item .phone-number {
   padding: 0 10px;
 }
 
-.header .navbar .navbar-brand img, .header-login .navbar .navbar-brand img {
+.header .navbar .navbar-brand img,
+.header-login .navbar .navbar-brand img {
   object-fit: cover;
   height: 50px;
 }
 
 @media (max-width: 991.98px) {
-  .header .navbar .navbar-brand img, .header-login .navbar .navbar-brand img {
+  .header .navbar .navbar-brand img,
+  .header-login .navbar .navbar-brand img {
     height: 30px;
   }
 }
 
 @media (min-width: 768px) {
-  .header .navbar .navbar-collapse, .header-login .navbar .navbar-collapse {
+  .header .navbar .navbar-collapse,
+  .header-login .navbar .navbar-collapse {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -10782,15 +10795,18 @@ Header
   }
 }
 
-.header .sub-header-item, .header-login .sub-header-item {
+.header .sub-header-item,
+.header-login .sub-header-item {
   position: relative;
 }
 
-.header .sub-header-item ul, .header-login .sub-header-item ul {
+.header .sub-header-item ul,
+.header-login .sub-header-item ul {
   margin: 0 0;
 }
 
-.header .sub-header-item ul.language-switch, .header-login .sub-header-item ul.language-switch {
+.header .sub-header-item ul.language-switch,
+.header-login .sub-header-item ul.language-switch {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -10800,17 +10816,20 @@ Header
   padding: 0 1rem;
 }
 
-.header .sub-header-item ul.language-switch li.button-lang, .header-login .sub-header-item ul.language-switch li.button-lang {
+.header .sub-header-item ul.language-switch li.button-lang,
+.header-login .sub-header-item ul.language-switch li.button-lang {
   padding: 0 0.2rem;
 }
 
-.header .sub-header-item ul.language-switch li.button-lang:nth-child(2):before, .header-login .sub-header-item ul.language-switch li.button-lang:nth-child(2):before {
+.header .sub-header-item ul.language-switch li.button-lang:nth-child(2):before,
+.header-login .sub-header-item ul.language-switch li.button-lang:nth-child(2):before {
   content: '|';
   color: #ffffff;
   padding-right: 5px;
 }
 
-.header .sub-header-item ul.login-regist, .header-login .sub-header-item ul.login-regist {
+.header .sub-header-item ul.login-regist,
+.header-login .sub-header-item ul.login-regist {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -10820,22 +10839,26 @@ Header
   padding: 0;
 }
 
-.header .sub-header-item ul.login-regist li.button-regist:before, .header-login .sub-header-item ul.login-regist li.button-regist:before {
+.header .sub-header-item ul.login-regist li.button-regist:before,
+.header-login .sub-header-item ul.login-regist li.button-regist:before {
   content: '/';
   color: #ffffff;
   padding: 0 3px;
 }
 
-.header .sub-header-item a, .header-login .sub-header-item a {
+.header .sub-header-item a,
+.header-login .sub-header-item a {
   font-size: 14px;
   color: #ffffff;
 }
 
-.header .sub-header-item .phone-number, .header-login .sub-header-item .phone-number {
+.header .sub-header-item .phone-number,
+.header-login .sub-header-item .phone-number {
   font-weight: bold;
 }
 
-.header .sub-header-item .current-lang, .header-login .sub-header-item .current-lang {
+.header .sub-header-item .current-lang,
+.header-login .sub-header-item .current-lang {
   font-weight: bold;
 }
 
@@ -10863,7 +10886,7 @@ Header
 
 .header-mobile .header-mb-item ul.language-switch li.button-lang:nth-child(2):before {
   content: '|';
-  color: #497F70;
+  color: #497f70;
   padding-right: 5px;
 }
 
@@ -10883,13 +10906,13 @@ Header
 
 .header-mobile .header-mb-item ul.login-regist li.button-regist:before {
   content: '/';
-  color: #497F70;
+  color: #497f70;
   padding: 0 3px;
 }
 
 .header-mobile .header-mb-item a {
   font-size: 14px;
-  color: #497F70;
+  color: #497f70;
 }
 
 .header-mobile .header-mb-item .phone-number {
@@ -10897,7 +10920,7 @@ Header
 }
 
 .header-mobile .header-mb-item .phone-number i {
-  color: #497F70;
+  color: #497f70;
 }
 
 .header-mobile .header-mb-item .current-lang {
@@ -10921,7 +10944,7 @@ html {
 
 @media (max-width: 767.98px) {
   .main {
-    background-color: #497F70;
+    background-color: #497f70;
   }
 }
 
@@ -11015,9 +11038,9 @@ Footer
   display: block;
   width: 100%;
   text-align: start;
-  border-bottom: 1px solid #497F70;
+  border-bottom: 1px solid #497f70;
   border-radius: 0;
-  color: #497F70;
+  color: #497f70;
   padding: 0.375rem 0;
 }
 
@@ -11030,7 +11053,8 @@ Footer
   box-shadow: none;
 }
 
-.footer .footer-hotline-info-mobile .info-mobile .card .card-header .btn-link:focus, .footer .footer-hotline-info-mobile .info-mobile .card .card-header .btn-link:hover {
+.footer .footer-hotline-info-mobile .info-mobile .card .card-header .btn-link:focus,
+.footer .footer-hotline-info-mobile .info-mobile .card .card-header .btn-link:hover {
   text-decoration: none;
 }
 
@@ -11130,7 +11154,9 @@ Footer
   width: 110px;
 }
 
-html, body, .wrapper {
+html,
+body,
+.wrapper {
   height: 100%;
 }
 
@@ -11214,7 +11240,8 @@ html, body, .wrapper {
   color: #ffffff;
 }
 
-.main-login .user-login a.Fb-login, .main-login .user-login a.G-login {
+.main-login .user-login a.Fb-login,
+.main-login .user-login a.G-login {
   width: 250px;
   background-color: #ffffff;
   padding: 2px 10px;
@@ -11225,18 +11252,21 @@ html, body, .wrapper {
   text-decoration: none;
 }
 
-.main-login .user-login a.Fb-login i, .main-login .user-login a.G-login i {
+.main-login .user-login a.Fb-login i,
+.main-login .user-login a.G-login i {
   color: #365f53;
   padding: 0 5px;
 }
 
-.main-login .user-login a.Fb-login:hover, .main-login .user-login a.G-login:hover {
+.main-login .user-login a.Fb-login:hover,
+.main-login .user-login a.G-login:hover {
   transition-duration: 0.5s;
   background-color: #365f53;
   color: #ffffff;
 }
 
-.main-login .user-login a.Fb-login:hover i, .main-login .user-login a.G-login:hover i {
+.main-login .user-login a.Fb-login:hover i,
+.main-login .user-login a.G-login:hover i {
   transition-duration: 0.5s;
   color: #ffffff;
 }
@@ -11286,7 +11316,7 @@ html, body, .wrapper {
 }
 
 .advisor-page .advisor-header .h2 {
-  color: #497F70;
+  color: #497f70;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -11313,7 +11343,7 @@ html, body, .wrapper {
 .advisor-page .advisor-body .advisor-list-row .slick-prev:before {
   content: '\f151';
   color: #000000;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-size: 25px;
 }
 
@@ -11326,7 +11356,7 @@ html, body, .wrapper {
 .advisor-page .advisor-body .advisor-list-row .slick-next:before {
   content: '\f150';
   color: #000000;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-size: 25px;
 }
 
@@ -11392,39 +11422,39 @@ html, body, .wrapper {
   margin: 5px 0;
   border-radius: 15px;
   padding: 3px;
-  color: #497F70;
-  border-color: #497F70;
+  color: #497f70;
+  border-color: #497f70;
   border-top-width: 1px;
 }
 
 @media (max-width: 767.98px) {
   .advisor-page .advisor-body .advisor-list-col .list-group .list-group-item {
-    color: #497F70;
-    border-color: #497F70;
+    color: #497f70;
+    border-color: #497f70;
     background-color: #ffffff;
     font-size: 14px;
   }
   .advisor-page .advisor-body .advisor-list-col .list-group .list-group-item.active {
     background-color: #ffffff !important;
-    border-color: #497F70 !important;
-    color: #497F70 !important;
+    border-color: #497f70 !important;
+    color: #497f70 !important;
   }
   .advisor-page .advisor-body .advisor-list-col .list-group .list-group-item:hover {
     background-color: #ffffff !important;
-    border-color: #497F70 !important;
-    color: #497F70 !important;
+    border-color: #497f70 !important;
+    color: #497f70 !important;
   }
 }
 
 .advisor-page .advisor-body .advisor-list-col .list-group .list-group-item.active {
-  background-color: #497F70;
-  border-color: #497F70;
+  background-color: #497f70;
+  border-color: #497f70;
   color: #ffffff;
 }
 
 .advisor-page .advisor-body .advisor-list-col .list-group .list-group-item:hover {
-  background-color: #497F70;
-  border-color: #497F70;
+  background-color: #497f70;
+  border-color: #497f70;
   color: #ffffff;
 }
 
@@ -11465,7 +11495,7 @@ html, body, .wrapper {
   text-align: center;
   display: block;
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
   padding: 10px;
   margin-top: 60px;
   margin-bottom: 30px;
@@ -11492,14 +11522,14 @@ html, body, .wrapper {
 
 .search-agent-list .search-agent-box i {
   position: absolute;
-  color: #497F70;
+  color: #497f70;
   top: 30%;
   left: 16.5%;
 }
 
 .search-agent-list .search-agent-box input {
   width: 70%;
-  border: 1px solid #497F70;
+  border: 1px solid #497f70;
   border-radius: 15px;
   padding: 5px 50px;
 }
@@ -11526,7 +11556,7 @@ html, body, .wrapper {
 }
 
 .DQ-agent-list .list-agent-list ul.list-unstyled li.media .advisor-avatar h5 {
-  color: #497F70;
+  color: #497f70;
 }
 
 .DQ-agent-list .list-agent-list ul.list-unstyled li.media .media-body h5 {
@@ -11542,8 +11572,8 @@ html, body, .wrapper {
 .DQ-agent-list .list-agent-list ul.list-unstyled li.media .media-body .advisor-contact a {
   padding: 4px 8px;
   margin: 10px;
-  color: #497F70;
-  border: 1px solid #497F70;
+  color: #497f70;
+  border: 1px solid #497f70;
   border-radius: 15px;
   text-decoration: none;
 }
@@ -11558,7 +11588,7 @@ html, body, .wrapper {
 }
 
 .DQ-agent-list .list-agent-list ul.list-unstyled li.media .media-body .advisor-contact a:hover {
-  background-color: #497F70;
+  background-color: #497f70;
   color: #ffffff;
 }
 
@@ -11655,7 +11685,7 @@ html, body, .wrapper {
 .search-filter form .form-row .form-group label {
   font-size: 18px;
   text-transform: uppercase;
-  color: #497F70;
+  color: #497f70;
 }
 
 .search-filter form .form-row .form-group select {
@@ -11671,9 +11701,9 @@ html, body, .wrapper {
 
 .search-filter form button {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
   border-radius: 15px;
-  border-color: #497F70;
+  border-color: #497f70;
   padding: 0 20px;
   font-weight: 300;
   text-transform: uppercase;
@@ -11759,7 +11789,7 @@ html, body, .wrapper {
 }
 
 .search-result .result .list-group-result .list-group-item .card .card-body .card-title {
-  color: #497F70;
+  color: #497f70;
   text-transform: capitalize;
 }
 
@@ -11803,12 +11833,12 @@ html, body, .wrapper {
 }
 
 .search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact i:hover {
-  color: #497F70;
+  color: #497f70;
 }
 
 .search-result .result .list-group-result .list-group-item .card .card-body .img-interact .heart-interact i:active {
-  color: #497F70;
-  background-color: #497F70;
+  color: #497f70;
+  background-color: #497f70;
 }
 
 .search-result .result .list-group-result .list-group-item .card .card-body .img-interact .option-interact {
@@ -11827,7 +11857,7 @@ html, body, .wrapper {
   right: 0;
   color: #ffffff;
   padding: 10px;
-  background-color: #497F70;
+  background-color: #497f70;
   border-bottom-right-radius: 10px;
 }
 
@@ -11848,7 +11878,7 @@ html, body, .wrapper {
 
 .search-result .result .list-group-result .load-more a {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
   padding: 5px 20px;
   border-radius: 15px;
 }
@@ -11884,7 +11914,7 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-header .sup-header .header-price {
-  color: #497F70;
+  color: #497f70;
   font-size: 20px;
 }
 
@@ -11896,7 +11926,7 @@ html, body, .wrapper {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: #497F70;
+  color: #497f70;
 }
 
 @media (max-width: 767.98px) {
@@ -11925,24 +11955,33 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-header .sub-header .header-option a {
-  color: #497F70;
+  color: #497f70;
   background-color: transparent;
   border-radius: 15px;
   padding: 5px 10px;
-  border: 1px solid #497F70;
+  border: 1px solid #497f70;
   text-decoration: none;
 }
 
 .DV-Ban .dv-header .sub-header .header-option a i {
-  color: #497F70;
+  color: #497f70;
 }
 
 .DV-Ban .dv-header .sub-header .header-option a:hover {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
 }
 
 .DV-Ban .dv-header .sub-header .header-option a:hover i {
+  color: #ffffff;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:active {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:active i {
   color: #ffffff;
 }
 
@@ -11997,7 +12036,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .image-section .image-slide button.slick-prev:before {
   color: #000;
   content: '\f053';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -12010,7 +12049,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .image-section .image-slide button.slick-next:before {
   color: #000;
   content: '\f054';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -12035,9 +12074,9 @@ html, body, .wrapper {
 
 .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link {
   font-weight: bold;
-  color: #497F70;
+  color: #497f70;
   border-radius: 0;
-  border-color: #497F70;
+  border-color: #497f70;
 }
 
 @media (max-width: 767.98px) {
@@ -12048,7 +12087,7 @@ html, body, .wrapper {
   }
   .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link.active {
     background-color: #ffffff !important;
-    color: #497F70 !important;
+    color: #497f70 !important;
     border-color: #ffffff !important;
   }
   .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link:hover {
@@ -12057,16 +12096,16 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link:hover {
-  border-color: #497F70;
+  border-color: #497f70;
 }
 
 .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link.active {
-  background-color: #497F70;
+  background-color: #497f70;
   color: #ffffff;
 }
 
 .DV-Ban .dv-body .info-section .house-info .nav-tabs {
-  border-bottom: 1px solid #497F70;
+  border-bottom: 1px solid #497f70;
 }
 
 @media (max-width: 767.98px) {
@@ -12076,7 +12115,7 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .info-section .house-info .tab-pane {
-  background-color: #497F70;
+  background-color: #497f70;
   padding: 15px 0 25px 0;
 }
 
@@ -12145,7 +12184,7 @@ html, body, .wrapper {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  color: #497F70;
+  color: #497f70;
 }
 
 .DV-Ban .dv-body .info-section .contact-info .card-info .card-body p {
@@ -12158,7 +12197,7 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .info-section .contact-info .contact-information p {
-  color: #497F70;
+  color: #497f70;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -12169,11 +12208,11 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .info-section .contact-info .contact-information a i {
-  color: #497F70;
+  color: #497f70;
 }
 
 .DV-Ban .dv-body .info-section .contact-info .send-message p {
-  color: #497F70;
+  color: #497f70;
   font-size: 16px;
   text-transform: uppercase;
   margin: 5px 0;
@@ -12213,7 +12252,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .info-section .contact-info .send-message form .submit-message button {
   text-transform: uppercase;
   font-size: 12px;
-  background-color: #497F70;
+  background-color: #497f70;
   padding: 1px 10px;
   border-radius: 8px;
   color: #ffffff;
@@ -12224,7 +12263,7 @@ html, body, .wrapper {
   .DV-Ban .dv-body .info-section .contact-info .send-message form .submit-message button {
     border-color: #ffffff;
     background-color: #ffffff;
-    color: #497F70;
+    color: #497f70;
   }
 }
 
@@ -12263,7 +12302,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-prev:before {
   color: #000;
   content: '\f053';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -12281,12 +12320,12 @@ html, body, .wrapper {
 .DV-Ban .dv-body .info-section .contact-info .list-agent button.slick-next:before {
   color: #000;
   content: '\f054';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
 .DV-Ban .dv-body .dv-body-content .h5 {
-  color: #497F70;
+  color: #497f70;
   text-transform: uppercase;
 }
 
@@ -12372,10 +12411,11 @@ html, body, .wrapper {
   height: 500px;
 }
 
-.DV-Ban .dv-body .dv-body-content .location .map-location img {
+.DV-Ban .dv-body .dv-body-content .location .map-location div#map {
+  height: 500px;
+  /* The height is 400 pixels */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* The width is the width of the web page */
 }
 
 .DV-Ban .dv-body .dv-body-content .utilities-inside-area {
@@ -12401,7 +12441,7 @@ html, body, .wrapper {
     color: #000;
     font-size: 2rem;
     content: '\f053';
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
   }
   .DV-Ban .dv-body .dv-body-content .utilities-inside-area .utilities-album .utilities-show.slick-single button.slick-next {
@@ -12411,7 +12451,7 @@ html, body, .wrapper {
     color: #000;
     font-size: 2rem;
     content: '\f054';
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
   }
 }
@@ -12455,7 +12495,7 @@ html, body, .wrapper {
   color: #000;
   font-size: 2rem;
   content: '\f053';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -12467,7 +12507,7 @@ html, body, .wrapper {
   color: #000;
   font-size: 2rem;
   content: '\f054';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
 
@@ -12507,8 +12547,8 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item .nav-link {
-  border: 1px solid #497F70;
-  color: #497F70;
+  border: 1px solid #497f70;
+  color: #497f70;
   background-color: transparent;
   border-radius: 15px;
   padding: 0 25px;
@@ -12523,14 +12563,14 @@ html, body, .wrapper {
     padding: 0 10px;
   }
   .DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item .nav-link.active {
-    color: #497F70 !important;
+    color: #497f70 !important;
     background-color: #ffffff !important;
   }
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .nav .nav-item .nav-link.active {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item {
@@ -12567,12 +12607,12 @@ html, body, .wrapper {
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact i:hover {
-  color: #497F70;
+  color: #497f70;
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .heart-interact i:active {
-  color: #497F70;
-  background-color: #497F70;
+  color: #497f70;
+  background-color: #497f70;
 }
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single .slick-item .mobile-item .price-box {
@@ -12581,7 +12621,7 @@ html, body, .wrapper {
   right: -1px;
   color: #ffffff;
   padding: 10px;
-  background-color: #497F70;
+  background-color: #497f70;
   border-bottom-right-radius: 10px;
 }
 
@@ -12654,7 +12694,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-prev:before {
   color: #000;
   content: '\f053';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-size: 2rem;
   font-weight: 900;
 }
@@ -12679,7 +12719,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-single button.slick-next:before {
   color: #000;
   content: '\f054';
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-size: 2rem;
   font-weight: 900;
 }
@@ -12702,6 +12742,10 @@ html, body, .wrapper {
 .DV-Ban .dv-body .dv-body-content .history-account .table td {
   border: none;
   font-weight: 400;
+}
+
+.DV-Ban .dv-body .dv-body-content .history-account .table td .my-rating {
+  display: inline-block;
 }
 
 @media (max-width: 1199.98px) {
@@ -12729,6 +12773,7 @@ html, body, .wrapper {
 .DV-Ban .dv-body .dv-body-content .history-account .table tbody tr td span.time {
   font-style: italic;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .DV-Ban .dv-body .dv-body-content .utilities-outside {
@@ -12814,22 +12859,32 @@ html, body, .wrapper {
     color: #ffffff;
   }
   .DV-Ban .dv-body .d-lg-flex .image-section .heart-interact i:hover {
-    color: #497F70;
+    color: #497f70;
   }
   .DV-Ban .dv-body .d-lg-flex .image-section .heart-interact i:active {
-    color: #497F70;
-    background-color: #497F70;
+    color: #497f70;
+    background-color: #497f70;
   }
   .DV-Ban .dv-body .d-lg-flex .image-section .tour-banner {
     position: absolute;
     top: 3%;
     z-index: 1000;
     background-color: #edcf94;
-    color: #497F70;
+    color: #497f70;
     padding: 2px 8px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    font-size: 14px !important;
   }
+}
+
+@media (max-width: 991.98px) and (max-width: 767.98px) {
+  .DV-Ban .dv-body .d-lg-flex .image-section .tour-banner {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
   .DV-Ban .dv-body .d-lg-flex .image-section .image-show img {
     height: 450px;
   }
@@ -12871,9 +12926,9 @@ html, body, .wrapper {
     text-align: center;
   }
   .DV-Ban .dv-body .slick-multiple a {
-    color: #497F70;
+    color: #497f70;
     background-color: #ffffff;
-    border: 1px solid #497F70;
+    border: 1px solid #497f70;
     border-radius: 15px;
     padding: 2px 10px;
     text-decoration: none;
@@ -12890,13 +12945,13 @@ html, body, .wrapper {
   }
   .DV-Ban .dv-body .slick-multiple a.chosen-tag {
     background-color: #ffffff !important;
-    color: #497F70 !important;
+    color: #497f70 !important;
   }
 }
 
 @media (max-width: 991.98px) {
   .DV-Ban .dv-body .slick-multiple a.chosen-tag {
-    background-color: #497F70;
+    background-color: #497f70;
     color: #ffffff;
   }
   .DV-Ban .dv-body .slick-multiple button.slick-prev {
@@ -12907,7 +12962,7 @@ html, body, .wrapper {
   }
   .DV-Ban .dv-body .slick-multiple button.slick-next:before {
     content: '\f054';
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #000000;
   }
