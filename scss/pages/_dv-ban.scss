@@ -1,9 +1,8 @@
 .DV-Ban {
   padding: 30px 0;
-  @include media-breakpoint-down(sm) {
-    padding: 10px;
+  @include media-breakpoint-down(sm){
+    padding: 10px 0;
   }
-
   .dv-header {
     .sup-header {
       .header-price {
@@ -22,7 +21,6 @@
       font-weight: bold;
       color: $primary-color;
       @include media-breakpoint-down(sm) {
-        color: #ffffff !important;
         font-size: 16px;
       }
     }
@@ -166,9 +164,6 @@
                 color: #ffffff;
                 font-size: 12px;
                 &.active {
-                  background-color: #ffffff !important;
-                  color: $primary-color !important;
-                  border-color: #ffffff !important;
                 }
                 &:hover {
                   border-color: #ffffff;
@@ -249,6 +244,18 @@
               margin: 0;
               font-weight: normal;
             }
+            .contact-mobile {
+              color: #000000;
+              i {
+                color: $primary-color;
+              }
+            }
+            .contact-mail {
+              color: #000000;
+              i {
+                color: $primary-color;
+              }
+            }
           }
         }
 
@@ -279,7 +286,6 @@
             margin: 5px 0;
             font-weight: 400;
             @include media-breakpoint-down(sm) {
-              color: #ffffff;
               font-size: 14px;
             }
           }
@@ -307,18 +313,18 @@
                 font-size: 14px;
               }
 
-              button {
+              .btn {
                 text-transform: uppercase;
                 font-size: 12px;
-                background-color: $primary-color;
+                background-color: transparent;
                 padding: 1px 10px;
+                border: 1px solid $primary-color;
                 border-radius: 8px;
-                color: #ffffff;
+                color: $primary-color;
                 font-weight: 300;
-                @include media-breakpoint-down(sm) {
-                  border-color: #ffffff;
-                  background-color: #ffffff;
-                  color: $primary-color;
+                &:hover {
+                  color: #ffffff;
+                  background-color: $primary-color;
                 }
               }
             }
@@ -382,7 +388,6 @@
         color: $primary-color;
         text-transform: uppercase;
         @include media-breakpoint-down(sm) {
-          color: #ffffff !important;
         }
       }
 
@@ -441,7 +446,7 @@
       }
 
       .location {
-        margin-top: 1rem;
+        margin-top: 2rem;
 
         .map-location {
           margin-top: 1rem;
@@ -462,7 +467,9 @@
 
         .utilities-album {
           margin-top: 1rem;
-
+          @include media-breakpoint-down(sm){
+            padding: 0 10px;
+          }
           img {
             &:focus {
               outline: none;
@@ -560,9 +567,6 @@
 
         span {
           font-weight: 400;
-          @include media-breakpoint-down(sm) {
-            color: #ffffff;
-          }
         }
 
         .filter {
@@ -587,14 +591,7 @@
                 padding: 0 25px;
                 font-size: 12px;
                 @include media-breakpoint-down(sm) {
-                  color: #ffffff !important;
-                  background-color: transparent !important;
-                  border-color: #ffffff !important;
                   padding: 0 10px;
-                  &.active {
-                    color: $primary-color !important;
-                    background-color: #ffffff !important;
-                  }
                 }
 
                 &.active {
@@ -608,9 +605,10 @@
           .tab-content {
             .tab-pane {
               .slick-suggest {
+                padding: 0 10px;
                 .slick-item {
                   @include flexbox();
-                  a:hover{
+                  a:hover {
                     text-decoration: none;
                     color: #007bff !important;
                   }
@@ -622,10 +620,11 @@
                     margin: 1rem 0;
                     padding: 0 5px;
                     font-weight: 400;
+                    color: #000000;
                   }
                   .mobile-item {
                     position: relative;
-                    img{
+                    img {
                       border-radius: 10px;
                       width: 100%;
                       height: 300px;
@@ -651,7 +650,7 @@
                     }
                     .price-box {
                       position: absolute;
-                      bottom: 55px;
+                      bottom: 56px;
                       right: -1px;
                       color: #ffffff;
                       padding: 10px;
@@ -703,18 +702,18 @@
                     }
                   }
                 }
-                .slick-dots{
+                .slick-dots {
                   bottom: unset !important;
                   top: 0 !important;
                   left: 53%;
                   width: 50%;
                   text-align: start !important;
-                  li{
+                  li {
                     margin: 0 0;
-                    button{
+                    button {
                       padding: 0;
                     }
-                    button:before{
+                    button:before {
                       font-size: 10px;
                     }
                   }
@@ -723,7 +722,7 @@
                   top: 40%;
                   left: -50px;
                   @include media-breakpoint-down(sm) {
-                    left: -25px !important;
+                    left: -15px !important;
                   }
                   @include media-breakpoint-up(md) {
                     display: none !important;
@@ -745,7 +744,7 @@
                     right: -35px !important;
                   }
                   @include media-breakpoint-down(sm) {
-                    right: -25px !important;
+                    right: -15px !important;
                   }
                   &:before {
                     color: #000;
@@ -765,6 +764,7 @@
         margin-top: 2rem;
 
         .table {
+          margin-top: 1rem;
           th {
             border: none;
             @include media-breakpoint-down(sm) {
@@ -776,7 +776,7 @@
           td {
             border: none;
             font-weight: 400;
-            .my-rating{
+            .my-rating {
               display: inline-block;
             }
             @include media-breakpoint-down(lg) {
@@ -915,7 +915,7 @@
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             font-size: 14px !important;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               font-size: 12px !important;
             }
           }
@@ -962,6 +962,7 @@
       }
       .slick-multiple {
         text-align: center;
+        width: 95%;
         a {
           color: $primary-color;
           background-color: #ffffff;
@@ -972,13 +973,6 @@
           @include media-breakpoint-down(sm) {
             font-size: 10px;
             padding: 2px 4px;
-            background-color: transparent !important;
-            color: #ffffff !important;
-            border-color: #ffffff !important;
-            &.chosen-tag {
-              background-color: #ffffff !important;
-              color: $primary-color !important;
-            }
           }
 
           &.chosen-tag {
@@ -990,7 +984,8 @@
           display: none !important;
         }
         button.slick-next {
-          top: 16px !important;
+          top: 15px !important;
+          right: -15px !important;
         }
         button.slick-next:before {
           content: '\f054';

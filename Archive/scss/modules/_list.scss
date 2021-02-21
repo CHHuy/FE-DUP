@@ -1,6 +1,6 @@
 .advisor-card-list {
   margin: 2rem;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     margin: 3rem 0 1rem 0;
   }
   .advisor-list-row {

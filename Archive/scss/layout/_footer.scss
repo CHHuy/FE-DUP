@@ -2,7 +2,6 @@
 Footer
 ========================================================================== */
 .footer {
-
   .footer-hotline-info-mobile {
     .list-group {
       @include flex-direction(row);
@@ -47,7 +46,7 @@ Footer
           border-width: 0;
         }
       }
-      @media (max-width: 400px){
+      @media (max-width: 400px) {
         .list-group-item:nth-last-child(2) {
           border-width: 0;
         }
@@ -59,14 +58,14 @@ Footer
         }
       }
     }
-    .info-mobile{
+    .info-mobile {
       margin-bottom: 1rem;
-      .card{
+      .card {
         border: none;
-        .card-header{
+        .card-header {
           background-color: transparent;
           border: none;
-          .btn{
+          .btn {
             display: block;
             width: 100%;
             text-align: start;
@@ -74,22 +73,23 @@ Footer
             border-radius: 0;
             color: $primary-color;
             padding: 0.375rem 0;
-            i{
+            i {
               float: right;
               line-height: 1.5;
             }
-            &:focus{
+            &:focus {
               box-shadow: none;
             }
           }
-          .btn-link:focus, .btn-link:hover{
+          .btn-link:focus,
+          .btn-link:hover {
             text-decoration: none;
           }
         }
-        .card-body{
+        .card-body {
           padding: 0 1.25rem;
-          .list-group{
-            .list-group-item{
+          .list-group {
+            .list-group-item {
               padding: 0 0;
               border: none;
             }
@@ -148,34 +148,34 @@ Footer
     height: 100%;
     padding: 30px 0;
     background-color: #365f53;
-    p{
+    p {
       color: #ffffff;
     }
-    .footer-logo{
-      img{
+    .footer-logo {
+      img {
         height: 30px;
       }
     }
-    .social-media{
+    .social-media {
       padding: 10px 0;
-      a{
+      a {
         padding: 5px 10px 5px 0;
-        i{
+        i {
           color: #ffffff;
         }
       }
     }
-    .app-store{
-      a{
+    .app-store {
+      a {
         display: block;
         width: 130px;
         text-align: center;
       }
-      .google-store{
+      .google-store {
         height: 50px;
         width: 130px;
       }
-      .apple-store{
+      .apple-store {
         height: 35px;
         width: 110px;
       }

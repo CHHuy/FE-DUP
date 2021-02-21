@@ -8,7 +8,4 @@ html {
   font-family: SVN-Gotham;
 }
 .main {
-  @include media-breakpoint-down(sm) {
-    background-color: $primary-color;
-  }
 }

@@ -4,11 +4,11 @@ Content
 .app-loading {
   display: none;
 }
-html{
+html {
   font-family: SVN-Gotham;
 }
-.main{
-  @include media-breakpoint-down(sm){
+.main {
+  @include media-breakpoint-down(sm) {
     background-color: $primary-color;
   }
 }

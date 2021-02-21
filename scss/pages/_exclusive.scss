@@ -1,0 +1,276 @@
+.dq-ban {
+  .dv-header {
+    .header-exclusive {
+      .exclusive-text {
+        font-weight: 900;
+        font-size: 26px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #6f3f09,
+          #8e632e,
+          #ad8853,
+          #cdae7b,
+          #edd6a6
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .dv-body {
+    .dv-body-content-mobile {
+      margin: 1rem 0;
+      text-align: center;
+      .exclusive-text {
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        background: linear-gradient(
+          to right,
+          #6f3f09,
+          #8e632e,
+          #ad8853,
+          #cdae7b,
+          #edd6a6
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .header-price {
+        color: $primary-color;
+        font-size: 20px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+      .video-tour {
+        margin-top: 0.5rem;
+
+        i {
+          color: red;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .image-section {
+      width: 100%;
+      margin: auto;
+      position: relative;
+
+      .heart-interact {
+        position: absolute;
+        top: 0.5rem;
+        right: 3rem;
+        padding: 5px;
+        z-index: 1000;
+
+        i {
+          color: #ffffff;
+
+          &:hover {
+            color: $primary-color;
+          }
+
+          &:active {
+            color: $primary-color;
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        background-image: url('../images/dq-bg.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        top: 45px;
+        width: 100%;
+        height: 95%;
+        @include media-breakpoint-down(sm) {
+          top: 25px !important;
+        }
+      }
+
+      .image-show {
+        padding: 5px;
+        background: linear-gradient(
+          to right,
+          #6f3f09,
+          #8e632e,
+          #ad8853,
+          #cdae7b,
+          #edd6a6
+        );
+        border-radius: 8px;
+        @include media-breakpoint-up(xl) {
+          width: 60% !important;
+        }
+        width: 90% !important;
+        @include media-breakpoint-down(sm) {
+          width: 80% !important;
+          img {
+            height: 300px;
+          }
+        }
+        margin: auto;
+      }
+
+      .image-slide {
+        width: 50%;
+        margin: auto;
+        @include media-breakpoint-down(md) {
+          width: 80%;
+        }
+        @include media-breakpoint-down(sm) {
+          img {
+            height: 75px;
+          }
+        }
+
+        button.slick-prev {
+          display: unset !important;
+          @include media-breakpoint-down(sm) {
+            top: -180%;
+          }
+          &:before {
+            color: #ffffff !important;
+          }
+        }
+
+        button.slick-next {
+          display: unset !important;
+          @include media-breakpoint-down(sm) {
+            top: -180%;
+          }
+          &:before {
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+
+    .button-option {
+      a {
+        color: $primary-color;
+        background-color: transparent;
+        border-radius: 15px;
+        padding: 5px 10px;
+        border: 1px solid $primary-color;
+        text-decoration: none;
+
+        i {
+          color: $primary-color;
+        }
+
+        span {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: #ffffff;
+          background-color: $primary-color;
+
+          i {
+            color: #ffffff;
+          }
+        }
+
+        &:active {
+          color: #ffffff;
+          background-color: $primary-color;
+
+          i {
+            color: #ffffff;
+          }
+        }
+
+        &:active {
+          color: #ffffff;
+          background-color: $primary-color;
+
+          i {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .info-section {
+      width: 100%;
+      @include flexbox();
+      @include media-breakpoint-down(sm) {
+        display: block !important;
+      }
+
+      .house-info {
+        width: 45%;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+        .nav-tabs {
+          border: none !important;
+        }
+
+        .nav-item {
+          .nav-link {
+            color: #6f3f09 !important;
+            border-color: #edd6a6 !important;
+            border-bottom: 0;
+            margin-bottom: 0 !important;
+            @include media-breakpoint-down(md) {
+              font-size: 13px;
+            }
+            &.active {
+              background: linear-gradient(
+                to right,
+                #ad8853 0%,
+                #edd6a6 100%
+              ) !important;
+              color: #6f3f09 !important;
+              border-color: #edd6a6 !important;
+            }
+          }
+        }
+
+        .tab-pane {
+          background: linear-gradient(
+            to right,
+            #ad8853 0%,
+            #edd6a6 100%
+          ) !important;
+
+          .list-group-item {
+            color: #6f3f09 !important;
+          }
+        }
+      }
+
+      .contact-info {
+        width: 55%;
+        margin: 0;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+        .send-message {
+          margin-left: 1.5rem;
+          @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            margin-top: 1rem;
+          }
+        }
+
+        .card-info {
+        }
+      }
+    }
+  }
+}
