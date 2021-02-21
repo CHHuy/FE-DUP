@@ -11985,6 +11985,15 @@ body,
   color: #ffffff;
 }
 
+.DV-Ban .dv-header .sub-header .header-option a:active {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.DV-Ban .dv-header .sub-header .header-option a:active i {
+  color: #ffffff;
+}
+
 .DV-Ban .dv-body {
   padding: 30px 0;
 }
@@ -13642,7 +13651,7 @@ body,
 .agent-filter form .form-row .form-group label {
   font-size: 18px;
   text-transform: uppercase;
-  color: #497F70;
+  color: #497f70;
 }
 
 .agent-filter form .form-row .form-group select {
@@ -13658,9 +13667,9 @@ body,
 
 .agent-filter form button {
   color: #ffffff;
-  background-color: #497F70;
+  background-color: #497f70;
   border-radius: 15px;
-  border-color: #497F70;
+  border-color: #497f70;
   padding: 0 20px;
   font-weight: 300;
   text-transform: uppercase;
