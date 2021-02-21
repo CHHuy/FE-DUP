@@ -1,131 +1,149 @@
-
-.image {
-  display: block;
-  position: relative;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-  }
-}
-
-.main.main-news {
-  background-color: transparent;
-}
-.article-title {
-  display: none;
-  @include media-breakpoint-up(md) {
+.main-news {
+  .image {
     display: block;
-    @include font-size(40px);
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
   }
-  color: #497f70;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.article-section {
-  .ad-box-left, .ad-box-right {
+
+  .main.main-news {
+    background-color: transparent;
+  }
+
+  .article-title {
     display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+      @include font-size(40px);
+    }
+    color: #497f70;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  @include media-breakpoint-up(lg) {
-    @include flexbox();
-    &+.article-section {
-      .article-content {
+
+  .article-section {
+    .ad-box-left, .ad-box-right {
+      display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include flexbox();
+      & + .article-section {
+        .article-content {
+          margin-top: 82px;
+        }
+      }
+      .ad-box-left, .ad-box-right {
+        display: block;
+        width: 220px;
+        text-align: center;
         margin-top: 82px;
       }
-    }
-    .ad-box-left, .ad-box-right {
-      display: block;
-      width: 220px;
-      text-align: center;
-      margin-top: 82px;
-    }
-    .article-content {
-      @include flex(1);
+      .article-content {
+        @include flex(1);
+      }
     }
   }
-}
-.article-content {
-  p {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  @include media-breakpoint-up(md) {
 
+  .article-content {
     p {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 12px;
+      padding-right: 12px;
     }
-  }
-}
-.ad-box {
-  display: none;
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
-}
-.article-related-title {
-  @include font-size(20px);
-  color: #497f70;
-}
-.article-related-item {
-  padding: 12px;
-  .article-related-img {
-    width: 100%;
-  }
-  .article-related-name {
-    @include font-size(14px);
+
     @include media-breakpoint-up(md) {
-      @include font-size(18px);
+
+      p {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
-    font-weight: 300;
+  }
+
+  .ad-box {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .article-related-title {
+    @include font-size(20px);
     color: #497f70;
-    text-align: center;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 6px;
   }
-  .article-related-price {
-    text-align: center;
-    display: block;
-    @include font-size(16px);
-    @include media-breakpoint-up(md) {
-      @include font-size(20px);
+
+  .article-related-item {
+    padding: 12px;
+
+    .article-related-img {
+      width: 100%;
     }
-    font-weight: 500;
+
+    .article-related-name {
+      @include font-size(14px);
+      @include media-breakpoint-up(md) {
+        @include font-size(18px);
+      }
+      font-weight: 300;
+      color: #497f70;
+      text-align: center;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 6px;
+    }
+
+    .article-related-price {
+      text-align: center;
+      display: block;
+      @include font-size(16px);
+      @include media-breakpoint-up(md) {
+        @include font-size(20px);
+      }
+      font-weight: 500;
+    }
   }
-}
-.slick-prev {
-  &:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f053";
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
-    font-weight: 900;
-    color: #000000;
+
+  .slick-prev {
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f053";
+      display: inline-block;
+      padding-right: 3px;
+      vertical-align: middle;
+      font-weight: 900;
+      color: #000000;
+    }
   }
-}
-.slick-next {
-  &:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f054";
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
-    font-weight: 900;
-    color: #000000;
+
+  .slick-next {
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f054";
+      display: inline-block;
+      padding-right: 3px;
+      vertical-align: middle;
+      font-weight: 900;
+      color: #000000;
+    }
   }
-}
-.slick-prev, .slick-next {
-  top: 38%;
-}
-.slick-prev {
-  left: -8px;
-}
-.slick-next {
-  right: -8px;
-}
-.article-related-list {
-  padding-left: 6px;
-  padding-right: 6px;
+
+  .slick-prev, .slick-next {
+    top: 38%;
+  }
+
+  .slick-prev {
+    left: -8px;
+  }
+
+  .slick-next {
+    right: -8px;
+  }
+
+  .article-related-list {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
 }
