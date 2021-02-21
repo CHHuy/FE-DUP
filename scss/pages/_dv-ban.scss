@@ -67,6 +67,14 @@
               color: #ffffff;
             }
           }
+          &:active {
+            color: #ffffff;
+            background-color: $primary-color;
+
+            i {
+              color: #ffffff;
+            }
+          }
         }
       }
     }
