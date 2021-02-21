@@ -5,7 +5,6 @@ Header
   background-color: #2a5447;
   height: 150px;
 
-
   .header-decoration {
     @include media-breakpoint-down(sm) {
       display: none;
@@ -62,7 +61,8 @@ Header
   }
 }
 
-.header, .header-login {
+.header,
+.header-login {
   position: relative;
 
   .sub-header:nth-child(1) {
@@ -87,7 +87,6 @@ Header
       }
     }
   }
-
 
   .navbar {
     .navbar-brand {
@@ -140,7 +139,6 @@ Header
       padding: 0;
 
       li.button-login {
-
       }
 
       li.button-regist {
@@ -161,7 +159,6 @@ Header
       font-weight: bold;
 
       i {
-
       }
     }
 
@@ -171,9 +168,7 @@ Header
   }
 }
 
-
 .header-login {
-
 }
 
 .header-mobile {
@@ -214,7 +209,6 @@ Header
       }
 
       li.button-login {
-
       }
 
       li.button-regist {
@@ -243,7 +237,7 @@ Header
       font-weight: bold;
     }
 
-    .navigation-tag{
+    .navigation-tag {
       font-weight: 300;
     }
   }

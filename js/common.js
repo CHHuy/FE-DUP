@@ -143,7 +143,6 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     btnSwitch()
     slickSlider()
     slickAgentList()
-    slickArticleRelated()
   }
 
   $(document).ready(function() {
