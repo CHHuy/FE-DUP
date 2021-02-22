@@ -144,9 +144,14 @@
 
     .info-section {
       width: 40%;
-      padding: 0 0 0 20px;
+      margin: 0 0 0 30px;
+      @include media-breakpoint-up(lg){
+        height: 100%;
+        position: sticky;
+        top:0;
+      }
       @include media-breakpoint-down(sm) {
-        padding: 0;
+        margin: 0;
       }
 
       .house-info {
@@ -160,8 +165,6 @@
               border-radius: 0;
               border-color: $primary-color;
               @include media-breakpoint-down(sm) {
-                border-color: #ffffff;
-                color: #ffffff;
                 font-size: 12px;
                 &.active {
                 }
@@ -182,11 +185,10 @@
         }
 
         .nav-tabs {
-          border-bottom: 1px solid $primary-color;
+          border: none;
         }
         @include media-breakpoint-down(sm) {
           .tab-content {
-            border: 1px solid #ffffff;
           }
         }
 
@@ -336,11 +338,18 @@
 
           .list-agent-item {
             text-align: center;
+            @include media-breakpoint-down(sm){
+              padding: 0 10px;
+            }
 
             img {
               width: 70px;
               height: 70px;
               margin: auto;
+              @include media-breakpoint-down(sm){
+                width: 60px;
+                height: 60px;
+              }
             }
 
             p {
@@ -348,11 +357,14 @@
               font-size: 14px;
               font-weight: bold;
               text-transform: uppercase;
+              @include media-breakpoint-down(sm){
+                font-size: 12px;
+              }
             }
           }
 
           button.slick-prev {
-            left: -20px;
+            left: -10px;
             top: 34%;
             @include media-breakpoint-up(lg) {
               display: none !important;
@@ -370,7 +382,7 @@
             right: 0;
             top: 34%;
             @include media-breakpoint-down(sm) {
-              right: -25px !important;
+              right: -10px !important;
             }
             &:before {
               color: #000;
@@ -415,10 +427,10 @@
               border: 1px solid #f1f1f1;
               border-radius: 0;
               color: #000000;
-              padding: 5px 2.5rem;
+              padding: 5px 10px;
               font-weight: bold;
               @include media-breakpoint-down(lg) {
-                padding: 5px 1rem;
+                padding: 5px 5px;
                 font-size: 14px;
               }
 
@@ -889,7 +901,7 @@
           .heart-interact {
             position: absolute;
             top: 0.5rem;
-            right: 0.5rem;
+            right: 1rem;
             padding: 5px;
             z-index: 1000;
             i {
@@ -920,6 +932,10 @@
             }
           }
           .image-show {
+            @include media-breakpoint-down(sm){
+              width: 95%;
+              margin: auto;
+            }
             img {
               height: 450px;
               @include media-breakpoint-down(sm) {
@@ -929,6 +945,10 @@
           }
 
           .image-slide {
+            @include media-breakpoint-down(sm){
+              width: 95%;
+              margin: auto;
+            }
             img {
               height: 150px;
               @include media-breakpoint-down(sm) {
@@ -997,11 +1017,6 @@
     }
     .card-contact-mobile {
       @include media-breakpoint-down(sm) {
-        .col {
-          padding-right: 10px !important;
-          padding-left: 10px !important;
-        }
-
         margin: 1rem 0;
 
         .card-img-avatar {
