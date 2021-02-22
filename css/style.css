@@ -12735,18 +12735,12 @@ body,
 
 .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
   top: 40%;
-  left: -50px;
+  left: -30px;
 }
 
 @media (max-width: 767.98px) {
   .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
     left: -15px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .DV-Ban .dv-body .dv-body-content .suggestion .filter .tab-content .tab-pane .slick-suggest button.slick-prev {
-    display: none !important;
   }
 }
 

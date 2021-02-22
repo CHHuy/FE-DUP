@@ -141,6 +141,11 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       ]
     });
   }
+  function fixSlickTab(){
+    $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+      $('.slick-suggest').slick('setPosition');
+    })
+  }
 
   function btnSwitch(){
     $('body').on('click', '.btn-switch', function() {
@@ -172,6 +177,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     slickSuggest()
     ratingaStar()
     slickArticleRelated()
+    fixSlickTab()
   }
 
   $(document).ready(function() {

@@ -732,12 +732,9 @@
                 }
                 button.slick-prev {
                   top: 40%;
-                  left: -50px;
+                  left: -30px;
                   @include media-breakpoint-down(sm) {
                     left: -15px !important;
-                  }
-                  @include media-breakpoint-up(md) {
-                    display: none !important;
                   }
 
                   &:before {
