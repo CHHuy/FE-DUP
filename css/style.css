@@ -13888,7 +13888,13 @@ body,
   margin: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .dq-ban .dv-body .image-section .image-show {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 1800px) {
   .dq-ban .dv-body .image-section .image-show {
     width: 60% !important;
   }
@@ -13946,50 +13952,6 @@ body,
 
 .dq-ban .dv-body .image-section .image-slide button.slick-next:before {
   color: #ffffff !important;
-}
-
-.dq-ban .dv-body .button-option a {
-  color: #497f70;
-  background-color: transparent;
-  border-radius: 15px;
-  padding: 5px 10px;
-  border: 1px solid #497f70;
-  text-decoration: none;
-}
-
-.dq-ban .dv-body .button-option a i {
-  color: #497f70;
-}
-
-.dq-ban .dv-body .button-option a span {
-  font-size: 18px;
-}
-
-.dq-ban .dv-body .button-option a:hover {
-  color: #ffffff;
-  background-color: #497f70;
-}
-
-.dq-ban .dv-body .button-option a:hover i {
-  color: #ffffff;
-}
-
-.dq-ban .dv-body .button-option a:active {
-  color: #ffffff;
-  background-color: #497f70;
-}
-
-.dq-ban .dv-body .button-option a:active i {
-  color: #ffffff;
-}
-
-.dq-ban .dv-body .button-option a:active {
-  color: #ffffff;
-  background-color: #497f70;
-}
-
-.dq-ban .dv-body .button-option a:active i {
-  color: #ffffff;
 }
 
 .dq-ban .dv-body .info-section {
@@ -14068,6 +14030,101 @@ body,
     margin-left: 0;
     margin-top: 1rem;
   }
+}
+
+.button-option a {
+  color: #497f70;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: 1px solid #497f70;
+  text-decoration: none;
+}
+
+.button-option a i {
+  color: #497f70;
+}
+
+.button-option a span {
+  font-size: 18px;
+}
+
+.button-option a:hover {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.button-option a:hover i {
+  color: #ffffff;
+}
+
+.button-option a:active {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.button-option a:active i {
+  color: #ffffff;
+}
+
+.button-option a:active {
+  color: #ffffff;
+  background-color: #497f70;
+}
+
+.button-option a:active i {
+  color: #ffffff;
+}
+
+.project-detail .info-section .h6 {
+  color: #497f70;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.project-detail .info-section .project-title {
+  border: 1px solid #497f70;
+  border-width: 1px 0 1px 0;
+  padding: 10px 0;
+}
+
+.project-detail .info-section .project-title .h4 {
+  color: #497f70;
+}
+
+.project-detail .info-section .project-title .project-address {
+  color: #000000;
+}
+
+.project-detail .info-section ul.list-info-detail {
+  padding: 1rem;
+  margin: 0;
+}
+
+.project-detail .info-section .project-manager-logo {
+  padding: 0 1rem 2rem 1rem;
+  border-bottom: 1px solid #497f70;
+}
+
+.project-detail .info-section .project-manager-logo img {
+  height: 50px;
+}
+
+.project-detail .info-section .project-link {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.project-detail .info-section .project-link a {
+  display: block;
+}
+
+.project-detail .dv-body-content .video-tour {
+  margin: 0;
+}
+
+.project-detail .dv-body-content .video-tour h5 {
+  display: inline-block;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
