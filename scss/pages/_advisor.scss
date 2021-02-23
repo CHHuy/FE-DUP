@@ -11,7 +11,6 @@
       }
       @include media-breakpoint-down(sm) {
         font-size: 14px;
-        color: #ffffff;
         line-height: 1.5;
       }
     }
@@ -66,14 +65,12 @@
         font-weight: normal;
         color: #000000;
         @include media-breakpoint-down(sm) {
-          color: #ffffff;
         }
       }
 
       .card-text {
         color: #000000;
         @include media-breakpoint-down(sm) {
-          color: #ffffff;
         }
       }
 
@@ -97,21 +94,7 @@
           border-color: $primary-color;
           border-top-width: 1px;
           @include media-breakpoint-down(sm) {
-            color: $primary-color;
-            border-color: $primary-color;
-            background-color: #ffffff;
             font-size: 14px;
-            &.active {
-              background-color: #ffffff !important;
-              border-color: $primary-color !important;
-              color: $primary-color !important;
-            }
-
-            &:hover {
-              background-color: #ffffff !important;
-              border-color: $primary-color !important;
-              color: $primary-color !important;
-            }
           }
 
           &.active {
@@ -170,7 +153,6 @@
       margin-top: 60px;
       margin-bottom: 30px;
       @include media-breakpoint-down(sm) {
-        border: 1px solid #ffffff;
       }
     }
   }
@@ -217,7 +199,6 @@
         @include media-breakpoint-down(sm) {
           display: block;
           h5 {
-            color: #ffffff !important;
           }
         }
 
@@ -238,7 +219,6 @@
 
           p {
             @include media-breakpoint-down(sm) {
-              color: #ffffff;
             }
           }
 
@@ -251,8 +231,6 @@
               border-radius: 15px;
               text-decoration: none;
               @include media-breakpoint-down(sm) {
-                color: #ffffff;
-                border-color: #ffffff;
                 display: block;
                 text-align: center;
               }

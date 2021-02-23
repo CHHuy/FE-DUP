@@ -1,7 +1,7 @@
 .search-filter {
   padding: 2rem 0 2rem 0;
   .h2 {
-    color: #ffffff;
+    color: $primary-color;
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 2rem;
@@ -11,22 +11,23 @@
       margin-bottom: 2rem;
     }
     label {
-      color: #ffffff;
+      color: $primary-color;
       text-transform: uppercase;
     }
 
     .input-group-text {
-      border-color: #ffffff;
+      border-color: #000000;
       border-bottom-left-radius: 15px;
       border-top-left-radius: 15px;
-      background-color: #ffffff;
+      background-color: transparent;
     }
 
     input {
-      border-color: #ffffff;
+      border-color: #000000;
       background-clip: unset;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
+      border-width: 1px 1px 1px 0;
 
       &:focus {
         box-shadow: none;
@@ -48,8 +49,8 @@
       color: #ffffff;
       border-radius: 15px;
       padding: 0 20px;
-      background-color: #2a5447;
-      border-color: #2a5447;
+      background-color: $primary-color;
+      border-color: $primary-color;
       color: #ffffff;
     }
   }
@@ -125,12 +126,13 @@
 
   .search-map {
     width: 50%;
-    height: 100%;
     padding: 2rem 0 2rem 0;
     @include media-breakpoint-down(sm) {
       width: 100%;
     }
     #map {
+      position: sticky !important;
+      top: 2rem;
       height: 750px;
       /* The height is 400 pixels */
       width: 100%;
@@ -257,15 +259,12 @@
         a {
           color: #ffffff;
           background-color: $primary-color;
+          border-color: #2a5447;
           padding: 5px 20px;
           border-radius: 15px;
         }
         @include media-breakpoint-down(sm) {
           margin-top: 15px;
-          a {
-            background-color: #2a5447;
-            border-color: #2a5447;
-          }
         }
       }
     }

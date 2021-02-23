@@ -239,7 +239,7 @@
               font-weight: bold;
               text-transform: uppercase;
               margin: 0;
-              color: $primary-color;
+              color: #000000;
             }
 
             p {
@@ -402,6 +402,11 @@
         @include media-breakpoint-down(sm) {
         }
       }
+      .h5-mobile{
+        @include media-breakpoint-down(sm){
+          color: #ffffff;
+        }
+      }
 
       .video-tour {
         margin-top: 1rem;
@@ -433,6 +438,14 @@
                 padding: 5px 5px;
                 font-size: 14px;
               }
+              @include media-breakpoint-down(sm) {
+                padding: 5px 2px;
+                font-size: 10px;
+              }
+              @media (max-width: 360px) {
+                padding: 5px 1px;
+                font-size: 8px;
+              }
 
               &.active {
                 background-color: #f1f1f1;
@@ -443,7 +456,14 @@
 
         .tab-content {
           background-color: #f1f1f1;
-
+          @include media-breakpoint-down(sm){
+            ul{
+              padding: 0 5px !important;
+              li{
+                padding: 5px 10px !important;
+              }
+            }
+          }
           ul {
             @include flexbox();
             @include flex-wrap(wrap);
@@ -463,10 +483,14 @@
         .map-location {
           margin-top: 1rem;
           width: 100%;
-          height: 500px;
+          height: 100%;
+
 
           div#map {
             height: 500px;
+            @include media-breakpoint-down(sm){
+              height: 250px;
+            }
             /* The height is 400 pixels */
             width: 100%;
             /* The width is the width of the web page */
@@ -771,14 +795,23 @@
 
       .history-account {
         margin-top: 2rem;
+        @include media-breakpoint-down(sm){
+          background-color: #9e9e9e;
+          padding: 5px;
+        }
 
         .table {
           margin-top: 1rem;
           th {
             border: none;
             @include media-breakpoint-down(sm) {
-              font-size: 14px !important;
+              font-size: 12px !important;
               padding: 0 5px !important;
+              color: #ffffff
+            }
+            @media (max-width: 360px) {
+              padding: 0 !important;
+              font-size: 10px !important;
             }
           }
 
@@ -794,12 +827,19 @@
             }
             @include media-breakpoint-down(sm) {
               font-size: 12px !important;
+              color: #ffffff
+            }
+            @media (max-width: 360px) {
+              padding: 0 !important;
+              font-size: 10px !important;
             }
           }
 
           thead {
             border-bottom: 1px solid;
-
+            @include media-breakpoint-down(sm){
+              border-color: #ffffff;
+            }
             tr {
               th {
                 text-transform: uppercase;
@@ -898,7 +938,7 @@
           .heart-interact {
             position: absolute;
             top: 0.5rem;
-            right: 1rem;
+            right: 0.7rem;
             padding: 5px;
             z-index: 1000;
             i {
@@ -921,11 +961,23 @@
             background-color: #edcf94;
             color: $primary-color;
             padding: 2px 8px;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
             font-size: 14px !important;
+            &:before{
+              content: "";
+              position: absolute;
+              right: -9px;
+              bottom: 0px;
+              width: 0;
+              height: 0px;
+              border-left: 10px solid #edcf94;
+              border-top: 11px solid transparent;
+              border-bottom: 11px solid transparent;
+            }
             @include media-breakpoint-down(sm) {
               font-size: 12px !important;
+              left: 2.5% !important;
             }
           }
           .image-show {
@@ -1023,6 +1075,9 @@
           .card-title {
             color: #000000 !important;
             font-size: 14px !important;
+            @include media-breakpoint-down(sm){
+              color: $primary-color !important;
+            }
           }
           p {
             color: #000000;
@@ -1034,11 +1089,13 @@
           p {
             color: #000000 !important;
             font-size: 12px !important;
+            @include media-breakpoint-down(sm){
+              color: $primary-color !important;
+            }
           }
           a {
             font-size: 12px !important;
             i {
-              color: #ffffff !important;
             }
           }
         }
