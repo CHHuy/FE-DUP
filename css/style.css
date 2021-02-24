@@ -14136,6 +14136,7 @@ body,
 
 @media (max-width: 767.98px) {
   .project-detail .info-section .project-link {
+    margin: 0;
     text-align: center;
     /*        @include flexbox();
         @include flex-wrap(wrap);
@@ -14157,6 +14158,14 @@ body,
     background-color: #497f70;
     color: #ffffff;
   }
+}
+
+.project-detail .dv-body-content {
+  margin-top: 1rem;
+}
+
+.project-detail .dv-body-content .content-text p {
+  margin-bottom: 0;
 }
 
 .project-detail .dv-body-content .video-tour {
@@ -14334,7 +14343,7 @@ body,
   background-color: #497f70;
   color: #ffffff;
   border-radius: 15px;
-  padding: 2px 20px;
+  padding: 4px 20px;
   text-decoration: none;
 }
 

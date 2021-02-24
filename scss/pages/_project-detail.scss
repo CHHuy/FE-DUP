@@ -43,6 +43,7 @@
         display: block;
       }
       @include media-breakpoint-down(sm){
+        margin: 0;
         text-align: center;
 /*        @include flexbox();
         @include flex-wrap(wrap);
@@ -68,6 +69,12 @@
   }
 
   .dv-body-content {
+    margin-top: 1rem;
+    .content-text{
+      p{
+        margin-bottom: 0;
+      }
+    }
     .video-tour {
       margin-top: 2rem !important;
 
@@ -243,9 +250,8 @@
           background-color: $primary-color;
           color: #ffffff;
           border-radius: 15px;
-          padding: 2px 20px;
+          padding: 4px 20px;
           text-decoration: none;
-
           &:hover {
             background-color: #2a5447;
           }
