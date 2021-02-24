@@ -14127,4 +14127,28 @@ body,
   margin: 0;
 }
 
+.project-detail .dv-body-content .utilities-building {
+  margin-top: 2rem;
+}
+
+.project-detail .dv-body-content .utilities-building ul.list-utilities {
+  padding: 0 1rem;
+}
+
+.project-detail .dv-body-content .building-contact {
+  margin-top: 2rem;
+}
+
+.project-detail .dv-body-content .contact-seller {
+  margin-top: 2rem;
+}
+
+.project-detail .dv-body-content .contact-seller .info-section {
+  width: 100%;
+}
+
+.project-detail .dv-body-content .contact-seller .send-all {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

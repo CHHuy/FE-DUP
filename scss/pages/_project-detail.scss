@@ -46,6 +46,27 @@
         margin: 0;
       }
     }
+    .utilities-building{
+      margin-top: 2rem;
+      ul.list-utilities{
+        padding: 0 1rem;
+      }
+    }
+    .building-contact{
+      margin-top: 2rem;
+    }
+    .contact-seller{
+      margin-top: 2rem;
+      .info-section{
+        width: 100%;
+        .contact-info{
+
+        }
+      }
+      .send-all{
+        text-align: center;
+      }
+    }
   }
 }
 
