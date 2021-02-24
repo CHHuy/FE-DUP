@@ -1,6 +1,5 @@
 .agent-profile {
   padding: 2rem 0 2rem 0;
-
 }
 
 .result {
@@ -122,7 +121,6 @@
   background-color: transparent;
 }
 
-
 .agent-list-news {
   margin-top: -36px;
   padding-bottom: 12px;
@@ -166,7 +164,6 @@
         }
 
         a {
-
           @include hover-focus-active {
             background-color: #497f70;
             color: $white;
@@ -189,7 +186,6 @@
             background-color: #497f70;
             color: $white;
           }
-
 
           i {
             &:before {
@@ -271,7 +267,6 @@
     }
   }
 }
-
 
 .agent-filter {
   padding: 2.5rem 0 0 0;
@@ -371,7 +366,7 @@
         }
 
         .form-control {
-          color: #497F70;
+          color: #497f70;
           font-weight: 600;
         }
 

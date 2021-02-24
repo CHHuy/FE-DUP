@@ -259,9 +259,12 @@
         a {
           color: #ffffff;
           background-color: $primary-color;
-          border-color: #2a5447;
           padding: 5px 20px;
           border-radius: 15px;
+          text-decoration: none;
+          &:hover {
+            background-color: #2a5447;
+          }
         }
         @include media-breakpoint-down(sm) {
           margin-top: 15px;

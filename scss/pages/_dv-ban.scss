@@ -1,6 +1,6 @@
 .DV-Ban {
   padding: 30px 0;
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(sm) {
     padding: 10px 0;
   }
   .dv-header {
@@ -145,10 +145,10 @@
     .info-section {
       width: 40%;
       margin: 0 0 0 30px;
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         height: 100%;
         position: sticky;
-        top:0;
+        top: 0;
       }
       @include media-breakpoint-down(sm) {
         margin: 0;
@@ -244,7 +244,7 @@
 
             p {
               margin: 0;
-              font-weight: normal;
+              font-weight: 300;
             }
             .contact-mobile {
               color: #000000;
@@ -338,7 +338,7 @@
 
           .list-agent-item {
             text-align: center;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               padding: 0 10px;
             }
 
@@ -346,7 +346,7 @@
               width: 70px;
               height: 70px;
               margin: auto;
-              @include media-breakpoint-down(sm){
+              @include media-breakpoint-down(sm) {
                 width: 60px;
                 height: 60px;
               }
@@ -357,7 +357,7 @@
               font-size: 14px;
               font-weight: bold;
               text-transform: uppercase;
-              @include media-breakpoint-down(sm){
+              @include media-breakpoint-down(sm) {
                 font-size: 12px;
               }
             }
@@ -399,11 +399,12 @@
       .h5 {
         color: $primary-color;
         text-transform: uppercase;
-        @include media-breakpoint-down(sm) {
+        @media (max-width: 360px)  {
+          font-size: 16px;
         }
       }
-      .h5-mobile{
-        @include media-breakpoint-down(sm){
+      .h5-mobile {
+        @include media-breakpoint-down(sm) {
           color: #ffffff;
         }
       }
@@ -456,10 +457,10 @@
 
         .tab-content {
           background-color: #f1f1f1;
-          @include media-breakpoint-down(sm){
-            ul{
+          @include media-breakpoint-down(sm) {
+            ul {
               padding: 0 5px !important;
-              li{
+              li {
                 padding: 5px 10px !important;
               }
             }
@@ -485,10 +486,9 @@
           width: 100%;
           height: 100%;
 
-
           div#map {
             height: 500px;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               height: 250px;
             }
             /* The height is 400 pixels */
@@ -503,7 +503,7 @@
 
         .utilities-album {
           margin-top: 1rem;
-          @include media-breakpoint-down(sm){
+          @include media-breakpoint-down(sm) {
             padding: 0 10px;
           }
           img {
@@ -795,7 +795,7 @@
 
       .history-account {
         margin-top: 2rem;
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
           background-color: #9e9e9e;
           padding: 5px;
         }
@@ -807,7 +807,7 @@
             @include media-breakpoint-down(sm) {
               font-size: 12px !important;
               padding: 0 5px !important;
-              color: #ffffff
+              color: #ffffff;
             }
             @media (max-width: 360px) {
               padding: 0 !important;
@@ -827,7 +827,7 @@
             }
             @include media-breakpoint-down(sm) {
               font-size: 12px !important;
-              color: #ffffff
+              color: #ffffff;
             }
             @media (max-width: 360px) {
               padding: 0 !important;
@@ -837,7 +837,7 @@
 
           thead {
             border-bottom: 1px solid;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               border-color: #ffffff;
             }
             tr {
@@ -964,8 +964,8 @@
             border-top-right-radius: 2px;
             border-bottom-right-radius: 2px;
             font-size: 14px !important;
-            &:before{
-              content: "";
+            &:before {
+              content: '';
               position: absolute;
               right: -9px;
               bottom: 0px;
@@ -981,7 +981,7 @@
             }
           }
           .image-show {
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               width: 95%;
               margin: auto;
             }
@@ -994,7 +994,7 @@
           }
 
           .image-slide {
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               width: 95%;
               margin: auto;
             }
@@ -1075,7 +1075,7 @@
           .card-title {
             color: #000000 !important;
             font-size: 14px !important;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               color: $primary-color !important;
             }
           }
@@ -1089,7 +1089,7 @@
           p {
             color: #000000 !important;
             font-size: 12px !important;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(sm) {
               color: $primary-color !important;
             }
           }
