@@ -111,9 +111,13 @@
           #edd6a6
         );
         border-radius: 8px;
-        @include media-breakpoint-up(xl) {
+        @media (min-width: 1200px) and (max-width: 1500px) {
+          width: 80% !important;
+        }
+        @media (min-width: 1800px) {
           width: 60% !important;
         }
+
         width: 90% !important;
         @include media-breakpoint-down(sm) {
           width: 80% !important;
@@ -153,52 +157,6 @@
           }
           &:before {
             color: #ffffff !important;
-          }
-        }
-      }
-    }
-
-    .button-option {
-      a {
-        color: $primary-color;
-        background-color: transparent;
-        border-radius: 15px;
-        padding: 5px 10px;
-        border: 1px solid $primary-color;
-        text-decoration: none;
-
-        i {
-          color: $primary-color;
-        }
-
-        span {
-          font-size: 18px;
-        }
-
-        &:hover {
-          color: #ffffff;
-          background-color: $primary-color;
-
-          i {
-            color: #ffffff;
-          }
-        }
-
-        &:active {
-          color: #ffffff;
-          background-color: $primary-color;
-
-          i {
-            color: #ffffff;
-          }
-        }
-
-        &:active {
-          color: #ffffff;
-          background-color: $primary-color;
-
-          i {
-            color: #ffffff;
           }
         }
       }
@@ -270,6 +228,51 @@
 
         .card-info {
         }
+      }
+    }
+  }
+}
+.button-option {
+  a {
+    color: $primary-color;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 1px solid $primary-color;
+    text-decoration: none;
+
+    i {
+      color: $primary-color;
+    }
+
+    span {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: $primary-color;
+
+      i {
+        color: #ffffff;
+      }
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: $primary-color;
+
+      i {
+        color: #ffffff;
+      }
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: $primary-color;
+
+      i {
+        color: #ffffff;
       }
     }
   }

@@ -135,12 +135,20 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
         {
           breakpoint: 500,
           settings: {
-            dots: false
+            dots: false,
           }
         },
       ]
     });
   }
+  function slickSuggestMobile(){
+    $('.slick-suggest-mobile').slick({
+      fade: true,
+      dots: false,
+      arrows: true,
+    });
+  }
+
   function fixSlickTab(){
     $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
       $('.slick-suggest').slick('setPosition');
@@ -178,6 +186,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     ratingaStar()
     slickArticleRelated()
     fixSlickTab()
+    slickSuggestMobile()
   }
 
   $(document).ready(function() {
