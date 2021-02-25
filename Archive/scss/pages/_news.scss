@@ -1,3 +1,4 @@
+
 .image {
   display: block;
   position: relative;
@@ -22,19 +23,17 @@
   padding-bottom: 10px;
 }
 .article-section {
-  .ad-box-left,
-  .ad-box-right {
+  .ad-box-left, .ad-box-right {
     display: none;
   }
   @include media-breakpoint-up(lg) {
     @include flexbox();
-    & + .article-section {
+    &+.article-section {
       .article-content {
         margin-top: 82px;
       }
     }
-    .ad-box-left,
-    .ad-box-right {
+    .ad-box-left, .ad-box-right {
       display: block;
       width: 220px;
       text-align: center;
@@ -51,6 +50,7 @@
     padding-right: 12px;
   }
   @include media-breakpoint-up(md) {
+
     p {
       padding-left: 0;
       padding-right: 0;
@@ -96,8 +96,8 @@
 }
 .slick-prev {
   &:before {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f053';
+    font-family: "Font Awesome 5 Free";
+    content: "\f053";
     display: inline-block;
     padding-right: 3px;
     vertical-align: middle;
@@ -107,8 +107,8 @@
 }
 .slick-next {
   &:before {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f054';
+    font-family: "Font Awesome 5 Free";
+    content: "\f054";
     display: inline-block;
     padding-right: 3px;
     vertical-align: middle;
@@ -116,8 +116,7 @@
     color: #000000;
   }
 }
-.slick-prev,
-.slick-next {
+.slick-prev, .slick-next {
   top: 38%;
 }
 .slick-prev {

@@ -13284,6 +13284,122 @@ body,
   padding-right: 6px;
 }
 
+.dq-find-agent .agent {
+  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent {
+    padding-bottom: 0;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .dq-find-agent .agent .agent-content {
+    width: 40%;
+    order: -1;
+  }
+  .dq-find-agent .agent .agent-image {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.dq-find-agent .agent-content {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent-content {
+    padding: 24px;
+  }
+}
+
+.dq-find-agent .agent-content .agent-logo {
+  text-align: center;
+}
+
+.dq-find-agent .agent-content .agent-logo img {
+  width: 80%;
+}
+
+.dq-find-agent .agent-content .agent-info {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.dq-find-agent .agent-content .agent-btn {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent-content .agent-btn {
+    text-align: right;
+  }
+}
+
+.dq-find-agent .agent-content .agent-btn a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2a5447;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent-content .agent-btn a {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+
+.dq-find-agent .agent-image {
+  padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent-image {
+    padding: 24px;
+  }
+}
+
+.dq-find-agent .agent-image img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .dq-find-agent .agent-image img {
+    width: 80%;
+  }
+}
+
 .agent-profile {
   padding: 2rem 0 2rem 0;
 }

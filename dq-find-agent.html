@@ -100,23 +100,6 @@
       animation-delay: 0.4s;
     }
   </style>
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      const uluru = {lat: -25.344, lng: 131.036};
-      // The map, centered at Uluru
-      const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru,
-      });
-      // The marker, positioned at Uluru
-      const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-      });
-    }
-  </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
@@ -144,13 +127,13 @@
       </div>
       <div class="header-mb-item d-block d-md-none">
         <ul class="language-switch">
-          <li id="v-click-mobile" class="button-lang current-lang"><a href="">VI</a></li>
-          <li id="e-click-mobile" class="button-lang"><a href="">EN</a></li>
+          <li id="v-click-mobile" class="button-lang current-lang"><a href="#">VI</a></li>
+          <li id="e-click-mobile" class="button-lang"><a href="#">EN</a></li>
         </ul>
       </div>
       <div class="header-mb-item d-block d-md-none">
-        <a class="u-login" href="#">
-          Login
+        <a class="navigation-tag" href="#">
+          Dịch vụ / Bán
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -159,26 +142,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVuMobile" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               DỊCH VỤ
+              <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVuMobile">
               <a class="dropdown-item" href="#">Bán</a>
               <a class="dropdown-item" href="#">Cho thuê</a>
             </div>
           </li>
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyenMobile" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               ĐỘC QUYỀN
-              <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyenMobile">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
+              <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
             </div>
           </li>
           <li class="nav-item">
@@ -204,14 +186,14 @@
         </div>
         <div class="sub-header-item">
           <ul class="language-switch">
-            <li id="v-click" class="button-lang current-lang"><a href="">VI</a></li>
-            <li id="e-click" class="button-lang"><a href="">EN</a></li>
+            <li id="v-click" class="button-lang current-lang"><a href="#">VI</a></li>
+            <li id="e-click" class="button-lang"><a href="#">EN</a></li>
           </ul>
         </div>
         <div class="sub-header-item">
           <ul class="login-regist">
-            <li id="u-login" class="button-login"><a href="">ĐĂNG NHẬP</a></li>
-            <li id="u-regist" class="button-regist"><a href="">ĐĂNG KÝ</a></li>
+            <li id="u-login" class="button-login"><a href="#">ĐĂNG NHẬP</a></li>
+            <li id="u-regist" class="button-regist"><a href="#">ĐĂNG KÝ</a></li>
           </ul>
         </div>
       </div>
@@ -222,21 +204,21 @@
           </a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   DỊCH VỤ
+                  <span class="sr-only">(current)</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
                   <a class="dropdown-item" href="#">Bán</a>
                   <a class="dropdown-item" href="#">Cho thuê</a>
                 </div>
               </li>
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyen" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   ĐỘC QUYỀN
-                  <span class="sr-only">(current)</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyen">
                   <a class="dropdown-item" href="#">Action</a>
@@ -270,269 +252,31 @@
       </div>
     </div>
   </div>
-  <main class="main agent" id="main">
+  <main class="main" id="main">
     <div class="container">
-      <div class="search-result">
-        <div class="search-map d-none d-md-block">
-          <!--The div element for the map -->
-          <div id="map"></div>
+      <div class="dq-find-agent">
+      <div class="agent">
+        <div class="agent-image">
+          <img src="images/bg-dq-find-agent.png" alt="">
         </div>
-        <div class="result">
-          <div class="agent-profile">
-            <div class="agent-profile-cover">
-              <img src="dummy/cover.png" alt="">
-            </div>
-            <div class="agent-profile-info">
-              <div class="agent-profile-avatar">
-                <img class="cover" src="images/covet-avatar.png" alt="">
-                <img class="avatar" src="dummy/avatar.png" alt="">
-              </div>
-              <div class="agent-profile-des">
-                <span class="agent-profile-name">
-                  NGHUYỄN THỊ HUỲNH ANH
-                </span>
-                <div class="agent-profile-text">
-                  <i class="fas fa-phone-alt"></i>
-                  <span>0909123456</span>
-                </div>
-                <div class="agent-profile-text">
-                  <i class="far fa-envelope-open"></i>
-                  <span>huynhthanh@lisvn.com</span>
-                </div>
-              </div>
-            </div>
+        <div class="agent-content">
+          <div class="agent-logo">
+            <img src="images/logo-dq-find-agent.png" alt="">
           </div>
-          <div class="agent-filter">
-            <form class="">
-              <div class="form-row">
-                <div class="form-group">
-                  <select class="form-control" id="filterKeyword">
-                    <option>Giá thấp nhất</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <select class="form-control" id="filterBDS">
-                    <option>Giá cao nhât</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <select class="form-control" id="filterLocation">
-                    <option>Quận</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <button type="submit" class="btn">Tìm kiếm</button>
-                </div>
-
-              </div>
-            </form>
+          <div class="agent-info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.¬</p>
           </div>
-          <div class="agent-list-news">
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="agent-item">
-                  <div class="card">
-                    <div class="card-img">
-                      <img class="card-img-top" src="dummy/agent.png" alt="Card image cap">
-                      <div class="card-share">
-                        <a class="" href="#"><i class="fas fa-heart fa-lg"></i></a>
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                      </div>
-
-                      <div class="card-price">
-                        VND <span>5.000.000.000</span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Đảo Kim Cương | Bora Bora | Dualkey</h5>
-                      <span class="card-text">TNBT-05102</span>
-                      <div class="card-info">
-                        <i class="fas fa-bed"><span class="ml-2">03</span></i>
-                        <i class="fas fa-bath"><span class="ml-2">03</span></i>
-                        <i class="fas fa-arrows-alt-h"><span class="ml-2">142m<sup>2</sup></span></i>
-                      </div>
-                      <div class="card-share">
-                        <a class="" href="#"><i class="fas fa-heart fa-lg"></i><span>Like</span></a>
-                        <a href="#"><i class="fas fa-share-alt"></i><span>Share</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="agent-item">
-                  <div class="card">
-                    <div class="card-img">
-                      <img class="card-img-top" src="dummy/agent.png" alt="Card image cap">
-                      <div class="card-share">
-                        <a class="" href="#"><i class="fas fa-heart fa-lg"></i></a>
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                      </div>
-
-                      <div class="card-price">
-                        VND <span>5.000.000.000</span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Đảo Kim Cương | Bora Bora | Dualkey</h5>
-                      <span class="card-text">TNBT-05102</span>
-                      <div class="card-info">
-                        <i class="fas fa-bed"><span class="ml-2">03</span></i>
-                        <i class="fas fa-bath"><span class="ml-2">03</span></i>
-                        <i class="fas fa-arrows-alt-h"><span class="ml-2">142m<sup>2</sup></span></i>
-                      </div>
-                      <div class="card-share">
-                        <a class="active" href="#"><i class="fas fa-heart fa-lg"></i><span>Like</span></a>
-                        <a href="#"><i class="fas fa-share-alt"></i><span>Share</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="agent-item">
-                  <div class="card">
-                    <div class="card-img">
-                      <img class="card-img-top" src="dummy/agent.png" alt="Card image cap">
-                      <div class="card-share">
-                        <a class="active" href="#"><i class="fas fa-heart fa-lg"></i></a>
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                      </div>
-
-                      <div class="card-price">
-                        VND <span>5.000.000.000</span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Đảo Kim Cương | Bora Bora | Dualkey</h5>
-                      <span class="card-text">TNBT-05102</span>
-                      <div class="card-info">
-                        <i class="fas fa-bed"><span class="ml-2">03</span></i>
-                        <i class="fas fa-bath"><span class="ml-2">03</span></i>
-                        <i class="fas fa-arrows-alt-h"><span class="ml-2">142m<sup>2</sup></span></i>
-                      </div>
-                      <div class="card-share">
-                        <a class="active" href="#"><i class="fas fa-heart fa-lg"></i><span>Like</span></a>
-                        <a href="#"><i class="fas fa-share-alt"></i><span>Share</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="agent-item">
-                  <div class="card">
-                    <div class="card-img">
-                      <img class="card-img-top" src="dummy/agent.png" alt="Card image cap">
-                      <div class="card-share">
-                        <a class="active" href="#"><i class="fas fa-heart fa-lg"></i></a>
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                      </div>
-
-                      <div class="card-price">
-                        VND <span>5.000.000.000</span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Đảo Kim Cương | Bora Bora | Dualkey</h5>
-                      <span class="card-text">TNBT-05102</span>
-                      <div class="card-info">
-                        <i class="fas fa-bed"><span class="ml-2">03</span></i>
-                        <i class="fas fa-bath"><span class="ml-2">03</span></i>
-                        <i class="fas fa-arrows-alt-h"><span class="ml-2">142m<sup>2</sup></span></i>
-                      </div>
-                      <div class="card-share">
-                        <a class="active" href="#"><i class="fas fa-heart fa-lg"></i><span>Like</span></a>
-                        <a href="#"><i class="fas fa-share-alt"></i><span>Share</span></a>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer d-none d-xl-block">
-            <div class="footer-info d-none d-md-block">
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Công ty
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
-                      <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
-                      <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
-                      <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Dịch vụ
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
-                      <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
-                      <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
-                      <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
-                      <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Thông tin
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
-                      <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
-                      <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
-                      <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
-                      <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
-                    </div>
-                  </div>
-                </div>
-                <img src="images/logo.png" alt="">
-                <div class="social-media">
-                  <a href="">
-                    <i class="fab fa-facebook-f fa-lg"></i>
-                  </a>
-                  <a href="">
-                    <i class="fab fa-instagram fa-lg"></i>
-                  </a>
-                  <a href="">
-                    <i class="fab fa-youtube fa-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="agent-btn">
+            <a href="#">Tìm kiếm tư vấn viên cao cấp</a>
           </div>
         </div>
-        <div class="d-sm-none">
-          <button class="btn-switch">
-            Map
-          </button>
-        </div>
+      </div>
       </div>
     </div>
   </main>
   <footer class="footer" id="footer">
-    <div class="footer-hotline-info-mobile d-none d-md-block d-xl-none">
+
+    <div class="footer-hotline-info-mobile">
       <div class="container">
         <div class="list-group list-group-flush">
           <div class="list-group-item">
@@ -625,7 +369,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-info d-none d-md-block d-xl-none">
+    <div class="footer-info d-none d-md-block">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -668,13 +412,13 @@
           </div>
         </div>
         <div class="social-media">
-          <a href="">
+          <a href="#">
             <i class="fab fa-facebook-f fa-lg"></i>
           </a>
-          <a href="">
+          <a href="#">
             <i class="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="">
+          <a href="#">
             <i class="fab fa-youtube fa-lg"></i>
           </a>
         </div>
@@ -688,13 +432,13 @@
               <img src="images/logo.png" alt="">
             </div>
             <div class="social-media">
-              <a href="">
+              <a href="#">
                 <i class="fab fa-facebook-f fa-lg"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <i class="fab fa-instagram fa-lg"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <i class="fab fa-youtube fa-lg"></i>
               </a>
             </div>
@@ -724,10 +468,6 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-  async
-></script>
 
 <!-- Core JavaScript -->
 <script src="dist/core.min.js"></script>

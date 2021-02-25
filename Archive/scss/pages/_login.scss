@@ -1,6 +1,4 @@
-html,
-body,
-.wrapper {
+html, body, .wrapper{
   height: 100%;
 }
 
@@ -22,7 +20,7 @@ body,
   @include flexbox();
   @include align-items(center);
   @include flex-direction(column);
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(sm){
     padding-top: 2rem;
   }
   padding-top: 5rem;
@@ -30,7 +28,7 @@ body,
   .main-logo {
     img {
       height: 150px;
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(md){
         height: auto;
       }
     }
@@ -51,8 +49,7 @@ body,
       color: #ffffff;
     }
 
-    a.Fb-login,
-    a.G-login {
+    a.Fb-login, a.G-login {
       width: 250px;
       background-color: #ffffff;
       padding: 2px 10px;
@@ -80,7 +77,7 @@ body,
     a.G-login {
       margin-top: 10px;
     }
-    a.regist-account {
+    a.regist-account{
       margin-top: 10px;
       text-decoration: underline;
       font-style: italic;
@@ -89,25 +86,26 @@ body,
     }
   }
 }
-.login-term {
+.login-term{
   padding-top: 3rem;
   padding-bottom: 1rem;
   color: #ffffff;
-  .h3 {
+  .h3{
     font-weight: 300;
   }
   @include media-breakpoint-down(md) {
-    .h3 {
+    .h3{
       font-size: 20px;
     }
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(sm){
     padding-top: 2rem;
-    .h3 {
+    .h3{
       font-size: 16px;
     }
-    p {
+    p{
       font-size: 12px;
     }
   }
 }
+
