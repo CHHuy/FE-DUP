@@ -100,23 +100,6 @@
       animation-delay: 0.4s;
     }
   </style>
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      const uluru = { lat: -25.344, lng: 131.036 }
-      // The map, centered at Uluru
-      const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru
-      })
-      // The marker, positioned at Uluru
-      const marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      })
-    }
-  </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
@@ -125,7 +108,7 @@
   <link rel="stylesheet" href="customs/style.css">
 </head>
 
-<body>
+<body class="body-login">
 <div class="app-loading">
   <div class="bouncing-loader">
     <div></div>
@@ -135,7 +118,7 @@
 </div>
 <div class="wrapper" id="site_wrapper">
   <div class="header-mobile" id="headerMobile">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
       <a class="navbar-brand" href="#">
         <img src="images/logo-mobile.png" alt="">
       </a>
@@ -149,8 +132,8 @@
         </ul>
       </div>
       <div class="header-mb-item d-block d-md-none">
-        <a class="navigation-tag" href="#">
-          Độc quyền / Bán
+        <a class="u-login" href="#">
+          Login
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -169,11 +152,10 @@
               <a class="dropdown-item" href="#">Cho thuê</a>
             </div>
           </li>
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyenMobile" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               ĐỘC QUYỀN
-              <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyenMobile">
               <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
@@ -193,1263 +175,355 @@
       </div>
     </nav>
   </div>
-  <div class="header d-none d-md-block" id="headerLogin">
-    <div class="header-decoration"></div>
-    <div class="container">
-      <div class="sub-header">
-        <div class="sub-header-item">
-          <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-xs"></i> +84 70 7777
-            117</a>
-        </div>
-        <div class="sub-header-item">
-          <ul class="language-switch">
-            <li id="v-click" class="button-lang current-lang"><a href="#">VI</a></li>
-            <li id="e-click" class="button-lang"><a href="#">EN</a></li>
-          </ul>
-        </div>
-        <div class="sub-header-item">
-          <ul class="login-regist">
-            <li id="u-login" class="button-login"><a href="#">ĐĂNG NHẬP</a></li>
-            <li id="u-regist" class="button-regist"><a href="#">ĐĂNG KÝ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="sub-header">
-        <nav class="navbar navbar-expand-md navbar-dark">
-          <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="">
-          </a>
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                  DỊCH VỤ
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
-                  <a class="dropdown-item" href="#">Bán</a>
-                  <a class="dropdown-item" href="#">Cho thuê</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyen" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                  ĐỘC QUYỀN
-                  <span class="sr-only">(current)</span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyen">
-                  <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
-                  <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">DỰ ÁN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">CHUYÊN VIÊN</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">TIN TỨC</a>
-              </li>
-              <li class="nav-item d-none d-md-block">
-                <div class="search-toggle">
-                  <i class="fas fa-search fa-lg" id="searchToggle"></i>
-                </div>
-              </li>
-            </ul>
-            <div class="search-box">
-              <form class="form-search">
-                <input aria-label="Search" class="form-control" data-url="" autocomplete="off"
-                       id="search" value="" name="q" placeholder="Nhập từ khoá tìm kiếm" type="text">
-              </form>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <main class="main" id="main">
-
-    <div class="DV-Ban dq-ban">
+  <main class="main homepage" id="main">
+    <div class="background-wrapper">
       <div class="container">
-        <div class="dv-header">
-          <div class="sup-header d-none d-md-block">
-            <div class="header-price mr-4 d-inline-block">VND <span>9.000.000.000</span></div>
-            <i class="fas fa-bed fa-sm mr-2"><span class="ml-2">03</span></i>
-            <i class="fas fa-bath fa-sm mr-2"><span class="ml-2">03</span></i>
-            <i class="fas fa-arrows-alt-h fa-sm mr-2"><span class="ml-2">142m<sup>2</sup></span></i>
+        <div class="header-login d-none d-md-block" id="headerLogin">
+          <div class="sub-header">
+            <div class="sub-header-item">
+              <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-xs"></i> +84 70 7777
+                117</a>
+            </div>
+            <div class="sub-header-item">
+              <ul class="language-switch">
+                <li id="v-click" class="button-lang current-lang"><a href="#">VI</a></li>
+                <li id="e-click" class="button-lang"><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="sub-header-item">
+              <ul class="login-regist">
+                <li id="u-login" class="button-login"><a href="#">ĐĂNG NHẬP</a></li>
+                <li id="u-regist" class="button-regist"><a href="#">ĐĂNG KÝ</a></li>
+              </ul>
+            </div>
           </div>
-          <h3 class="h3">3 Phòng ngủ | The Sun Avenue | 28 Mai Chí Thọ, Phường An Phú, Quận 2</h3>
-          <div class="sub-header d-none d-lg-flex">
-            <div class="header-tag">
-              <a href="#" class="mr-4">Vị trí</a>
-              <a href="#" class="mr-4">Thông tin dự án</a>
-              <a href="#" class="mr-4">Tiện ích</a>
-              <a href="#" class="mr-4">Tư vấn viên</a>
-              <a href="#" class="mr-4">Gợi ý thêm</a>
+          <div class="sub-header">
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="">
+              </a>
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                      DỊCH VỤ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
+                      <a class="dropdown-item" href="#">Bán</a>
+                      <a class="dropdown-item" href="#">Cho thuê</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyen" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                      ĐỘC QUYỀN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyen">
+                      <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
+                      <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DỰ ÁN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CHUYÊN VIÊN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">TIN TỨC</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="homepage-search">
+          <div class="home-search">
+            <div class="search-container text-center">
+              <h5 class="home-filter-text">Từ khoá tìm kiếm</h5>
+              <div class="home-search-box">
+                <i class="fas fa-search fa-lg"></i>
+                <input class="search-input" type="text">
+              </div>
             </div>
-            <div class="header-exclusive">
-              <h5 class="exclusive-text">Exclusive</h5>
-            </div>
+            <form class="home-filter d-none d-md-block">
+              <h5 class="home-filter-text">Tìm kiếm nâng cao</h5>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="filterBDS">Loại hình BĐS</label>
+                  <select class="form-control" id="filterBDS">
+                    <option>Thuê</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterLocation">Vị trí</label>
+                  <select class="form-control" id="filterLocation">
+                    <option>Quận 1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="filterPriceRange">Khung giá</label>
+                  <select class="form-control" id="filterPriceRange">
+                    <option>1-2 tỷ</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn">Tìm kiếm</button>
+            </form>
           </div>
         </div>
       </div>
-      <div class="dv-body">
-        <div class="d-block">
-          <div class="image-section">
-            <a href="#" class="heart-interact d-md-none"><i class="fas fa-heart fa-lg"></i></a>
-            <div class="image-show slider-for">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-            </div>
-            <div class="image-slide slider-nav">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-              <img src="images/house.jpg" alt="">
-              <img src="images/house-2.jpg" alt="">
-            </div>
-          </div>
-          <div class="container">
-            <div class="dv-body-content-mobile d-md-none">
-              <h5 class="exclusive-text">Exclusive</h5>
-              <div class="header-price d-inline-block">VND <span>9.000.000.000</span></div>
-              <div class="text-center mt-2 d-md-none">
-                <i class="fas fa-bed fa-sm mr-2"><span class="ml-2">03</span></i>
-                <i class="fas fa-bath fa-sm mr-2"><span class="ml-2">03</span></i>
-                <i class="fas fa-arrows-alt-h fa-sm mr-2"><span class="ml-2">142m<sup>2</sup></span></i>
-              </div>
-              <div class="video-tour d-md-none">
-                <a href="https://www.youtube.com/user/LiveinSaigon"><i class="fab fa-youtube mr-2 fa-lg"></i><span>https://www.youtube.com/user/LiveinSaigon</span></a>
-              </div>
-            </div>
-            <div class="dv-body-content">
-              <div class="video-tour d-none d-md-block">
-                <h5 class="h5">Video tour</h5>
-                <a href="https://www.youtube.com/user/LiveinSaigon"><i class="fab fa-youtube mr-2 fa-2x"></i><span>https://www.youtube.com/user/LiveinSaigon</span></a>
-              </div>
-            </div>
-            <div class="button-option text-center mt-3 mb-5 d-none d-sm-block">
-              <a href="#" class="mr-3 active"><i class="fas fa-heart pr-1 fa-lg"></i><span>Save</span></a>
-              <a href="#"><i class="fas fa-share-alt pr-1 fa-1x fa-lg"></i><span>Share</span></a>
-            </div>
-            <div class="info-section">
-              <div class="house-info">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="house-detail" data-toggle="tab" href="#houseInfo" role="tab"
-                       aria-controls="houseInfo" aria-selected="true">Thông tin căn hộ</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="project-detail" data-toggle="tab" href="#projectInfo" role="tab"
-                       aria-controls="projectInfo" aria-selected="false">Thông tin dự án</a>
-                  </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="houseInfo" role="tabpanel" aria-labelledby="house-detail">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Trạng thái
-                        </div>
-                        <div class="respond-content">
-                          Đang rao bán
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Ngày rao bán
-                        </div>
-                        <div class="respond-content">
-                          25/12/2020
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Số phòng ngủ
-                        </div>
-                        <div class="respond-content">
-                          3 phòng ngủ
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Trạng bị nội thất
-                        </div>
-                        <div class="respond-content">
-                          Có
-                        </div>
-                      </li>
-                    </ul>
+    </div>
+    <div class="background-wrapper-2">
+      <div class="container">
+        <div class="homepage-suggest">
+          <h4>Những gì bạn đang tìm kiếm</h4>
+          <div class="suggest-background">
+            <div class="header-suggest-wrap">
+              <div class="header-suggest">
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
                   </div>
-                  <div class="tab-pane fade" id="projectInfo" role="tabpanel" aria-labelledby="project-detail">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Số tầng
-                        </div>
-                        <div class="respond-content">
-                          23
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Tổng số căn hộ
-                        </div>
-                        <div class="respond-content">
-                          1340
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Số tầng giữ xe
-                        </div>
-                        <div class="respond-content">
-                          3
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Năm bàn giao
-                        </div>
-                        <div class="respond-content">
-                          2018
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="request-content">
-                          Ghi chú:
-                        </div>
-                        <div class="respond-content">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequatur eos ex, libero
-                          non nulla vero? A deleniti eos labore praesentium! Consequatur eligendi magni molestias
-                          numquam placeat sunt temporibus voluptates?
-                        </div>
-                      </li>
-                    </ul>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">New City</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Grand Park</p>
                   </div>
                 </div>
               </div>
-              <div class="contact-info">
-                <div class="send-message">
-                  <p class="mb-2">Gửi tin nhắn cho tư vấn viên</p>
-                  <form>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Họ và tên">
-                    </div>
-                    <div class="form-group">
-                      <input type="tel" class="form-control" id="InputPhone" placeholder="Số điện thoại">
-                    </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
-                    </div>
-
-                    <p class="mb-2 mt-4">Hoặc liên lạc để đặt lịch xem nhà</p>
-
-                    <div class="card-info d-flex">
-                      <img class="card-img-top card-img-avatar" src="images/advisor_avatar.png" alt="">
-                      <div class="card-body">
-                        <h5 class="card-title">Chế Hoàng Hi</h5>
-                        <div>
-                          <a href="tel:+84 00000000" class="contact-mobile"><i class="fas fa-phone-alt mr-2"></i>070 007
-                            7777</a>
-                        </div>
-                        <div>
-                          <a href="mailto:abc.lis@gmail.com" class="contact-mail"><i class="far fa-envelope mr-2"></i>abc.lis@gmail.com</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="submit-message d-flex justify-content-start form-group">
-                      <a href="tel:+84 00000000" class="btn mr-2">Gọi tư vấn viên</a>
-                      <button type="submit" class="btn">Gửi lời nhắn</button>
-                    </div>
-                  </form>
+            </div>
+            <div class="footer-suggest-wrap">
+              <h5 class="h5">Tìm kiếm khu vực lân cận</h5>
+              <div class="footer-suggest">
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <a href="#" class="button-suggest-all">Xem tất cả</a>
           </div>
         </div>
-        <div class="container">
-          <div class="dv-body-content">
-            <div class="utilities-inside d-none d-md-block">
-              <h5 class="h5">Tiện ích trong nhà</h5>
-              <ul class="nav nav-tabs" id="utilitiesTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="guess-tab" data-toggle="tab" href="#guess" role="tab"
-                     aria-controls="guess" aria-selected="true">Phòng khách</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="toilet-tab" data-toggle="tab" href="#toilet" role="tab" aria-controls="toilet"
-                     aria-selected="false">Toilet</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="sleep-tab-1" data-toggle="tab" href="#sleep-1" role="tab"
-                     aria-controls="sleep-1" aria-selected="false">Phòng ngủ 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="sleep-tab-2" data-toggle="tab" href="#sleep-2" role="tab"
-                     aria-controls="sleep-2" aria-selected="false">Phòng ngủ 2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="sleep-tab-3" data-toggle="tab" href="#sleep-3" role="tab"
-                     aria-controls="sleep-3" aria-selected="false">Phòng ngủ 3</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="kitchen-tab" data-toggle="tab" href="#kitchen" role="tab"
-                     aria-controls="kitchen" aria-selected="false">Bếp</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="utilitiesTabContent">
-                <div class="tab-pane fade show active" id="guess" role="tabpanel" aria-labelledby="guess-tab">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="toilet" role="tabpanel" aria-labelledby="toilet-tab">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="sleep-1" role="tabpanel" aria-labelledby="sleep-tab-1">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="sleep-2" role="tabpanel" aria-labelledby="sleep-tab-2">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="sleep-3" role="tabpanel" aria-labelledby="sleep-tab-3">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tab-pane fade" id="kitchen" role="tabpanel" aria-labelledby="kitchen-tab">
-                  <ul>
-                    <li>
-                      <div class="item"><i class="fas fa-check mr-2"></i>Sofa<i class="fas fa-couch ml-2"></i></div>
-                    </li>
-                    <li>
-                      <div class="item"><i class="fas fa-circle fa-xs mr-2"></i>TV<i class="fas fa-tv ml-2"></i></div>
-                    </li>
-                  </ul>
+      </div>
+    </div>
+    <div class="house-introduction">
+      <div class="container">
+        <h5 class="h5">Nhà bán giá tốt</h5>
+        <div class="slick-agent">
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
                 </div>
               </div>
-            </div>
-            <div class="location">
-              <h5 class="h5">Vị trí</h5>
-              <div class="slick-multiple d-lg-none">
-                <div><a href="#" class="chosen-tag">Trường học</a></div>
-                <div><a href="#">Bệnh viện</a></div>
-                <div><a href="#">Công viên</a></div>
-                <div><a href="#">Siêu thị</a></div>
-                <div><a href="#">Trường học</a></div>
-                <div><a href="#">Tiểu học</a></div>
-                <div><a href="#">Trung học</a></div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
               </div>
-              <div class="map-location">
-                <div id="map"></div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
               </div>
             </div>
-            <div class="utilities-inside-area">
-              <h5 class="h5">Tiện ích nội khu</h5>
-              <div class="utilities-album">
-                <div class="utilities-show slider-for d-none d-md-block">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                </div>
-                <div class="utilities-show slick-single d-md-none">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloribus est nostrum numquam odit
-                  quisquam quod sit tenetur! Atque commodi deserunt dolorum ducimus et maiores nobis non placeat quia
-                  voluptates.</p>
-                <div class="utilities-slide slider-nav d-none d-md-block">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
-                  <img src="images/pool.jpg" alt="">
-                  <img src="images/garden.jpg" alt="">
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
                 </div>
               </div>
-            </div>
-            <div class="suggestion">
-              <h5 class="h5">Gợi ý tương tự</h5>
-              <span>Lọc theo</span>
-              <div class="filter">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="price-tab" data-toggle="pill" href="#price" role="tab"
-                       aria-controls="price" aria-selected="true">Giá</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab"
-                       aria-controls="location" aria-selected="false">Vị trí</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="layout-tab" data-toggle="pill" href="#layout" role="tab"
-                       aria-controls="layout" aria-selected="false">Layout nhà</a>
-                  </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade show active" id="price" role="tabpanel" aria-labelledby="price-tab">
-                    <div class="slick-suggest">
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab">
-                    <div class="slick-suggest">
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="layout" role="tabpanel" aria-labelledby="layout-tab">
-                    <div class="slick-suggest">
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="slick-item">
-                        <div class="mobile-item d-md-none">
-                          <a href="#">
-                            <img src="images/house.jpg" alt="">
-                            <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
-                            <div class="price-box">
-                              VND <span>5.000.000.000</span>
-                            </div>
-                            <p>lorem something short</p>
-                          </a>
-                        </div>
-                        <a href="#" class="d-flex">
-                          <div class="special-item d-none d-md-block">
-                            <img src="images/house.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                          <div class="normal-item d-none d-md-block">
-                            <img src="images/house-2.jpg" alt="">
-                            <p>lorem something short</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
               </div>
             </div>
-            <div class="history-account">
-              <h5 class="h5">Lịch sử tài khoản</h5>
-              <table class="table d-none d-md-table">
-                <thead>
-                <tr>
-                  <th scope="col">Ngày</th>
-                  <th scope="col">Giao dịch</th>
-                  <th scope="col">Giá</th>
-                  <th scope="col">Đánh giá</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>20/12/2020
-                  </td>
-                  <td>Chủ sỡ hứu | Ông Văn Tè</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                  <td>
-                    <div class="my-rating"></div>
-                    <span class="time ml-2">1 tháng trước</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>20/12/2020
-                  </td>
-                  <td>Chủ sỡ hứu | Ông Văn Bông</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                  <td>
-                    <div class="my-rating"></div>
-                    <span class="time ml-2">1 tháng trước</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>20/12/2020
-                  </td>
-                  <td>Chủ sỡ hứu | Ông Văn Vỹ</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                  <td>
-                    <div class="my-rating"></div>
-                    <span class="time ml-2">1 tháng trước</span>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
-              <table class="table d-md-none">
-                <thead>
-                <tr>
-                  <th scope="col">Chủ sở hữu</th>
-                  <th scope="col">Ngày sở hữu</th>
-                  <th scope="col">Giá trị sở hữu</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Ông Văn Tè
-                  </td>
-                  <td>20/12/2020</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                </tr>
-                <tr>
-                  <td>Ông Văn Tè
-                  </td>
-                  <td>20/12/2020</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                </tr>
-                <tr>
-                  <td>Ông Văn Tè
-                  </td>
-                  <td>20/12/2020</td>
-                  <td><span>3.000.000.000</span> vnd</td>
-                </tr>
-                </tbody>
-              </table>
-
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
             </div>
-            <div class="utilities-outside d-none d-md-block">
-              <h5 class="h5">Tiện ích ngoại khu</h5>
-              <ul class="nav nav-tabs" id="utilitiesOutTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="school-tab" data-toggle="tab" href="#school" role="tab"
-                     aria-controls="school" aria-selected="true">Trường học</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="hospital-tab" data-toggle="tab" href="#hospital" role="tab"
-                     aria-controls="hospital"
-                     aria-selected="false">Toilet</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="zoo-tab" data-toggle="tab" href="#zoo" role="tab"
-                     aria-controls="zoo" aria-selected="false">Phòng ngủ 1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="market-tab" data-toggle="tab" href="#market" role="tab"
-                     aria-controls="market" aria-selected="false">Phòng ngủ 2</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="utilitiesOutTabContent">
-                <div class="tab-pane fade show active" id="school" role="tabpanel" aria-labelledby="school-tab">
-                  <div class="row">
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          Tên trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">trường tiểu học quận 2</span>
-                        <span class="list-group-item list-group-item-action">trường quốc tế AIS</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế VAS</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          loại trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">Trường công</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế</span>
-                        <span class="list-group-item list-group-item-action">Trường bán công</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          cấp
-                        </p>
-                        <span class="list-group-item list-group-item-action">1</span>
-                        <span class="list-group-item list-group-item-action">1, 2, 3</span>
-                        <span class="list-group-item list-group-item-action">3</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          khoảng cách
-                        </p>
-                        <span class="list-group-item list-group-item-action">1km</span>
-                        <span class="list-group-item list-group-item-action">3km</span>
-                        <span class="list-group-item list-group-item-action">4km</span>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
                 </div>
-                <div class="tab-pane fade" id="hospital" role="tabpanel" aria-labelledby="hospital-tab">
-                  <div class="row">
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          Tên trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">trường tiểu học quận 2</span>
-                        <span class="list-group-item list-group-item-action">trường quốc tế AIS</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế VAS</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          loại trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">Trường công</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế</span>
-                        <span class="list-group-item list-group-item-action">Trường bán công</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          cấp
-                        </p>
-                        <span class="list-group-item list-group-item-action">1</span>
-                        <span class="list-group-item list-group-item-action">1, 2, 3</span>
-                        <span class="list-group-item list-group-item-action">3</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          khoảng cách
-                        </p>
-                        <span class="list-group-item list-group-item-action">1km</span>
-                        <span class="list-group-item list-group-item-action">3km</span>
-                        <span class="list-group-item list-group-item-action">4km</span>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
                 </div>
-                <div class="tab-pane fade" id="zoo" role="tabpanel" aria-labelledby="zoo-tab">
-                  <div class="row">
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          Tên trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">trường tiểu học quận 2</span>
-                        <span class="list-group-item list-group-item-action">trường quốc tế AIS</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế VAS</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          loại trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">Trường công</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế</span>
-                        <span class="list-group-item list-group-item-action">Trường bán công</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          cấp
-                        </p>
-                        <span class="list-group-item list-group-item-action">1</span>
-                        <span class="list-group-item list-group-item-action">1, 2, 3</span>
-                        <span class="list-group-item list-group-item-action">3</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          khoảng cách
-                        </p>
-                        <span class="list-group-item list-group-item-action">1km</span>
-                        <span class="list-group-item list-group-item-action">3km</span>
-                        <span class="list-group-item list-group-item-action">4km</span>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
                 </div>
-                <div class="tab-pane fade" id="market" role="tabpanel" aria-labelledby="market-tab">
-                  <div class="row">
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          Tên trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">trường tiểu học quận 2</span>
-                        <span class="list-group-item list-group-item-action">trường quốc tế AIS</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế VAS</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          loại trường
-                        </p>
-                        <span class="list-group-item list-group-item-action">Trường công</span>
-                        <span class="list-group-item list-group-item-action">Trường quốc tế</span>
-                        <span class="list-group-item list-group-item-action">Trường bán công</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          cấp
-                        </p>
-                        <span class="list-group-item list-group-item-action">1</span>
-                        <span class="list-group-item list-group-item-action">1, 2, 3</span>
-                        <span class="list-group-item list-group-item-action">3</span>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="list-group">
-                        <p class="list-group-item list-group-item-action">
-                          khoảng cách
-                        </p>
-                        <span class="list-group-item list-group-item-action">1km</span>
-                        <span class="list-group-item list-group-item-action">3km</span>
-                        <span class="list-group-item list-group-item-action">4km</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </main>
-  <footer class="footer" id="footer">
-    <div class="footer-hotline-info-mobile">
-      <div class="container">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <p class="hotline-name">Hotline 24/7</p>
-            <a href="tel:+84 00000000" class="hotline-contact">070 007 7777</a>
-          </div>
-          <div class="list-group-item">
-            <p class="hotline-name">Bộ phận kỹ thuật</p>
-            <a href="mailto:abc.lis@gmail.com" class="hotline-contact">abc.lis@gmail.com</a>
-          </div>
-          <div class="list-group-item">
-            <p class="hotline-name">Phản hồi khiếu nại</p>
-            <a href="tel:+84 00000000" class="hotline-contact">070 007 7777</a>
-          </div>
-          <div class="list-group-item">
-            <p class="hotline-name">Bộ phận kinh doanh</p>
-            <a href="tel:+84 00000000" class="hotline-contact">036 363 0368</a>
-          </div>
-          <div class="list-group-item">
-            <p class="hotline-name">Bộ phận hỗ trợ</p>
-            <a href="mailto:abc.lis@gmail.com" class="hotline-contact">abc.lis@gmail.com</a>
-          </div>
-        </div>
-        <div class="info-mobile d-md-none">
-          <div id="accordion">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="true"
-                          aria-controls="collapseOne">
-                    Về công ty <i class="fas fa-angle-down"></i>
-                  </button>
-                </h5>
-              </div>
 
-              <div id="collapseAbout" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
-                    <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
-                    <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseServices"
-                          aria-expanded="false" aria-controls="collapseTwo">
-                    Dịch vụ <i class="fas fa-angle-down"></i>
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseServices" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
-                    <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
-                    <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
-                    <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInfo"
-                          aria-expanded="false" aria-controls="collapseThree">
-                    Thông tin <i class="fas fa-angle-down"></i>
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseInfo" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
-                    <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
-                    <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
-                    <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
-                    <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-info d-none d-md-block">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <img src="images/logo.png" alt="">
-          </div>
-          <div class="col">
-            <div class="list-group">
-              <p class="list-group-item list-group-item-action">
-                Công ty
-              </p>
-              <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
-              <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
-              <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
-              <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="list-group">
-              <p class="list-group-item list-group-item-action">
-                Dịch vụ
-              </p>
-              <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
-              <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
-              <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
-              <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
-              <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="list-group">
-              <p class="list-group-item list-group-item-action">
-                Thông tin
-              </p>
-              <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
-              <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
-              <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
-              <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
-              <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
-            </div>
-          </div>
-        </div>
-        <div class="social-media">
-          <a href="#">
-            <i class="fab fa-facebook-f fa-lg"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-instagram fa-lg"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-youtube fa-lg"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-info-mobile d-md-none">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="footer-logo">
-              <img src="images/logo.png" alt="">
-            </div>
-            <div class="social-media">
-              <a href="#">
-                <i class="fab fa-facebook-f fa-lg"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-instagram fa-lg"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-youtube fa-lg"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="app-store">
-              <a href="#"><img src="images/appstore.png" class="apple-store" alt=""></a>
-              <a href="#"><img src="images/ggplay.png" class="google-store" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi cum debitis dolorum ea eligendi excepturi
-          minima neque obcaecati odit perspiciatis placeat possimus provident quam repudiandae sequi, ullam velit
-          voluptatem?</p>
-      </div>
+  <footer class="footer" id="footer">
+    <div class="login-term">
+      <h3 class="h3">TERM & CONDITIONS</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque, blanditiis corporis cum dolores
+        enim inventore iure non odit perspiciatis provident quia, quo suscipit ullam velit? Consequuntur quos
+        tenetur voluptas.</p>
     </div>
   </footer>
+
 </div>
 
 <!-- Optional JavaScript -->
@@ -1462,10 +536,7 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-  async
-></script>
+
 <!-- Core JavaScript -->
 <script src="dist/core.min.js"></script>
 <script src="third_party/modernizr.min.js"></script>

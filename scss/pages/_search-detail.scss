@@ -172,6 +172,10 @@
             .card-title {
               color: $primary-color;
               text-transform: capitalize;
+              font-size: 1.25rem;
+              margin-bottom: 0.75rem;
+              font-weight: 400;
+              cursor: pointer;
             }
 
             .card-info {
