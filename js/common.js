@@ -144,6 +144,24 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       ]
     });
   }
+  function slickOwner(){
+    $('.slick-owner').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
+  }
 
   function slickSuggest(){
     $('.slick-suggest').slick({
@@ -207,6 +225,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     fixSlickTab()
     slickSuggestMobile()
     slickHomeSuggest()
+    slickOwner()
   }
 
   $(document).ready(function() {
