@@ -126,6 +126,25 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       arrows: true,
     });
   }
+  function slickHomeSuggest(){
+    $('.slick-home-suggest').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
+  }
+
   function slickSuggest(){
     $('.slick-suggest').slick({
       fade: true,
@@ -187,6 +206,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     slickArticleRelated()
     fixSlickTab()
     slickSuggestMobile()
+    slickHomeSuggest()
   }
 
   $(document).ready(function() {

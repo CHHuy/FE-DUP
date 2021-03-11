@@ -12976,12 +12976,18 @@ body,
     content: '';
     position: absolute;
     right: -9px;
-    bottom: 0px;
+    bottom: 1px;
     width: 0;
     height: 0px;
     border-left: 10px solid #edcf94;
     border-top: 11px solid transparent;
     border-bottom: 11px solid transparent;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 767.98px) {
+  .DV-Ban .dv-body .d-lg-flex .image-section .tour-banner:before {
+    bottom: 0;
   }
 }
 
@@ -14605,9 +14611,9 @@ body,
   padding: 4rem 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199.98px) {
   .homepage .background-wrapper-2 {
-    height: 100vh;
+    display: none !important;
   }
 }
 
@@ -14766,11 +14772,12 @@ body,
   bottom: -2%;
   left: 45%;
   background-color: #edd6a6;
-  padding: 0 10px;
-  border-radius: 8px;
+  padding: 2px 1rem;
+  border-radius: 10px;
   color: #497f70;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .homepage .homepage-suggest .button-suggest-all:hover {
@@ -14789,6 +14796,43 @@ body,
 
 .homepage .house-introduction .card .card-body {
   padding: 0 0 2rem 0;
+}
+
+.homepage .house-introduction .card .card-body .tour-banner {
+  position: absolute;
+  top: 3%;
+  z-index: 1000;
+  background-color: #edcf94;
+  color: #497f70;
+  padding: 2px 8px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  font-size: 14px !important;
+}
+
+.homepage .house-introduction .card .card-body .tour-banner:before {
+  content: '';
+  position: absolute;
+  right: -9px;
+  bottom: 1px;
+  width: 0;
+  height: 0px;
+  border-left: 10px solid #edcf94;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+@media (max-width: 767.98px) {
+  .homepage .house-introduction .card .card-body .tour-banner:before {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .homepage .house-introduction .card .card-body .tour-banner {
+    font-size: 12px !important;
+    left: 2.5% !important;
+  }
 }
 
 .homepage .house-introduction .card .card-body .card-title {
@@ -14879,6 +14923,53 @@ body,
 .homepage .house-introduction .card .card-body .span-id span {
   font-size: 14px;
   font-weight: 300;
+}
+
+.homepage .house-introduction .slick-prev, .homepage .house-introduction .slick-next {
+  top: 35%;
+}
+
+@media (min-width: 768px) {
+  .homepage .house-introduction .slick-prev {
+    display: none !important;
+  }
+}
+
+.homepage .house-introduction .slick-prev:before {
+  color: #000;
+  font-size: 2rem;
+  content: '\f053';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.homepage .house-introduction .slick-next:before {
+  font-size: 2rem;
+  color: #000;
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.btn-show-all {
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid #000000;
+}
+
+.btn-show {
+  background-color: #edd6a6;
+  padding: 5px 1rem;
+  border-radius: 10px;
+  color: #497f70;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-show:hover {
+  text-decoration: none;
+  color: #edd6a6;
+  background-color: #497f70;
 }
 
 /*# sourceMappingURL=style.css.map */
