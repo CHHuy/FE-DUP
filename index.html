@@ -242,43 +242,53 @@
           <div class="home-search">
             <div class="search-container text-center">
               <h5 class="home-filter-text">Từ khoá tìm kiếm</h5>
-              <div class="home-search-box">
-                <i class="fas fa-search fa-lg"></i>
-                <input class="search-input" type="text">
-              </div>
+              <!--              <div class="home-search-box">
+                              <i class="fas fa-search fa-lg"></i>
+                              <input class="search-input" type="text">
+                            </div>-->
+              <form class="home-search-box">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search fa-lg"></i></span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </form>
             </div>
             <form class="home-filter d-none d-md-block">
               <h5 class="home-filter-text">Tìm kiếm nâng cao</h5>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="filterBDS">Loại hình BĐS</label>
-                  <select class="form-control" id="filterBDS">
-                    <option>Thuê</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="filterLocation">Vị trí</label>
-                  <select class="form-control" id="filterLocation">
-                    <option>Quận 1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="filterPriceRange">Khung giá</label>
-                  <select class="form-control" id="filterPriceRange">
-                    <option>1-2 tỷ</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+              <div class="form-wrapper">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="filterBDS">Loại hình BĐS</label>
+                    <select class="form-control" id="filterBDS">
+                      <option>Thuê</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="filterLocation">Vị trí</label>
+                    <select class="form-control" id="filterLocation">
+                      <option>Quận 1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="filterPriceRange">Khung giá</label>
+                    <select class="form-control" id="filterPriceRange">
+                      <option>1-2 tỷ</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <button type="submit" class="btn">Tìm kiếm</button>
@@ -654,26 +664,33 @@
           <div class="image-section">
             <img src="images/house.jpg" alt="">
             <div class="exclusive-text">
-              <h3 class="h3">Exclusive member</h3>
+              <h3 class="h3">Exclusive <span class="d-none d-lg-block">member</span></h3>
+            </div>
+            <div class="house-price d-lg-none">
+              VND <span>5.000.000.000</span>
             </div>
           </div>
           <div class="info-section">
-            <div class="project-name">
-              Đảo kim cương
+            <div class="project-name-flex">
+              <div class="project-name">
+                Đảo kim cương
+              </div>
+              <div class="project-property">
+                Bora Bora
+              </div>
+              <div class="project-property">
+                Dualkey
+              </div>
             </div>
-            <div class="project-property">
-              Bora Bora
-            </div>
-            <div class="project-property">
-              Dualkey
-            </div>
-            <div class="span-id">
-              <span>TNBT-05102</span>
-            </div>
-            <div class="card-info mb-3">
-              <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
-              <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
-              <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+            <div class="project-property-flex">
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
             </div>
             <div class="btn-option">
               <a href="" class="a-btn-option">Bán với Lis</a>
@@ -704,7 +721,7 @@
         </div>
       </div>
     </div>
-    <div class="special-news">
+    <div class="special-news d-none d-lg-block">
       <div class="container">
         <h4 class="h4">Tin tức nổi bật</h4>
         <div class="special-flex">
@@ -777,8 +794,93 @@
         </div>
       </div>
     </div>
-  </main>
+    <div class="list-district d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ BÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận</a>
+              <a href="#" class="list-group-item list-group-item-action">Bình Thạnh</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 1</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 3</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 4</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 5</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 6</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 7</a>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                Nhà phố bán
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 9</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 8</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 7</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 6</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 5</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 4</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 3</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 1</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ THUÊ THEO DỰ ÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Vinhomes</a>
+              <a href="#" class="list-group-item list-group-item-action">Central Park</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Landmark 81</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Masteri Thảo Điền</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Vinhomes</a>
+              <a href="#" class="list-group-item list-group-item-action">Golden River</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Masteri An Phú</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Diamond Island</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ THUÊ THEO QUẬN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Hồ Chí Minh</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
 
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                DỰ ÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">King Crown Infinity</a>
+              <a href="#" class="list-group-item list-group-item-action">Masteri Lumiere Riverside</a>
+              <a href="#" class="list-group-item list-group-item-action">New City Thủ Thiêm</a>
+              <a href="#" class="list-group-item list-group-item-action">Celesta Rise</a>
+              <a href="#" class="list-group-item list-group-item-action">Masteri Centre Pôint</a>
+              <a href="#" class="list-group-item list-group-item-action">Meyhomes Capital Phú Quốc</a>
+              <a href="#" class="list-group-item list-group-item-action">Novaworld Phan Thiết</a>
+              <a href="#" class="list-group-item list-group-item-action">Vinhomes Grand Park</a>
+              <a href="#" class="list-group-item list-group-item-action">The River Thủ Thiêm</a>
+              <a href="#" class="list-group-item list-group-item-action">Precia Quận 2</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="footer" id="footer">
     <div class="footer-hotline-info-mobile">
       <div class="container">

@@ -160,7 +160,14 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       dots: false,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 770,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 600,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
