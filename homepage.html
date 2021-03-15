@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Frontend Seed 4</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="canonical" href="http://">
+  <meta name="title" content="Frontend Seed 4 - Title">
+  <meta name="referrer" content="unsafe-url">
+  <meta name="description" content="Frontend Seed 4 - Description">
+
+  <meta property="fb:app_id" content="your_app_id">
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="article:publisher" content="">
+  <meta property="article:section" content="Article">
+  <meta property="article:published_time" content="">
+  <meta property="article:modified_time" content="">
+  <meta property="og:updated_time" content="">
+  <meta property="og:image" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+  <meta name="twitter:creator" content="">
+  <!-- App CSS -->
+  <style>
+    :root {
+      --theme-color: #007bff;
+      --bg-color: #ffffff;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    .app-loading {
+      background: var(--bg-color);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes bouncing-loader {
+      to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+      }
+    }
+
+    .app-loading .bouncing-loader {
+      display: flex;
+      justify-content: center;
+    }
+
+    .app-loading .bouncing-loader > div {
+      width: 1rem;
+      height: 1rem;
+      margin: 3rem 0.2rem;
+      background: var(--theme-color);
+      border-radius: 50%;
+      animation: bouncing-loader 0.6s infinite alternate;
+    }
+
+    .app-loading .bouncing-loader > div:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .app-loading .bouncing-loader > div:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  </style>
+  <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="dist/app.min.css">
+  </noscript>-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="customs/style.css">
+</head>
+
+<body class="body-login">
+<div class="app-loading">
+  <div class="bouncing-loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<div class="wrapper" id="site_wrapper">
+  <div class="header-mobile" id="headerMobile">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-mobile.png" alt="">
+      </a>
+      <div class="header-mb-item d-block d-md-none">
+        <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-lg"></i></a>
+      </div>
+      <div class="header-mb-item d-block d-md-none">
+        <ul class="language-switch">
+          <li id="v-click-mobile" class="button-lang current-lang"><a href="#">VI</a></li>
+          <li id="e-click-mobile" class="button-lang"><a href="#">EN</a></li>
+        </ul>
+      </div>
+      <div class="header-mb-item d-block d-md-none">
+        <a class="u-login" href="#">
+          Login
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVuMobile" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              DỊCH VỤ
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVuMobile">
+              <a class="dropdown-item" href="#">Bán</a>
+              <a class="dropdown-item" href="#">Cho thuê</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyenMobile" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              ĐỘC QUYỀN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyenMobile">
+              <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
+              <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">DỰ ÁN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CHUYÊN VIÊN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TIN TỨC</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <main class="main homepage" id="main">
+    <div class="background-wrapper">
+      <div class="container">
+        <div class="header-login d-none d-md-block" id="headerLogin">
+          <div class="sub-header">
+            <div class="sub-header-item">
+              <a href="tel:+84 70 7777 117" class="phone-number"><i class="fas fa-phone-alt fa-xs"></i> +84 70 7777
+                117</a>
+            </div>
+            <div class="sub-header-item">
+              <ul class="language-switch">
+                <li id="v-click" class="button-lang current-lang"><a href="#">VI</a></li>
+                <li id="e-click" class="button-lang"><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="sub-header-item">
+              <ul class="login-regist">
+                <li id="u-login" class="button-login"><a href="#">ĐĂNG NHẬP</a></li>
+                <li id="u-regist" class="button-regist"><a href="#">ĐĂNG KÝ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub-header">
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="">
+              </a>
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                      DỊCH VỤ
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
+                      <a class="dropdown-item" href="#">Bán</a>
+                      <a class="dropdown-item" href="#">Cho thuê</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyen" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                      ĐỘC QUYỀN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyen">
+                      <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
+                      <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DỰ ÁN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CHUYÊN VIÊN</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">TIN TỨC</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="homepage-search">
+          <div class="home-search">
+            <div class="search-container text-center">
+              <h5 class="home-filter-text">Từ khoá tìm kiếm</h5>
+              <!--              <div class="home-search-box">
+                              <i class="fas fa-search fa-lg"></i>
+                              <input class="search-input" type="text">
+                            </div>-->
+              <form class="home-search-box">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search fa-lg"></i></span>
+                  </div>
+                  <input type="text" class="form-control">
+                </div>
+              </form>
+            </div>
+            <form class="home-filter d-none d-md-block">
+              <h5 class="home-filter-text">Tìm kiếm nâng cao</h5>
+              <div class="form-wrapper">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="filterBDS">Loại hình BĐS</label>
+                    <select class="form-control" id="filterBDS">
+                      <option>Thuê</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="filterLocation">Vị trí</label>
+                    <select class="form-control" id="filterLocation">
+                      <option>Quận 1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="filterPriceRange">Khung giá</label>
+                    <select class="form-control" id="filterPriceRange">
+                      <option>1-2 tỷ</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn">Tìm kiếm</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-wrapper-2">
+      <div class="container">
+        <div class="homepage-suggest">
+          <h4 class="h4 h4-white">Những gì bạn đang tìm kiếm</h4>
+          <div class="suggest-background">
+            <div class="header-suggest-wrap">
+              <div class="header-suggest">
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">New City</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Grand Park</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="footer-suggest-wrap">
+              <h5 class="h5 h4-white">Tìm kiếm khu vực lân cận</h5>
+              <div class="footer-suggest">
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Masteri Lumirie</p>
+                  </div>
+                </a>
+                <a href="#" class="card">
+                  <img class="card-img-top"
+                       src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1781b9f4131%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1781b9f4131%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.1171875%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                       alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Empire Thu Thiem</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="button-suggest-all">Xem tất cả</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="house-introduction">
+      <div class="container">
+        <h4 class="h4">Nhà bán giá tốt</h4>
+        <div class="slick-home-suggest">
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <div class="tour-banner">Tour xem nhà hôm nay | 8:00 - 17:00</div>
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-show-all text-center">
+          <a href="#" class="btn-show">Xem tất cả</a>
+        </div>
+      </div>
+    </div>
+    <div class="house-introduction">
+      <div class="container">
+        <h4 class="h4">Nhà thuê giá tốt</h4>
+        <div class="slick-home-suggest">
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <div class="tour-banner">Tour xem nhà hôm nay | 8:00 - 17:00</div>
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="img-interact">
+                <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                <div class="price-box">
+                  VND <span>5.000.000.000</span>
+                </div>
+              </div>
+              <a href="#" class="card-title">Đảo kim cương</a>
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-show-all border-0 text-center">
+          <a href="#" class="btn-show">Xem tất cả</a>
+        </div>
+      </div>
+    </div>
+    <div class="become-member-background">
+      <div class="container">
+        <div class="become-member">
+          <div class="image-section">
+            <img src="images/house.jpg" alt="">
+            <div class="exclusive-text">
+              <h3 class="h3">Exclusive <span class="d-none d-lg-block">member</span></h3>
+            </div>
+            <div class="house-price d-lg-none">
+              VND <span>5.000.000.000</span>
+            </div>
+          </div>
+          <div class="info-section">
+            <div class="project-name-flex">
+              <div class="project-name">
+                Đảo kim cương
+              </div>
+              <div class="project-property">
+                Bora Bora
+              </div>
+              <div class="project-property">
+                Dualkey
+              </div>
+            </div>
+            <div class="project-property-flex">
+              <div class="span-id">
+                <span>TNBT-05102</span>
+              </div>
+              <div class="card-info mb-3">
+                <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+              </div>
+            </div>
+            <div class="btn-option">
+              <a href="" class="a-btn-option">Bán với Lis</a>
+              <a href="" class="a-btn-option">Cho thuê với Lis</a>
+            </div>
+            <a href="" class="read-more">Tìm hiểu thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="before-after">
+      <div class="container">
+        <div class="img-before-after">
+          <div class="img-before">
+            <img src="images/house.jpg" alt="">
+            <span>Trước</span>
+          </div>
+          <div class="img-after">
+            <img src="images/house.jpg" alt="">
+            <span>Sau</span>
+          </div>
+        </div>
+        <div class="some-info">
+          <h3 class="h3">Bán nhanh nhất, cho thuê giá tốt nhất!</h3>
+          <h5 class="h5">Gần 90% chủ nhà chốt giao dịch trong vòng 90 ngày sau khi chọn LIS.</h5>
+          <a href="#" class="sign-contact">Ký gửi bất động sản</a>
+          <a href="#" class="btn-show">Tìm hiểu thêm</a>
+        </div>
+      </div>
+    </div>
+    <div class="special-news d-none d-lg-block">
+      <div class="container">
+        <h4 class="h4">Tin tức nổi bật</h4>
+        <div class="special-flex">
+          <div class="big-special">
+            <a href="#" class="card">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Làm thế nào để phát triển được BĐS?</p>
+              </div>
+            </a>
+          </div>
+          <div class="small-special">
+            <a href="#" class="card">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Biến động thị trường!</p>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Mua đâu, bán đâu?</p>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Empire như thế nào?</p>
+              </div>
+            </a>
+            <a href="#" class="card">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">Giá trị nào tăng cho BĐS?</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="btn-show">Xem tất cả</a>
+      </div>
+    </div>
+    <div class="owner">
+      <div class="container">
+        <h4 class="h4">Chủ đầu tư</h4>
+        <div class="slick-owner">
+          <div>
+            <img src="images/angia.png">
+          </div>
+          <div>
+            <img src="images/masteri.png">
+          </div>
+          <div>
+            <img src="images/thaodien.jpg">
+          </div>
+          <div>
+            <img src="images/sonkim.jpg">
+          </div>
+          <div>
+            <img src="images/angia.png">
+          </div>
+          <div>
+            <img src="images/masteri.png">
+          </div>
+          <div>
+            <img src="images/thaodien.jpg">
+          </div>
+          <div>
+            <img src="images/sonkim.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list-district d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ BÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận</a>
+              <a href="#" class="list-group-item list-group-item-action">Bình Thạnh</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 1</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 3</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 4</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 5</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 6</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ bán Quận 7</a>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                Nhà phố bán
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 9</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 8</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 7</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 6</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 5</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 4</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 3</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà phố Quận 1</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ THUÊ THEO DỰ ÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Vinhomes</a>
+              <a href="#" class="list-group-item list-group-item-action">Central Park</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Landmark 81</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Masteri Thảo Điền</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Vinhomes</a>
+              <a href="#" class="list-group-item list-group-item-action">Golden River</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Masteri An Phú</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Diamond Island</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                CĂN HỘ THUÊ THEO QUẬN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Hồ Chí Minh</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+              <a href="#" class="list-group-item list-group-item-action">Căn hộ cho thuê Quận 2</a>
+
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                DỰ ÁN
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">King Crown Infinity</a>
+              <a href="#" class="list-group-item list-group-item-action">Masteri Lumiere Riverside</a>
+              <a href="#" class="list-group-item list-group-item-action">New City Thủ Thiêm</a>
+              <a href="#" class="list-group-item list-group-item-action">Celesta Rise</a>
+              <a href="#" class="list-group-item list-group-item-action">Masteri Centre Pôint</a>
+              <a href="#" class="list-group-item list-group-item-action">Meyhomes Capital Phú Quốc</a>
+              <a href="#" class="list-group-item list-group-item-action">Novaworld Phan Thiết</a>
+              <a href="#" class="list-group-item list-group-item-action">Vinhomes Grand Park</a>
+              <a href="#" class="list-group-item list-group-item-action">The River Thủ Thiêm</a>
+              <a href="#" class="list-group-item list-group-item-action">Precia Quận 2</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="footer-hotline-info-mobile">
+      <div class="container">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item">
+            <p class="hotline-name">Hotline 24/7</p>
+            <a href="tel:+84 00000000" class="hotline-contact">070 007 7777</a>
+          </div>
+          <div class="list-group-item">
+            <p class="hotline-name">Bộ phận kỹ thuật</p>
+            <a href="mailto:abc.lis@gmail.com" class="hotline-contact">abc.lis@gmail.com</a>
+          </div>
+          <div class="list-group-item">
+            <p class="hotline-name">Phản hồi khiếu nại</p>
+            <a href="tel:+84 00000000" class="hotline-contact">070 007 7777</a>
+          </div>
+          <div class="list-group-item">
+            <p class="hotline-name">Bộ phận kinh doanh</p>
+            <a href="tel:+84 00000000" class="hotline-contact">036 363 0368</a>
+          </div>
+          <div class="list-group-item">
+            <p class="hotline-name">Bộ phận hỗ trợ</p>
+            <a href="mailto:abc.lis@gmail.com" class="hotline-contact">abc.lis@gmail.com</a>
+          </div>
+        </div>
+        <div class="info-mobile d-md-none">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="true"
+                          aria-controls="collapseOne">
+                    Về công ty <i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseAbout" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
+                    <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseServices"
+                          aria-expanded="false" aria-controls="collapseTwo">
+                    Dịch vụ <i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseServices" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
+                    <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
+                    <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
+                    <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInfo"
+                          aria-expanded="false" aria-controls="collapseThree">
+                    Thông tin <i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseInfo" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
+                    <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
+                    <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="images/logo.png" alt="">
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                Công ty
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
+              <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
+              <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
+              <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                Dịch vụ
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
+              <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
+              <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
+              <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
+              <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="list-group">
+              <p class="list-group-item list-group-item-action">
+                Thông tin
+              </p>
+              <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
+              <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
+              <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
+              <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
+              <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
+            </div>
+          </div>
+        </div>
+        <div class="social-media">
+          <a href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info-mobile d-md-none">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="footer-logo">
+              <img src="images/logo.png" alt="">
+            </div>
+            <div class="social-media">
+              <a href="#">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="app-store">
+              <a href="#"><img src="images/appstore.png" class="apple-store" alt=""></a>
+              <a href="#"><img src="images/ggplay.png" class="google-store" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi cum debitis dolorum ea eligendi excepturi
+          minima neque obcaecati odit perspiciatis placeat possimus provident quam repudiandae sequi, ullam velit
+          voluptatem?</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+<!-- Core JavaScript -->
+<script src="dist/core.min.js"></script>
+<script src="third_party/modernizr.min.js"></script>
+<!-- End Core JavaScript -->
+
+<!-- JavaScript -->
+<!--<script src="dist/app.min.js"></script>-->
+<script src="js/common.js"></script>
+<script src="customs/script.js"></script>
+<!-- End JavaScript -->
+</body>
+</html>

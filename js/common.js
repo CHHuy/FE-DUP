@@ -198,6 +198,28 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       dots: false,
       arrows: true,
     });
+    $('.slick-project').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
   }
 
   function fixSlickTab(){
