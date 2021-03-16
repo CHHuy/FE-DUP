@@ -9888,6 +9888,295 @@ body {
   }
 }
 
+@media (max-width: 991.98px) {
+  .modal-agent-profile .modal-dialog {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal-agent-profile .agent-profile-avatar {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .modal-agent-profile .agent-profile-avatar img.avatar {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .modal-agent-profile .agent-info {
+    padding: 0 1rem;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: column !important;
+    -moz-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    text-align: center;
+    padding: 0 1rem !important;
+    margin: 0 0 2rem 0 !important;
+  }
+  .modal-agent-profile .slick-suggest-agent {
+    padding: 0 1rem !important;
+  }
+  .modal-agent-profile .slick-suggest-agent .slick-prev {
+    left: 5px !important;
+  }
+  .modal-agent-profile .slick-suggest-agent .slick-next {
+    right: 5px !important;
+  }
+  .modal-agent-profile .slick-suggest-agent .list-agent-item img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .modal-agent-profile .slick-suggest-agent .list-agent-item .agent-name {
+    font-size: 10px !important;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile {
+  padding: 0 0 2rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-info {
+    bottom: -10%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-info {
+    bottom: -15% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-info {
+    bottom: -5% !important;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-avatar {
+  width: 150px;
+  height: 150px;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-avatar img.avatar {
+  width: 150px;
+  height: 150px;
+  padding: 3px;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-des .agent-profile-name {
+  color: #497f70;
+}
+
+@media (min-width: 768px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-des .agent-profile-name {
+    font-size: 1.2rem;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-des .agent-profile-text i {
+  color: #497f70;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-des .agent-profile-text .hotline-contact {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-profile-des .agent-profile-text {
+    font-size: 0.7rem;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-contract {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  position: absolute;
+  right: 9%;
+  bottom: -10%;
+}
+
+@media (max-width: 991.98px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-contract {
+    right: 3% !important;
+    bottom: -15% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal-agent-profile .agent-profile-modal .agent-profile .agent-contract {
+    right: 3% !important;
+    bottom: -15% !important;
+    right: 25% !important;
+    bottom: -35% !important;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-contract a {
+  font-size: 12px;
+  border: 1px solid #497f70;
+  color: #497f70;
+  padding: 1px 5px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-contract a:first-child {
+  margin-bottom: 5px;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-profile .agent-contract a:hover {
+  background-color: #497f70;
+  color: #ffffff;
+}
+
+.modal-agent-profile .agent-profile-modal .split-agent {
+  margin-top: 4rem;
+  padding: 0 4rem;
+}
+
+@media (max-width: 767.98px) {
+  .modal-agent-profile .agent-profile-modal .split-agent {
+    margin-top: 5rem !important;
+    padding: 0 1rem !important;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .split-agent p {
+  text-transform: uppercase;
+  color: #497f70;
+}
+
+.modal-agent-profile .agent-profile-modal .split-agent p:after {
+  display: inline-block;
+  content: "";
+  border-top: 0.1rem solid #497f70;
+  width: 80%;
+  margin: 0 0 0 1rem;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 991.98px) {
+  .modal-agent-profile .agent-profile-modal .split-agent p:after {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+
+.modal-agent-profile .agent-profile-modal .agent-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0 4rem;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-info .agent-info-item {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-info .agent-info-item span {
+  font-weight: bold;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-info .agent-info-item span:before {
+  content: '|';
+  padding-right: 5px;
+}
+
+.modal-agent-profile .agent-profile-modal .agent-info .agent-info-item .my-rating {
+  text-align: center;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-agent-wrapper {
+  padding: 2rem 0;
+  background-color: #f6f6f6f6;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-agent-wrapper .h5 {
+  padding: 0 4rem;
+  color: #497f70;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent {
+  padding: 0 4rem;
+  margin: 1rem 0;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .list-agent-item {
+  text-align: center;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .list-agent-item img {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .list-agent-item .agent-name {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-prev, .modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-next {
+  top: 35%;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-prev {
+  left: 30px;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-prev:before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f053';
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #000000;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-next {
+  right: 30px;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f054';
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  color: #000000;
+}
+
 .fz30 {
   font-size: 30px !important;
 }
@@ -15700,6 +15989,9 @@ body,
   }
   .tintuc .tintuc-body .tintuc-left .card .card-info p {
     font-size: 10px;
+    margin-bottom: 0.5rem;
+    height: 165px;
+    overflow: hidden;
   }
   .tintuc .tintuc-body .tintuc-left .card .card-info a {
     color: #497f70;

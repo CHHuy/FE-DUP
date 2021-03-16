@@ -191,6 +191,20 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
         },
       ]
     });
+    $('.slick-suggest-agent').slick({
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+      ]
+    });
   }
   function slickSuggestMobile(){
     $('.slick-suggest-mobile').slick({
@@ -225,6 +239,9 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
   function fixSlickTab(){
     $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
       $('.slick-suggest').slick('setPosition');
+    })
+    $('.modal').on('shown.bs.modal', function (e) {
+      $('.slick-suggest-agent').slick('setPosition');
     })
   }
 
