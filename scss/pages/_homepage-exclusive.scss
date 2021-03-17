@@ -1,0 +1,105 @@
+.home-page-exclusive {
+  @media (max-width: 770px) {
+    .agent-content {
+      .agent-btn {
+        text-align: center !important;
+
+        a {
+          display: block !important;
+          padding: 0 0 !important;
+        }
+      }
+    }
+  }
+
+  .get-info {
+    margin: 2rem 0;
+
+    .h5 {
+      color: $primary-color;
+      font-size: 1.45rem;
+    }
+
+    .form-get-info {
+      margin: 2rem 0;
+
+      .form-row {
+        .col {
+          padding-right: 1.5rem;
+          align-self: center;
+        }
+      }
+
+      .form-check {
+        margin: 1rem 0;
+
+        label {
+          font-weight: 500;
+        }
+      }
+
+      .form-control {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        text-align: center;
+        font-style: italic;
+
+        &:focus {
+          color: #495057;
+          background-color: #fff;
+          border-color: $primary-color;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+
+      .form-info-submit {
+        background: $primary-color;
+        color: #ffffff;
+        padding: 0 1rem;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 10px;
+
+        &:hover {
+          background: #2a5447;
+        }
+      }
+    }
+  }
+
+  .introduction-info {
+    .introduction-txt {
+      font-weight: 500;
+    }
+
+    .introduction-block {
+      ul.list-group {
+        @include flex-direction(row);
+        @include justify-content(center);
+        li.list-group-item {
+          border: 1px solid $primary-color;
+          border-radius: 8px;
+          background: $primary-color;
+          max-width: 220px;
+          .group-item-head{
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid #ffffff;
+            border-width: 0 0 1px 0;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.4rem;
+          }
+          .group-item-txt{
+            color: #ffffff;
+            font-size: 14px;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
