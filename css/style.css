@@ -13661,6 +13661,10 @@ body,
   font-size: 1rem;
 }
 
+.dq-find-agent .agent-content .agent-info p {
+  font-weight: 400;
+}
+
 .dq-find-agent .agent-content .agent-btn {
   text-align: center;
 }
@@ -16193,13 +16197,14 @@ body,
   }
 }
 
-.home-page-exclusive .get-info {
-  margin: 2rem 0;
-}
-
-.home-page-exclusive .get-info .h5 {
+.home-page-exclusive .h5 {
   color: #497f70;
   font-size: 1.45rem;
+  text-transform: uppercase;
+}
+
+.home-page-exclusive .get-info {
+  margin: 2rem 0;
 }
 
 .home-page-exclusive .get-info .form-get-info {
@@ -16288,6 +16293,72 @@ body,
   color: #ffffff;
   font-size: 14px;
   text-align: justify;
+}
+
+.home-page-exclusive .introduction-story {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-page-exclusive .introduction-story .story-img {
+  width: 50%;
+}
+
+.home-page-exclusive .introduction-story .story-img img {
+  width: 100%;
+}
+
+.home-page-exclusive .introduction-story .story-txt {
+  width: 48%;
+  padding: 0 2rem;
+  align-self: center;
+}
+
+.home-page-exclusive .introduction-story .story-txt ul.list-group li.list-group-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  padding: 0.4rem 0;
+}
+
+.home-page-exclusive .introduction-story .story-txt ul.list-group li.list-group-item .group-item-number {
+  width: 25%;
+  border-right: 1px solid #497f70;
+  margin-right: 4%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #497f70;
+  padding: 2rem 0;
+}
+
+.home-page-exclusive .introduction-story .story-txt ul.list-group li.list-group-item .group-item-txt {
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.home-page-exclusive .utilities-building {
+  margin: 2rem 0;
+}
+
+.home-page-exclusive .utilities-building .col-4 {
+  padding-right: 15px;
+  padding-left: 20px !important;
+}
+
+.home-page-exclusive .utilities-building ul.list-utilities {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+.home-page-exclusive .utilities-building ul.list-utilities li.list-utilities-item {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

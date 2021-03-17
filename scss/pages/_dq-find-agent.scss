@@ -41,6 +41,9 @@
     .agent-info {
       margin-top: 12px;
       @include font-size(16px);
+      p{
+        font-weight: 400;
+      }
     }
     .agent-btn {
       text-align: center;
