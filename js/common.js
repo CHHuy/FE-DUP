@@ -126,6 +126,57 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       arrows: true,
     });
   }
+  function slickHomeSuggest(){
+    $('.slick-home-suggest').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 560,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
+  }
+  function slickOwner(){
+    $('.slick-owner').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 770,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
+  }
+
   function slickSuggest(){
     $('.slick-suggest').slick({
       fade: true,
@@ -140,6 +191,20 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
         },
       ]
     });
+    $('.slick-suggest-agent').slick({
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+      ]
+    });
   }
   function slickSuggestMobile(){
     $('.slick-suggest-mobile').slick({
@@ -147,11 +212,36 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       dots: false,
       arrows: true,
     });
+    $('.slick-project').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+    });
   }
 
   function fixSlickTab(){
     $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
       $('.slick-suggest').slick('setPosition');
+    })
+    $('.modal').on('shown.bs.modal', function (e) {
+      $('.slick-suggest-agent').slick('setPosition');
     })
   }
 
@@ -187,6 +277,8 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     slickArticleRelated()
     fixSlickTab()
     slickSuggestMobile()
+    slickHomeSuggest()
+    slickOwner()
   }
 
   $(document).ready(function() {

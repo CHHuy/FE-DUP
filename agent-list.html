@@ -104,17 +104,17 @@
     // Initialize and add the map
     function initMap() {
       // The location of Uluru
-      const uluru = {lat: -25.344, lng: 131.036};
+      const uluru = { lat: -25.344, lng: 131.036 }
       // The map, centered at Uluru
       const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: uluru,
-      });
+        center: uluru
+      })
       // The marker, positioned at Uluru
       const marker = new google.maps.Marker({
         position: uluru,
-        map: map,
-      });
+        map: map
+      })
     }
   </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
@@ -298,6 +298,9 @@
                   <span>huynhthanh@lisvn.com</span>
                 </div>
               </div>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
+                modal
+              </button>
             </div>
           </div>
           <div class="agent-filter">
@@ -338,7 +341,7 @@
           </div>
           <div class="agent-list-news">
             <div class="row">
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-lg-6">
                 <div class="agent-item">
                   <div class="card">
                     <div class="card-img">
@@ -369,7 +372,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-lg-6">
                 <div class="agent-item">
                   <div class="card">
                     <div class="card-img">
@@ -400,7 +403,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-lg-6">
                 <div class="agent-item">
                   <div class="card">
                     <div class="card-img">
@@ -431,7 +434,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-lg-6">
                 <div class="agent-item">
                   <div class="card">
                     <div class="card-img">
@@ -709,6 +712,87 @@
       </div>
     </div>
   </footer>
+</div>
+<div class="modal fade bd-example-modal-lg modal-agent-profile" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="agent-profile-modal">
+        <div class="agent-profile">
+          <div class="agent-profile-cover">
+            <img src="dummy/cover.png" alt="">
+          </div>
+          <div class="agent-profile-info">
+            <div class="agent-profile-avatar">
+              <img class="cover" src="images/covet-avatar.png" alt="">
+              <img class="avatar" src="dummy/avatar.png" alt="">
+            </div>
+            <div class="agent-profile-des">
+                <span class="agent-profile-name">
+                  NGHUYỄN THỊ HUỲNH ANH
+                </span>
+              <div class="agent-profile-text">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+84 00000000" class="hotline-contact">070 007 7777</a>
+              </div>
+              <div class="agent-profile-text">
+                <i class="far fa-envelope-open"></i>
+                <a href="mailto:abc.lis@gmail.com" class="hotline-contact">abc.lis@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="agent-contract">
+            <a href="#">Gọi tư vấn viên</a>
+            <a href="#">Gửi lời nhắn cho tư vấn viên</a>
+          </div>
+        </div>
+        <div class="split-agent">
+          <p>Kinh nghiệm</p>
+        </div>
+        <div class="agent-info">
+          <div class="agent-info-item">Sinh năm <span>2000</span></div>
+          <div class="agent-info-item">Kinh nghiệm <span>2 năm</span></div>
+          <div class="agent-info-item">Số căn đã chốt <span>99</span></div>
+          <div class="agent-info-item">Độ hài lòng từ khách hàng
+            <div class="my-rating"></div>
+          </div>
+        </div>
+        <div class="slick-agent-wrapper">
+          <h5 class="h5">Các tư vấn viên khác</h5>
+          <div class="slick-suggest-agent">
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+            <div class="list-agent-item">
+              <img src="images/advisor_avatar.png" alt="">
+              <p class="agent-name">Chế Bàn Bút</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Optional JavaScript -->
