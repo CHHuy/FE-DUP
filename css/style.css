@@ -13636,6 +13636,15 @@ body,
   }
 }
 
+@media (max-width: 500px) {
+  .dq-find-agent .agent .agent-content {
+    width: 100% !important;
+  }
+  .dq-find-agent .agent .agent-image img {
+    width: 100% !important;
+  }
+}
+
 .dq-find-agent .agent-content {
   margin-top: auto;
   margin-bottom: auto;

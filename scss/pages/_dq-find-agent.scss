@@ -24,6 +24,17 @@
         }
       }
     }
+    @media (max-width: 500px){
+      .agent-content {
+        width: 100% !important;
+      }
+      .agent-image {
+        img{
+          width: 100% !important;
+        }
+      }
+    }
+
   }
   .agent-content {
     margin-top: auto;
