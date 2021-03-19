@@ -1,0 +1,35 @@
+.project{
+  .project-header-img{
+    margin: 1rem 0;
+    img{
+      width: 100%;
+    }
+  }
+  .search-filter{
+    .h5{
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+    .form-row{
+      align-items: center;
+      .form-group{
+        border: none !important;
+        .form-control{
+          width: unset;
+        }
+        button.btn-filter-project{
+          background: #497f70;
+          color: #ffffff;
+          padding: 0 1rem;
+          font-size: 13px;
+          font-weight: 300;
+          border-radius: 10px;
+          &:hover{
+            background: #2a5447;
+          }
+        }
+      }
+    }
+  }
+}
