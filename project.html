@@ -104,17 +104,17 @@
     // Initialize and add the map
     function initMap() {
       // The location of Uluru
-      const uluru = { lat: -25.344, lng: 131.036 };
+      const uluru = { lat: -25.344, lng: 131.036 }
       // The map, centered at Uluru
-      const map = new google.maps.Map(document.getElementById("map"), {
+      const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: uluru,
-      });
+        center: uluru
+      })
       // The marker, positioned at Uluru
       const marker = new google.maps.Marker({
         position: uluru,
-        map: map,
-      });
+        map: map
+      })
     }
   </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
@@ -269,56 +269,301 @@
     </div>
   </div>
   <main class="main" id="main">
+    <div class="project-background d-sm-none">
+      <img src="dummy/detail-news.png" alt="">
+    </div>
     <div class="container">
       <div class="project">
-        <div class="project-header-img">
+        <div class="project-header-img d-none d-md-block">
           <img src="dummy/detail-news.png" alt="">
         </div>
-      <div class="search-filter">
-        <form class="d-none d-md-block">
-          <div class="form-row">
-            <h5 class="h5">Tìm kiếm theo</h5>
+        <div class="search-filter">
+          <form class="search-box">
             <div class="form-group">
-              <label for="filterLocation">Khu vực</label>
-              <select class="form-control" id="filterLocation">
-                <option>Quận 1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <div class="input-group input-group-md">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search fa-lg"></i></span>
+                </div>
+                <input type="text" id="inputSearch" class="form-control" aria-label="Small"
+                       aria-describedby="inputGroup-sizing-sm">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="filterOwner">Chủ đầu tư</label>
-              <select class="form-control" id="filterOwner">
-                <option>Novaland</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+          </form>
+          <form class="d-none d-md-block">
+            <div class="form-row">
+              <div class="form-group">
+                <h5 class="h5">Tìm kiếm theo</h5>
+              </div>
+              <div class="form-group">
+                <label for="filterLocation">Khu vực</label>
+                <select class="form-control" id="filterLocation">
+                  <option>Quận 1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filterOwner">Chủ đầu tư</label>
+                <select class="form-control" id="filterOwner">
+                  <option>Novaland</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filterPriceRange">Khung giá</label>
+                <select class="form-control" id="filterPriceRange">
+                  <option>1-2 tỷ</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn">Tìm kiếm</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="filterPriceRange">Khung giá</label>
-              <select class="form-control" id="filterPriceRange">
-                <option>1-2 tỷ</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+          </form>
+          <div class="filter-mobile d-md-none">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="true"
+                          aria-controls="collapseOne">
+                    Giá thấp nhất<i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseAbout" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
+                    <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <button type="submit" class="btn">Tìm kiếm</button>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseServices"
+                          aria-expanded="false" aria-controls="collapseTwo">
+                    Giá cao nhất<i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseServices" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
+                    <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
+                    <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
+                    <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
+                    <a href="#" class="list-group-item list-group-item-action">Cho thuê &amp; ký gửi</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseInfo"
+                          aria-expanded="false" aria-controls="collapseThree">
+                    Quận<i class="fas fa-angle-down"></i>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseInfo" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
+                    <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
+                    <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="list-project">
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-project-item">
+            <div class="card">
+              <a href="#" class="project-img">
+                <img class="card-img-top" src="images/house.png" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <a href="#" class="card-title">THE SUN AVENUE <span class="d-none d-md-inline">- 28 MAI CHÍ THỌ, PHƯỜNG AN PHÚ, QUẬN 2</span>
+                </a>
+                <p class="card-text d-md-none">28 Mai Chí Thọ, Phường An Phú, Quận 2</p>
+                <p class="card-text d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Asperiores cupiditate
+                  doloribus eaque eveniet facilis, neque sit veniam? Excepturi illo ipsam ullam. Ad alias corporis culpa
+                  ducimus nobis perspiciatis veritatis voluptatibus.</p>
+                <div class="project-extend">
+                  <a href="#" class="btn-read d-none d-lg-inline"><i class="fas fa-angle-left fa-sm pr-2"></i>Xem thêm
+                    về dự án</a>
+                  <a href="#" class="btn-extend">Liên lạc với chúng tôi</a>
+                  <a href="#" class="btn-extend">Xem bản đồ</a>
+                  <a href="#" class="btn-extend d-lg-none">Xem thêm về dự án</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <footer class="footer" id="footer">
-    <div class="footer-hotline-info-mobile d-none d-md-block d-xl-none">
+
+    <div class="footer-hotline-info-mobile">
       <div class="container">
         <div class="list-group list-group-flush">
           <div class="list-group-item">
@@ -411,7 +656,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-info d-none d-md-block d-xl-none">
+    <div class="footer-info d-none d-md-block">
       <div class="container">
         <div class="row">
           <div class="col">
