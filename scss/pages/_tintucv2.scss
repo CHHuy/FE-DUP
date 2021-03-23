@@ -1,0 +1,381 @@
+.tintucv2 {
+  .tintuc-background {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .tintuc-page-title {
+      position: absolute;
+      margin: auto;
+      top: 25%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      color: #ffffff;
+      font-size: 8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.1;
+      @include media-breakpoint-down(lg) {
+        font-size: 6rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 4rem;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+        top: 15%;
+      }
+
+      span {
+        display: block;
+        font-size: 5rem;
+        @include media-breakpoint-down(lg) {
+          font-size: 4rem;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 2rem;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .tintuc-district-wrap {
+      position: absolute;
+      bottom: 0;
+      top: 65%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      @include media-breakpoint-down(sm){
+        position: unset;
+        margin-top: 1rem;
+      }
+    }
+
+    .tintuc-district {
+      padding: 1rem 5rem;
+      background-color: #e3e8e7;
+      border-radius: 8px;
+      display: inline-flex;
+
+      @include media-breakpoint-down(md) {
+        padding: 5px;
+      }
+      @include media-breakpoint-down(sm) {
+        background-color: transparent;
+      }
+
+      .district-item {
+        background-image: url('../images/district.png');
+        background-repeat: no-repeat;
+        padding: 3rem 1rem;
+        border-radius: 4px;
+        margin: 0 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        @include media-breakpoint-down(lg) {
+          padding: 2rem 1rem;
+          font-size: 1rem;
+          margin: 0 0.5rem;
+        }
+        @include media-breakpoint-down(sm) {
+          padding: 1.2rem 0.4rem;
+          font-size: 10px;
+          margin: 0 0.2rem;
+        }
+      }
+    }
+  }
+
+  .tintuc-header {
+    @include flexbox();
+    margin: 2rem 0 0 0;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+
+    .tintuc-header-item {
+      padding: 0 10px;
+
+      .tintuc-title {
+        color: $primary-color;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+          font-size: 1.4rem;
+        }
+
+        &:after {
+          content: '';
+          float: right;
+          border-top: 2px solid #497f70;
+          width: 77%;
+          transform: translateY(20px);
+          @include media-breakpoint-down(lg) {
+            width: 70%;
+          }
+          @include media-breakpoint-down(md) {
+            transform: translateY(15px);
+          }
+        }
+
+        &.long-title {
+          &:after {
+            content: '';
+            float: right;
+            border-top: 2px solid #497f70;
+            width: 50%;
+            transform: translateY(20px);
+            @include media-breakpoint-down(lg) {
+              width: 40%;
+            }
+            @include media-breakpoint-down(md) {
+              width: 35%;
+              transform: translateY(15px);
+            }
+          }
+        }
+      }
+
+      .card {
+        border: none;
+
+        .card-img-top {
+          border-radius: 8px;
+          height: 350px;
+          object-fit: cover;
+          @include media-breakpoint-down(lg) {
+            height: 250px;
+          }
+          @include media-breakpoint-down(md) {
+            height: 200px;
+          }
+        }
+
+        .card-body {
+          padding: 1rem 0;
+
+          .card-title {
+            color: $primary-color;
+            font-size: 1.8rem;
+            @include media-breakpoint-down(md) {
+              font-size: 1.2rem;
+            }
+          }
+
+          .card-text {
+            font-size: 1.2rem;
+            color: #a6a6a6;
+            font-style: italic;
+            @include media-breakpoint-down(md) {
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tintuc-body {
+    .row {
+      margin: 0 0;
+
+      .col {
+        padding: 0;
+      }
+    }
+
+    .card {
+      border: none;
+      @include flex-direction(row);
+      padding: 8px 10px;
+
+      a {
+        width: 40%;
+      }
+
+      .card-img-top {
+        border-radius: 4px;
+        height: 150px;
+        object-fit: cover;
+        @include media-breakpoint-down(lg){
+          height: 120px;
+        }
+      }
+
+
+      .card-body {
+        width: 60%;
+        padding: 2rem 0.5rem 0 1rem;
+        @include media-breakpoint-down(lg){
+          padding-top: 1rem;
+        }
+
+        .card-title {
+          color: $primary-color;
+          font-size: 1.3rem;
+        }
+
+        .card-text {
+          font-size: 0.8rem;
+          color: #a6a6a6;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .tintuc-body-mobile {
+    margin-top: 0.5rem;
+    .card {
+      border: none;
+      @include flex-direction(row);
+      padding: 8px 0;
+
+      .card-left {
+        width: 60%;
+
+        .card-left-body {
+          padding: 1rem 0;
+
+          .card-title {
+            color: $primary-color;
+            font-size: 1.3rem;
+            font-weight: bold;
+            @include media-breakpoint-down(sm){
+              font-size: 16px;
+            }
+          }
+
+          .card-text {
+            font-size: 0.8rem;
+            color: #a6a6a6;
+            font-style: italic;
+            @include media-breakpoint-down(sm){
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .card-img-top {
+        border-radius: 4px;
+        height: 350px;
+        object-fit: cover;
+        @include media-breakpoint-down(sm){
+          height: 200px;
+        }
+      }
+
+      .card-body {
+        width: 40%;
+        padding: 0 0.5rem 0 1rem;
+        @include media-breakpoint-down(sm){
+          padding:  0 0 0 0.4rem;
+        }
+
+        .card-text {
+          font-size: 0.8rem;
+          @include media-breakpoint-down(sm){
+            font-size: 0.6rem;
+          }
+        }
+
+        .btn-more {
+          a {
+            border: 1px solid $primary-color;
+            background-color: transparent;
+            color: $primary-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 15px;
+            @include media-breakpoint-down(sm){
+              font-size: 10px;
+            }
+            &:hover {
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .load-more {
+    text-align: center;
+    padding: 5px 10px;
+    margin: 2rem;
+
+    a {
+      color: #ffffff;
+      background-color: $primary-color;
+      padding: 2px 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: #2a5447;
+      }
+    }
+  }
+  .pagination-wrapper{
+    @include flexbox();
+    @include justify-content(center);
+    @include media-breakpoint-down(sm){
+      @include flex-direction(column);
+      nav{
+        align-self: center;
+        margin: 1rem 0;
+      }
+      .current-page{
+        margin-right: 0 !important;
+      }
+      .fast-next{
+        margin-left: 0 !important;
+      }
+    }
+    margin: 1rem 0;
+    ul.pagination{
+      margin-bottom: 0;
+      .page-item{
+        margin: 0 2px;
+        a{
+          color: #000000;
+          border-color: #000000;
+          padding: 0 0.5rem !important;
+          border-radius: 2px !important;
+        }
+      }
+      .page-item.disabled{
+        a{
+          background-color: #000000;
+          color: #ffffff;
+          padding: 0 0.5rem !important;
+        }
+      }
+    }
+    .current-page{
+      align-self: center;
+      margin-right: 1rem;
+    }
+    .fast-next{
+      align-self: center;
+      margin-left: 1rem;
+      a{
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

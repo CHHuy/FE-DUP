@@ -100,6 +100,23 @@
       animation-delay: 0.4s;
     }
   </style>
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: -25.344, lng: 131.036 }
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      })
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      })
+    }
+  </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
@@ -132,8 +149,8 @@
         </ul>
       </div>
       <div class="header-mb-item d-block d-md-none">
-        <a class="navigation-tag" href="#">
-          Dịch vụ / Bán
+        <a class="u-login" href="#">
+          Login
         </a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -142,21 +159,21 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVuMobile" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               DỊCH VỤ
-              <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVuMobile">
               <a class="dropdown-item" href="#">Bán</a>
               <a class="dropdown-item" href="#">Cho thuê</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown active">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyenMobile" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               ĐỘC QUYỀN
+              <span class="sr-only">(current)</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyenMobile">
               <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
@@ -204,26 +221,25 @@
           </a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDichVu" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   DỊCH VỤ
-                  <span class="sr-only">(current)</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDichVu">
                   <a class="dropdown-item" href="#">Bán</a>
                   <a class="dropdown-item" href="#">Cho thuê</a>
                 </div>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDocQuyen" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   ĐỘC QUYỀN
+                  <span class="sr-only">(current)</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownDocQuyen">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Tư vấn viên cao cấp</a>
+                  <a class="dropdown-item" href="#">Các sản phẩm độc quyền</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -252,249 +268,432 @@
       </div>
     </div>
   </div>
-  <main class="main" id="main">
+  <main class="main tintucv2" id="main">
+    <div class="tintuc-background">
+      <img src="images/tintuc-bg.png" alt="">
+      <div class="tintuc-page-title">
+        Thành phố <span>Đáng sống</span>
+      </div>
+      <div class="tintuc-district-wrap">
+        <div class="tintuc-district">
+          <div class="district-item">Quận 2</div>
+          <div class="district-item">Quận 3</div>
+          <div class="district-item">Quận 4</div>
+          <div class="district-item">Quận 7</div>
+          <div class="district-item">Quận 1</div>
+        </div>
+      </div>
+    </div>
     <div class="container">
-      <div class="home-page-exclusive d-none d-sm-block">
-        <div class="dq-find-agent">
-          <div class="agent">
-            <div class="agent-image">
-              <img src="images/bg-dq-find-agent.png" alt="">
-            </div>
-            <div class="agent-content">
-              <div class="agent-logo">
-                <img src="images/logo-dq-find-agent.png" alt="">
-              </div>
-              <div class="agent-info">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.¬</p>
-              </div>
-              <div class="agent-btn">
-                <a href="#">Tìm kiếm tư vấn viên cao cấp</a>
-              </div>
+      <div class="tintuc-header">
+        <div class="tintuc-header-item">
+          <p class="tintuc-title">Mua</p>
+          <div class="card">
+            <a href="#">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <a href="#" class="card-title">Card title</a>
+              <p class="card-text">05/01/2021 - 12:45 AM</p>
             </div>
           </div>
         </div>
-        <div class="get-info">
-          <h5 class="h5">HÃY ĐỂ LẠI THÔNG TIN CỦA BẠN CHO CHÚNG TÔI ĐỂ ĐƯỢC TƯ VẤN THÊM</h5>
-          <form class="form-get-info">
-            <div class="form-row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Họ và Tên">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Email">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Phone">
-              </div>
-              <div class="col">
-                <button type="submit" class="btn form-info-submit">Hoàn tất</button>
-              </div>
+        <div class="tintuc-header-item">
+          <p class="tintuc-title">Bán</p>
+          <div class="card">
+            <a href="#">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <a href="#" class="card-title">Card title</a>
+              <p class="card-text">05/01/2021 - 12:45 AM</p>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="confirmCheck1">
-              <label class="form-check-label" for="confirmCheck1">
-                Tôi đã từng làm việc với LIS
-              </label>
-            </div>
-          </form>
-        </div>
-        <div class="introduction-info">
-          <p class="introduction-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi cum debitis
-            dolorum ea eligendi excepturi
-            minima neque obcaecati odit perspiciatis placeat possimus provident quam repudiandae sequi, ullam velit
-            voluptatem?</p>
-          <div class="introduction-block">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <div class="group-item-head">
-                  Thông tin
-                </div>
-                <p class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolor enim ex facilis
-                  incidunt
-                  iure laboriosam magnam minima nam natus optio quo reiciendis, sapiente sint suscipit tempora
-                  temporibus
-                  vero!
-                </p>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-head">
-                  Nhanh gọn
-                </div>
-                <p class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolor enim ex facilis
-                  incidunt
-                  iure laboriosam magnam minima nam natus optio quo reiciendis, sapiente sint suscipit tempora
-                  temporibus
-                  vero!
-                </p>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-head">
-                  Minh bạch
-                </div>
-                <p class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolor enim ex facilis
-                  incidunt
-                  iure laboriosam magnam minima nam natus optio quo reiciendis, sapiente sint suscipit tempora
-                  temporibus
-                  vero!
-                </p>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-head">
-                  Đơn giản
-                </div>
-                <p class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis dolor enim ex facilis
-                  incidunt
-                  iure laboriosam magnam minima nam natus optio quo reiciendis, sapiente sint suscipit tempora
-                  temporibus
-                  vero!
-                </p>
-              </li>
-            </ul>
           </div>
         </div>
-        <div class="introduction-story">
-          <div class="story-img">
-            <img src="images/house-3.png" alt="">
-            <i class="far fa-play-circle fa-4x"></i>
-          </div>
-          <div class="story-txt">
-            <h5 class="h5">Câu chuyện thành công</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid aperiam, cum delectus, eos esse,
-              eveniet ex fugit inventore labore molestiae necessitatibus nemo nobis praesentium quasi reiciendis ut vel
-              velit.</p>
-          </div>
-        </div>
-        <div class="utilities-building">
-          <h5 class="h5">Những dịch vụ kèm theo</h5>
-          <ul class="list-utilities row">
-            <div class="col-4">
-              <li class="list-utilities-item">Sữa sàn nhà</li>
-              <li class="list-utilities-item">Giặt hoặc thay thế thảm</li>
-              <li class="list-utilities-item">Vệ sinh sâu</li>
-              <li class="list-utilities-item">Diệt côn trùng</li>
+        <div class="tintuc-header-item">
+          <p class="tintuc-title long-title">Cho Thuê</p>
+          <div class="card">
+            <a href="#">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <a href="#" class="card-title">Card title</a>
+              <p class="card-text">05/01/2021 - 12:45 AM</p>
             </div>
-            <div class="col-4">
-              <li class="list-utilities-item">Sửa mái</li>
-              <li class="list-utilities-item">Kiểm tra điện</li>
-              <li class="list-utilities-item">Kiểm tra nước</li>
-              <li class="list-utilities-item">Kiểm tra thoát nước</li>
-            </div>
-            <div class="col-4">
-              <li class="list-utilities-item">Cái thiện bếp</li>
-              <li class="list-utilities-item">Cải thiện nhà tắm</li>
-              <li class="list-utilities-item">Hơn 100 hạng mục cải thiện trong nhà</li>
-            </div>
-          </ul>
-        </div>
-        <div class="introduction-story">
-          <div class="story-img">
-            <img src="images/house-3.png" alt="">
-          </div>
-          <div class="story-txt">
-            <h5 class="h5">Cách thức hoạt động</h5>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <div class="group-item-number">
-                  1
-                </div>
-                <div class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dignissimos eos error ex facere
-                  hic laborum libero minus mollitia nisi non odio, officiis optio perferendis porro quasi vitae
-                  voluptates voluptatibus.
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-number">
-                  2
-                </div>
-                <div class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dignissimos eos error ex facere
-                  hic laborum libero minus mollitia nisi non odio, officiis optio perferendis porro quasi vitae
-                  voluptates voluptatibus.
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-number">
-                  3
-                </div>
-                <div class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dignissimos eos error ex facere
-                  hic laborum libero minus mollitia nisi non odio, officiis optio perferendis porro quasi vitae
-                  voluptates voluptatibus.
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="group-item-number">
-                  4
-                </div>
-                <div class="group-item-txt">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dignissimos eos error ex facere
-                  hic laborum libero minus mollitia nisi non odio, officiis optio perferendis porro quasi vitae
-                  voluptates voluptatibus.
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      <div class="search-filter d-sm-none">
-        <h2 class="h2">Tiện ích nội khu</h2>
-        <form class="mobile-filter">
-          <div class="form-group">
-            <label for="inputKeyword">Từ khoá tìm kiếm</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
+      <div class="tintuc-body d-none d-lg-block">
+        <div class="row">
+          <div class="col">
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
               </div>
-              <input type="text" id="inputKeyword" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Nhà bán giá rẻ">
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="inputBDS">Loại hình bất động sản</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
+          <div class="col">
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
               </div>
-              <input type="text" id="inputBDS" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Nhà cho thuê">
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="inputLocation">Vị trí</label>
-            <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
+          <div class="col">
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
               </div>
-              <input type="text" id="inputLocation" class="form-control" aria-label="Small"
-                     aria-describedby="inputGroup-sizing-sm" placeholder="Quận 2">
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-item">
+              <div class="card">
+                <a href="#">
+                  <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <a href="#" class="card-title">Card title</a>
+                  <p class="card-text">05/01/2021 - 12:45 AM</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="inputPriceRange">Khung giá</label>
-            <select class="form-control price-range-mobile" id="inputPriceRange">
-              <option>1-2 tỷ</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+        </div>
+      </div>
+      <div class="tintuc-body-mobile d-lg-none">
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn">Tìm kiếm</button>
-        </form>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card">
+            <div class="card-left">
+              <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+              <div class="card-left-body">
+                <a href="#" class="card-title">Card title</a>
+                <p class="card-text">05/01/2021 - 12:45 AM</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aliquam est laborum omnis quia soluta voluptatem! Aliquam, dicta earum enim et fugiat iure magnam porro ratione recusandae tempora vitae, voluptates?</p>
+              <div class="btn-more text-center">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="load-more d-none d-lg-block">
+        <a href="#">Xem thêm</a>
+      </div>
+      <div class="pagination-wrapper d-lg-none">
+        <div class="current-page">
+          Trang 1/10
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+        <div class="fast-next">
+          <a href="#">Trang tiếp theo</a>
+          <a href="#">Trang cuối</a>
+        </div>
       </div>
     </div>
   </main>
   <footer class="footer" id="footer">
-
     <div class="footer-hotline-info-mobile">
       <div class="container">
         <div class="list-group list-group-flush">
@@ -687,6 +886,10 @@
 <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+  async
+></script>
 
 <!-- Core JavaScript -->
 <script src="dist/core.min.js"></script>
