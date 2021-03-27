@@ -1,5 +1,5 @@
 // Variables
-$primary-color: #497F70;
+$primary-color: #497f70;
 // Color system
 // Options
 // Spacing
@@ -11,7 +11,10 @@ $primary-color: #497F70;
 // Grid columns
 // Components
 // Fonts
-$font-family-sans-serif: "SVN-Gotham" , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: 'SVN-Gotham', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans',
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
 // Tables
 // Buttons + Forms
 // Buttons
@@ -20,7 +23,7 @@ $font-family-sans-serif: "SVN-Gotham" , -apple-system, BlinkMacSystemFont, "Sego
 // Z-index master list
 // Navs
 // Navbar
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{rgb(73,127,112)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{rgb(73,127,112)}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 // Pagination
 // Jumbotron
 // Cards

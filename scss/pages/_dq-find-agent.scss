@@ -14,27 +14,26 @@
         @include flex(1);
       }
     }
-    @media (max-width: 1200px){
+    @media (max-width: 1200px) {
       .agent-content {
         width: 60%;
       }
       .agent-image {
-        img{
+        img {
           width: 100% !important;
         }
       }
     }
-    @media (max-width: 500px){
+    @media (max-width: 500px) {
       .agent-content {
         width: 100% !important;
       }
       .agent-image {
-        img{
+        img {
           width: 100% !important;
         }
       }
     }
-
   }
   .agent-content {
     margin-top: auto;
@@ -43,16 +42,16 @@
     @include media-breakpoint-up(md) {
       padding: 24px;
     }
-   .agent-logo {
-     text-align: center;
-     img {
-       width: 80%;
-     }
-   }
+    .agent-logo {
+      text-align: center;
+      img {
+        width: 80%;
+      }
+    }
     .agent-info {
       margin-top: 12px;
       @include font-size(16px);
-      p{
+      p {
         font-weight: 400;
       }
     }
@@ -70,7 +69,7 @@
         padding-right: 20px;
         padding-top: 4px;
         padding-bottom: 4px;
-        &:hover{
+        &:hover {
           background-color: #2a5447;
         }
         @include media-breakpoint-up(md) {

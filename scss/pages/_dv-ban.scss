@@ -399,7 +399,7 @@
       .h5 {
         color: $primary-color;
         text-transform: uppercase;
-        @media (max-width: 360px)  {
+        @media (max-width: 360px) {
           font-size: 16px;
         }
       }
@@ -974,7 +974,7 @@
               border-left: 10px solid #edcf94;
               border-top: 11px solid transparent;
               border-bottom: 11px solid transparent;
-              @include media-breakpoint-down(sm){
+              @include media-breakpoint-down(sm) {
                 bottom: 0;
               }
             }

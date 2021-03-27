@@ -104,17 +104,17 @@
     // Initialize and add the map
     function initMap() {
       // The location of Uluru
-      const uluru = { lat: -25.344, lng: 131.036 };
+      const uluru = { lat: -25.344, lng: 131.036 }
       // The map, centered at Uluru
-      const map = new google.maps.Map(document.getElementById("map"), {
+      const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center: uluru,
-      });
+        center: uluru
+      })
       // The marker, positioned at Uluru
       const marker = new google.maps.Marker({
         position: uluru,
-        map: map,
-      });
+        map: map
+      })
     }
   </script>
   <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
@@ -269,7 +269,7 @@
     </div>
   </div>
   <main class="main" id="main">
-    <div class="container">
+    <div class="container-fluid">
       <div class="search-result">
         <div class="search-map d-none d-md-block">
           <!--The div element for the map -->
@@ -278,93 +278,76 @@
         <div class="result">
           <div class="search-filter">
             <h2 class="h2 d-md-none">Tiện ích nội khu</h2>
-            <form class="d-md-none mobile-filter">
-              <div class="form-group">
-                <label for="inputKeyword">Từ khoá tìm kiếm</label>
-                <div class="input-group input-group-sm mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <form class="filter-searching">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <select class="form-control" id="filterKeyword">
+                      <option>Bất động sản giá tốt</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <input type="text" id="inputKeyword" class="form-control" aria-label="Small"
-                         aria-describedby="inputGroup-sizing-sm" placeholder="Nhà bán giá rẻ">
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="inputBDS">Loại hình bất động sản</label>
-                <div class="input-group input-group-sm mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <select class="form-control" id="filterBuy">
+                      <option>Mua</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <input type="text" id="inputBDS" class="form-control" aria-label="Small"
-                         aria-describedby="inputGroup-sizing-sm" placeholder="Nhà cho thuê">
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="inputLocation">Vị trí</label>
-                <div class="input-group input-group-sm mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <select class="form-control" id="filterLocation">
+                      <option>Vị trí</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                   </div>
-                  <input type="text" id="inputLocation" class="form-control" aria-label="Small"
-                         aria-describedby="inputGroup-sizing-sm" placeholder="Quận 2">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="inputPriceRange">Khung giá</label>
-                <select class="form-control price-range-mobile" id="inputPriceRange">
-                  <option>1-2 tỷ</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <button type="submit" class="btn">Tìm kiếm</button>
-            </form>
-            <form class="d-none d-md-block">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="filterKeyword">Từ khoá tìm kiếm</label>
-                  <select class="form-control" id="filterKeyword">
-                    <option>Bất động sản giá tốt</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-group">
+                    <select class="form-control" id="filterRoom">
+                      <option>Phòng ngủ</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label for="filterBDS">Loại hình BĐS</label>
-                  <select class="form-control" id="filterBDS">
-                    <option>Thuê</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+                <div class="col-sm">
+                  <div class="form-group">
+                    <select class="form-control" id="filterDirection">
+                      <option>Hướng</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label for="filterLocation">Vị trí</label>
-                  <select class="form-control" id="filterLocation">
-                    <option>Quận 1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="filterPriceRange">Khung giá</label>
-                  <select class="form-control" id="filterPriceRange">
-                    <option>1-2 tỷ</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+                <div class="col-sm">
+                  <div class="form-group">
+<!--                    <p>
+                      <label for="amount">Khung giá</label>
+                      <input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+                    </p>-->
+                    <label for="slider-range">Khung giá</label>
+                    <div id="slider-range"></div>
+                  </div>
                 </div>
               </div>
-              <button type="submit" class="btn">Tìm kiếm</button>
             </form>
           </div>
           <div class="list-group list-group-result">
@@ -399,8 +382,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="list-group-item">
               <div class="card">
                 <div class="card-body">
                   <a class="card-title">Đảo kim cương</a>
@@ -463,6 +444,36 @@
                   </div>
                 </div>
               </div>
+              <div class="card">
+                <div class="card-body">
+                  <a class="card-title">Đảo kim cương</a>
+                  <div class="card-info mb-3">
+                    <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+                    <span>TNBT-05102</span>
+                  </div>
+                  <div class="img-interact">
+                    <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                    <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                    <a href="#" class="option-interact"><i class="fas fa-ellipsis-v fa-lg"></i></a>
+                    <!--<div class="dropdown dropleft dropmenu-interact">
+                      <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-lg"></i>
+                      </button>
+                      <div class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>-->
+                    <div class="price-box">
+                      VND <span>5.000.000.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="list-group-item">
               <div class="card">
@@ -495,65 +506,102 @@
                   </div>
                 </div>
               </div>
+              <div class="card">
+                <div class="card-body">
+                  <a class="card-title">Đảo kim cương</a>
+                  <div class="card-info mb-3">
+                    <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+                    <span>TNBT-05102</span>
+                  </div>
+                  <div class="img-interact">
+                    <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                    <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                    <a href="#" class="option-interact"><i class="fas fa-ellipsis-v fa-lg"></i></a>
+                    <!--<div class="dropdown dropleft dropmenu-interact">
+                      <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-lg"></i>
+                      </button>
+                      <div class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>-->
+                    <div class="price-box">
+                      VND <span>5.000.000.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="load-more">
-              <a href="#">Xem thêm</a>
+            <div class="list-group-item">
+              <div class="card">
+                <div class="card-body">
+                  <a class="card-title">Đảo kim cương</a>
+                  <div class="card-info mb-3">
+                    <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+                    <span>TNBT-05102</span>
+                  </div>
+                  <div class="img-interact">
+                    <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                    <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                    <a href="#" class="option-interact"><i class="fas fa-ellipsis-v fa-lg"></i></a>
+                    <!--<div class="dropdown dropleft dropmenu-interact">
+                      <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-lg"></i>
+                      </button>
+                      <div class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>-->
+                    <div class="price-box">
+                      VND <span>5.000.000.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <a class="card-title">Đảo kim cương</a>
+                  <div class="card-info mb-3">
+                    <i class="fas fa-bed mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-bath mr-4"><span class="ml-2">03</span></i>
+                    <i class="fas fa-arrows-alt-h mr-4"><span class="ml-2">142m<sup>2</sup></span></i>
+                    <span>TNBT-05102</span>
+                  </div>
+                  <div class="img-interact">
+                    <img class="card-img-top" src="images/house.jpg" alt="Card image cap">
+                    <a href="#" class="heart-interact"><i class="fas fa-heart fa-lg"></i></a>
+                    <a href="#" class="option-interact"><i class="fas fa-ellipsis-v fa-lg"></i></a>
+                    <!--<div class="dropdown dropleft dropmenu-interact">
+                      <button class="btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-lg"></i>
+                      </button>
+                      <div class="dropdown-menu " aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>-->
+                    <div class="price-box">
+                      VND <span>5.000.000.000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="footer d-none d-xl-block">
-            <div class="footer-info d-none d-md-block">
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Công ty
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Về chúng tôi</a>
-                      <a href="#" class="list-group-item list-group-item-action">Tầm nhìn</a>
-                      <a href="#" class="list-group-item list-group-item-action">Sứ mệnh</a>
-                      <a href="#" class="list-group-item list-group-item-action">Đội ngũ</a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Dịch vụ
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Nhà đất bán</a>
-                      <a href="#" class="list-group-item list-group-item-action">Nhà đất thuê</a>
-                      <a href="#" class="list-group-item list-group-item-action">Tư vấn dự án</a>
-                      <a href="#" class="list-group-item list-group-item-action">Định giá nhà đất</a>
-                      <a href="#" class="list-group-item list-group-item-action">Cho thuê & ký gửi</a>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="list-group">
-                      <p class="list-group-item list-group-item-action">
-                        Thông tin
-                      </p>
-                      <a href="#" class="list-group-item list-group-item-action">Đầu tư</a>
-                      <a href="#" class="list-group-item list-group-item-action">Hướng dẫn</a>
-                      <a href="#" class="list-group-item list-group-item-action">Kiến thức</a>
-                      <a href="#" class="list-group-item list-group-item-action">Thị trường</a>
-                      <a href="#" class="list-group-item list-group-item-action">Sự kiện</a>
-                    </div>
-                  </div>
-                </div>
-                <img src="images/logo.png" alt="">
-                <div class="social-media">
-                  <a href="#">
-                    <i class="fab fa-facebook-f fa-lg"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-instagram fa-lg"></i>
-                  </a>
-                  <a href="#">
-                    <i class="fab fa-youtube fa-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="load-more">
+            <a href="#">Xem thêm</a>
           </div>
         </div>
         <div class="d-sm-none">
@@ -658,7 +706,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-info d-none d-md-block d-xl-none">
+    <div class="footer-info d-none d-md-block">
       <div class="container">
         <div class="row">
           <div class="col">

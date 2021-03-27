@@ -110,7 +110,7 @@
   .introduction-story {
     margin: 2rem 0;
     @include flexbox();
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       @include flex-direction(column);
       .story-img {
         width: 100% !important;
@@ -127,7 +127,7 @@
       img {
         width: 100%;
       }
-      i{
+      i {
         position: absolute;
         top: 45%;
         left: 0;
@@ -142,7 +142,7 @@
       width: 48%;
       padding: 0 2rem;
       align-self: center;
-      p{
+      p {
         font-weight: 400;
       }
       ul.list-group {
@@ -159,7 +159,7 @@
             color: $primary-color;
             padding: 2rem 0;
           }
-          .group-item-txt{
+          .group-item-txt {
             font-weight: 400;
             line-height: 1.4;
           }

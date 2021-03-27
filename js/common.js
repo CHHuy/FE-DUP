@@ -72,6 +72,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
       })
     }
   }
+
   function slickArticleRelated() {
     $('.article-related-js').slick({
       arrows: true,
@@ -87,46 +88,48 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
           breakpoint: 850,
           settings: {
             slidesToShow: 2,
-            centerPadding: '40px',
+            centerPadding: '40px'
           }
         }
       ]
-    });
+    })
   }
-  function slickSlider(){
+
+  function slickSlider() {
     $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
       asNavFor: '.slider-nav',
       arrows: false
-    });
+    })
     $('.slider-nav').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       asNavFor: '.slider-for',
       focusOnSelect: true,
       arrows: true
-    });
+    })
     $('.slick-single').slick({
-      fade: true,
-    });
+      fade: true
+    })
     $('.slick-multiple').slick({
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 4
-    });
+    })
   }
 
-  function slickAgentList(){
+  function slickAgentList() {
     $('.slick-agent').slick({
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 3,
-      arrows: true,
-    });
+      arrows: true
+    })
   }
-  function slickHomeSuggest(){
+
+  function slickHomeSuggest() {
     $('.slick-home-suggest').slick({
       infinite: true,
       slidesToShow: 3,
@@ -138,20 +141,21 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
           breakpoint: 1200,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 2
           }
         },
         {
           breakpoint: 560,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToScroll: 1
           }
-        },
+        }
       ]
-    });
+    })
   }
-  function slickOwner(){
+
+  function slickOwner() {
     $('.slick-owner').slick({
       infinite: true,
       slidesToShow: 4,
@@ -163,21 +167,21 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
           breakpoint: 770,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 2
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToScroll: 1
           }
-        },
+        }
       ]
-    });
+    })
   }
 
-  function slickSuggest(){
+  function slickSuggest() {
     $('.slick-suggest').slick({
       fade: true,
       dots: true,
@@ -186,11 +190,11 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
         {
           breakpoint: 500,
           settings: {
-            dots: false,
+            dots: false
           }
-        },
+        }
       ]
-    });
+    })
     $('.slick-suggest-agent').slick({
       arrows: true,
       slidesToShow: 5,
@@ -200,18 +204,19 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
           breakpoint: 500,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 3
           }
-        },
+        }
       ]
-    });
+    })
   }
-  function slickSuggestMobile(){
+
+  function slickSuggestMobile() {
     $('.slick-suggest-mobile').slick({
       fade: true,
       dots: false,
-      arrows: true,
-    });
+      arrows: true
+    })
     $('.slick-project').slick({
       dots: false,
       arrows: true,
@@ -222,48 +227,63 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
           breakpoint: 1025,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 3
           }
         },
         {
           breakpoint: 500,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToScroll: 1
           }
-        },
+        }
       ]
-    });
-  }
-
-  function fixSlickTab(){
-    $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
-      $('.slick-suggest').slick('setPosition');
-    })
-    $('.modal').on('shown.bs.modal', function (e) {
-      $('.slick-suggest-agent').slick('setPosition');
     })
   }
 
-  function btnSwitch(){
+  function fixSlickTab() {
+    $('a[data-toggle="pill"]').on('shown.bs.tab', function(e) {
+      $('.slick-suggest').slick('setPosition')
+    })
+    $('.modal').on('shown.bs.modal', function(e) {
+      $('.slick-suggest-agent').slick('setPosition')
+    })
+  }
+
+  function btnSwitch() {
     $('body').on('click', '.btn-switch', function() {
-      $('.search-map').toggleClass('d-none');
-      $('.result').toggleClass('d-none');
-      $(this).text($(this).text() == 'List' ? 'Map' : 'List');
-    });
+      $('.search-map').toggleClass('d-none')
+      $('.result').toggleClass('d-none')
+      $(this).text($(this).text() == 'List' ? 'Map' : 'List')
+    })
   }
 
-  function ratingaStar(){
+  function ratingaStar() {
     $('.my-rating').starRating({
       initialRating: 4,
       strokeColor: '#894A00',
       strokeWidth: 10,
       starSize: 20,
-      callback: function(currentRating, $el){
+      callback: function(currentRating, $el) {
         // make a server call here
       }
-    });
+    })
   }
+
+  function rangeScale() {
+    $('#slider-range').slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [75, 300],
+      slide: function(event, ui) {
+        $('#amount').val('$' + ui.values[0] + ' - $' + ui.values[1])
+      }
+    })
+    $('#amount').val('$' + $('#slider-range').slider('values', 0) +
+      ' - $' + $('#slider-range').slider('values', 1))
+  }
+
   function init() {
     scrollToAnchor()
     getBarwidth()
@@ -279,6 +299,7 @@ if (Modernizr.touch === true && $(window).width() <= 767) {
     slickSuggestMobile()
     slickHomeSuggest()
     slickOwner()
+    rangeScale()
   }
 
   $(document).ready(function() {

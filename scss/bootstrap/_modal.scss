@@ -1,49 +1,49 @@
-.modal-agent-profile{
-  @include media-breakpoint-down(md){
-    .modal-dialog{
+.modal-agent-profile {
+  @include media-breakpoint-down(md) {
+    .modal-dialog {
       max-width: 700px;
     }
   }
-  @include media-breakpoint-down(sm){
-    .agent-profile-avatar{
+  @include media-breakpoint-down(sm) {
+    .agent-profile-avatar {
       width: 70px !important;
       height: 70px !important;
-      img.avatar{
+      img.avatar {
         width: 70px !important;
         height: 70px !important;
       }
     }
-    .agent-info{
+    .agent-info {
       padding: 0 1rem;
       @include flex-direction(column !important);
       text-align: center;
       padding: 0 1rem !important;
       margin: 0 0 2rem 0 !important;
     }
-    .slick-suggest-agent{
+    .slick-suggest-agent {
       padding: 0 1rem !important;
-      .slick-prev{
+      .slick-prev {
         left: 5px !important;
       }
-      .slick-next{
+      .slick-next {
         right: 5px !important;
       }
-      .list-agent-item{
-        img{
+      .list-agent-item {
+        img {
           width: 50px !important;
           height: 50px !important;
         }
-        .agent-name{
+        .agent-name {
           font-size: 10px !important;
         }
       }
     }
   }
 
-  .agent-profile-modal{
-    .agent-profile{
+  .agent-profile-modal {
+    .agent-profile {
       padding: 0 0 2rem 0 !important;
-      .agent-profile-info{
+      .agent-profile-info {
         @include media-breakpoint-up(md) {
           bottom: -10%;
         }
@@ -54,27 +54,27 @@
           bottom: -5% !important;
         }
       }
-      .agent-profile-avatar{
+      .agent-profile-avatar {
         width: 150px;
         height: 150px;
-        img.avatar{
+        img.avatar {
           width: 150px;
           height: 150px;
           padding: 3px;
         }
       }
-      .agent-profile-des{
-        .agent-profile-name{
+      .agent-profile-des {
+        .agent-profile-name {
           color: $primary-color;
           @include media-breakpoint-up(md) {
             font-size: 1.2rem;
           }
         }
-        .agent-profile-text{
-          i{
+        .agent-profile-text {
+          i {
             color: $primary-color;
           }
-          .hotline-contact{
+          .hotline-contact {
             color: #000000;
             text-decoration: none;
           }
@@ -83,115 +83,116 @@
           }
         }
       }
-      .agent-contract{
+      .agent-contract {
         @include flexbox();
         @include flex-direction(column);
         @include align-items(center);
         position: absolute;
         right: 9%;
         bottom: -10%;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           right: 3% !important;
           bottom: -15% !important;
         }
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
           right: 3% !important;
           bottom: -15% !important;
           right: 25% !important;
           bottom: -35% !important;
         }
-        a{
+        a {
           font-size: 12px;
           border: 1px solid $primary-color;
           color: $primary-color;
           padding: 1px 5px;
           border-radius: 10px;
           text-decoration: none;
-          &:first-child{
+          &:first-child {
             margin-bottom: 5px;
           }
-          &:hover{
+          &:hover {
             background-color: $primary-color;
             color: #ffffff;
           }
         }
       }
     }
-    .split-agent{
+    .split-agent {
       margin-top: 4rem;
       padding: 0 4rem;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         margin-top: 5rem !important;
         padding: 0 1rem !important;
       }
-      p{
+      p {
         text-transform: uppercase;
         color: $primary-color;
       }
-      p:after{
+      p:after {
         display: inline-block;
-        content: "";
-        border-top: .1rem solid $primary-color;
+        content: '';
+        border-top: 0.1rem solid $primary-color;
         width: 80%;
         margin: 0 0 0 1rem;
         transform: translateY(-3px);
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           margin: 0 !important;
           width: 100% !important;
         }
       }
     }
-    .agent-info{
+    .agent-info {
       @include flexbox();
       @include justify-content(space-between);
       margin: 1rem 0;
       padding: 0 4rem;
-      .agent-info-item{
+      .agent-info-item {
         font-size: 12px;
         font-weight: 400;
-        span{
+        span {
           font-weight: bold;
-          &:before{
+          &:before {
             content: '|';
             padding-right: 5px;
           }
         }
-        .my-rating{
+        .my-rating {
           text-align: center;
         }
       }
     }
-    .slick-agent-wrapper{
+    .slick-agent-wrapper {
       padding: 2rem 0;
       background-color: #f6f6f6f6;
-      .h5{
+      .h5 {
         padding: 0 4rem;
         color: $primary-color;
       }
     }
-    .slick-suggest-agent{
+    .slick-suggest-agent {
       padding: 0 4rem;
       margin: 1rem 0;
-      .list-agent-item{
+      .list-agent-item {
         text-align: center;
-        img{
+        img {
           width: 70px;
           height: 70px;
           margin: auto;
         }
-        .agent-name{
+        .agent-name {
           margin: 5px 0 0 0;
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
         }
       }
-      .slick-prev,.slick-next{
+      .slick-prev,
+      .slick-next {
         top: 35%;
       }
-      .slick-prev{
+      .slick-prev {
         left: 30px;
-        &:before{
+        &:before {
           font-family: 'Font Awesome 5 Free';
           content: '\f053';
           display: inline-block;
@@ -200,11 +201,10 @@
           font-weight: 900;
           color: #000000;
         }
-
       }
-      .slick-next{
+      .slick-next {
         right: 30px;
-        &:before{
+        &:before {
           font-family: 'Font Awesome 5 Free';
           content: '\f054';
           display: inline-block;
@@ -217,4 +217,3 @@
     }
   }
 }
-

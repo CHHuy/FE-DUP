@@ -1,16 +1,16 @@
-.tintuc{
-  .slick-project{
+.tintuc {
+  .slick-project {
     margin: 2rem 0;
-    @include media-breakpoint-down(md){
-      button.slick-next{
+    @include media-breakpoint-down(md) {
+      button.slick-next {
         right: -15px !important;
       }
     }
-    .slick-item{
-/*      max-width: fit-content;
+    .slick-item {
+      /*      max-width: fit-content;
       width: auto !important;
       margin: 0 0.5rem;*/
-      a{
+      a {
         display: block;
         text-align: center;
         border: 1px solid $primary-color;
@@ -18,57 +18,57 @@
         margin-right: 5px;
         color: $primary-color;
         text-decoration: none;
-        &:hover{
+        &:hover {
           background: $primary-color;
           color: #ffffff;
         }
       }
     }
-    button.slick-prev{
+    button.slick-prev {
       display: none !important;
     }
-    button.slick-next:before{
+    button.slick-next:before {
       color: #000;
       content: '\f054';
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
     }
   }
-  .tintuc-body{
+  .tintuc-body {
     @include flexbox();
-    .list-group-item{
+    .list-group-item {
       padding-left: 0;
     }
-    .tintuc-left{
+    .tintuc-left {
       width: 60%;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         width: 100% !important;
-        .list-group-item{
+        .list-group-item {
           margin-right: 0 !important;
           padding-right: 0 !important;
         }
-        .card{
+        .card {
           @include flex-direction(column);
           position: relative;
-          .card-body{
+          .card-body {
             padding-left: 0 !important;
             padding-top: 1rem !important;
           }
-          .card-img-top{
+          .card-img-top {
             width: 60% !important;
           }
-          .card-info{
+          .card-info {
             width: 37%;
             position: absolute;
             top: 0;
             right: 0;
-            p{
+            p {
               font-size: 10px;
               margin-bottom: 0.5rem;
               height: 165px;
               overflow: hidden;
             }
-            a{
+            a {
               color: $primary-color;
               border: 1px solid $primary-color;
               border-radius: 10px;
@@ -79,64 +79,64 @@
           }
         }
       }
-      .list-group-item{
+      .list-group-item {
         margin-right: 1rem;
       }
     }
-    .tintuc-right{
+    .tintuc-right {
       width: 40%;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         display: none !important;
       }
-      .h5{
+      .h5 {
         color: $primary-color;
         text-transform: uppercase;
       }
-      .news-post{
+      .news-post {
         margin-top: 1rem;
-        .card{
+        .card {
           margin-bottom: 0.5rem;
         }
-        .card-img-top{
+        .card-img-top {
           width: 100px !important;
           height: 100px !important;
           border-radius: 4px !important;
         }
-        .card-body{
+        .card-body {
           padding-top: 1rem !important;
           padding-left: 0.5rem !important;
-          .card-text{
+          .card-text {
             font-size: 14px !important;
           }
-          span{
+          span {
             font-size: 12px !important;
           }
         }
       }
     }
-    .card{
+    .card {
       border: none;
       @include flex-direction(row);
-      .card-img-top{
+      .card-img-top {
         width: 400px;
         height: 400px;
         border-radius: 8px;
-        @include media-breakpoint-down(lg){
+        @include media-breakpoint-down(lg) {
           width: 200px !important;
           height: 200px !important;
         }
       }
-      .card-body{
+      .card-body {
         padding-top: 5rem;
         padding-right: 0;
         @include flexbox();
         @include flex-direction(column);
-        .card-text{
+        .card-text {
           color: $primary-color;
           font-size: 1.5rem;
           font-weight: bold;
         }
-        span{
+        span {
           font-size: 14px;
           color: #a6a6a6;
           font-style: italic;
@@ -144,50 +144,50 @@
       }
     }
   }
-  .pagination-wrapper{
+  .pagination-wrapper {
     @include flexbox();
     @include justify-content(center);
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       @include flex-direction(column);
-      nav{
+      nav {
         align-self: center;
         margin: 1rem 0;
       }
-      .current-page{
+      .current-page {
         margin-right: 0 !important;
       }
-      .fast-next{
+      .fast-next {
         margin-left: 0 !important;
       }
     }
     margin: 1rem 0;
-    ul.pagination{
+    ul.pagination {
       margin-bottom: 0;
-      .page-item{
+      .page-item {
         margin: 0 2px;
-        a{
+        a {
           color: #000000;
           border-color: #000000;
           padding: 0 0.5rem !important;
           border-radius: 2px !important;
         }
       }
-      .page-item.disabled{
-        a{
+      .page-item.disabled {
+        a {
           background-color: #000000;
           color: #ffffff;
           padding: 0 0.5rem !important;
         }
       }
     }
-    .current-page{
+    .current-page {
       align-self: center;
       margin-right: 1rem;
     }
-    .fast-next{
+    .fast-next {
       align-self: center;
       margin-left: 1rem;
-      a{
+      a {
         margin-right: 0.5rem;
       }
     }

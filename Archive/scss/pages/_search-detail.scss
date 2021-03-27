@@ -1,13 +1,13 @@
 .search-filter {
   padding: 2rem 0 2rem 0;
-  .h2{
+  .h2 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 2rem;
   }
   .mobile-filter {
-    .form-group{
+    .form-group {
       margin-bottom: 2rem;
     }
     label {
@@ -127,7 +127,7 @@
     width: 50%;
     height: 100%;
     padding: 2rem 0 2rem 0;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 100%;
     }
     #map {
@@ -140,14 +140,14 @@
 
   .result {
     width: 50%;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       width: 100%;
     }
 
     .list-group-result {
       margin-bottom: 1rem;
 
-/*      .list-group-item:nth-child(4) {
+      /*      .list-group-item:nth-child(4) {
         .card-body {
           border-bottom: none !important;
         }
@@ -156,7 +156,7 @@
       .list-group-item {
         border: none;
         padding: 0.75rem 2rem;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
           padding: 0.75rem 1rem;
         }
 
@@ -173,7 +173,7 @@
             }
 
             .card-info {
-              span{
+              span {
                 display: inline-block;
               }
             }
@@ -204,9 +204,8 @@
                     background-color: $primary-color;
                   }
                 }
-
               }
-              .option-interact{
+              .option-interact {
                 position: absolute;
                 top: 40%;
                 right: 15px;
@@ -242,7 +241,7 @@
                 span {
                   font-weight: bold;
                 }
-                @include media-breakpoint-down(sm){
+                @include media-breakpoint-down(sm) {
                   font-size: 12px;
                 }
               }
@@ -261,9 +260,9 @@
           padding: 5px 20px;
           border-radius: 15px;
         }
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
           margin-top: 15px;
-          a{
+          a {
             background-color: #2a5447;
             border-color: #2a5447;
           }
@@ -272,7 +271,7 @@
     }
   }
 }
-.btn-switch{
+.btn-switch {
   position: fixed;
   bottom: 5%;
   left: 40%;

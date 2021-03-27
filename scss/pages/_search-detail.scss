@@ -56,43 +56,52 @@
   }
 
   form {
-    text-align: center;
+    .row{
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .form-group {
+      label {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+      }
 
-    .form-row {
-      @include justify-content(center);
-      text-align: center;
-      margin-bottom: 1rem;
+      select {
+        font-style: italic;
+        color: #000000;
+        font-weight: 400;
 
-      .form-group {
-        margin-bottom: 1rem;
-        padding: 1rem;
-        @include media-breakpoint-up(xl) {
-          border-right: 1px solid;
-          padding: 0 3rem;
-          &:nth-last-child(1) {
-            border-width: 0;
-          }
-          &:nth-last-child(3) {
-            border-width: 0;
-          }
+        &:focus {
+          box-shadow: none;
         }
+      }
+      .ui-slider-horizontal{
+        height: .2em;
+      }
+      .ui-widget-content{
+      }
+      .ui-slider .ui-slider-handle{
+        font-size: 0.6rem;
 
-        label {
-          font-size: 18px;
-          text-transform: uppercase;
-          color: $primary-color;
-        }
-
-        select {
-          border: none;
-          font-style: italic;
-          font-weight: 300;
-          color: #000000;
-
-          &:focus {
-            box-shadow: none;
-          }
-        }
+      }
+      .ui-slider-horizontal .ui-slider-handle{
+        top: -.6em;
+      }
+      .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+        background: $primary-color;
+        border-radius: 50%;
+        border: none;
+      }
+      .ui-widget-header{
+        background: $primary-color;
+      }
+      .ui-slider-handle:focus{
+        outline: none;
+      }
+      .form-control{
+        border-radius: 0;
+        border-color: $primary-color;
       }
     }
 
@@ -123,7 +132,16 @@
 
 .search-result {
   @include flexbox();
-
+  @include media-breakpoint-down(lg){
+    @include flex-direction(column);
+    .search-map{
+      width: 100% !important;
+    }
+    .result{
+      width: 100% !important;
+      margin-left: 0;
+    }
+  }
   .search-map {
     width: 50%;
     padding: 2rem 0 2rem 0;
@@ -147,6 +165,7 @@
     }
 
     .list-group-result {
+      padding: 0 1rem;
       margin-bottom: 1rem;
 
       /*      .list-group-item:nth-child(4) {
@@ -157,17 +176,24 @@
 
       .list-group-item {
         border: none;
-        padding: 0.75rem 2rem;
-        @include media-breakpoint-down(md) {
-          padding: 0.75rem 1rem;
+        padding: 0 0;
+
+        @include media-breakpoint-up(md) {
+          @include flexbox();
+          @include justify-content(space-between);
+          border-bottom: 1px solid #000000;
+          &:nth-last-child(1) {
+            border-bottom: none !important;
+          }
         }
 
         .card {
           border: none;
-
+          @include media-breakpoint-up(md) {
+            width: 48%;
+          }
           .card-body {
-            border-bottom: 1px solid #000000;
-            padding: 0 0 2rem 0;
+            padding: 1rem 0 2rem 0;
 
             .card-title {
               color: $primary-color;
@@ -255,24 +281,23 @@
           }
         }
       }
-
-      .load-more {
-        text-align: center;
-        padding: 10px;
-
-        a {
-          color: #ffffff;
-          background-color: $primary-color;
-          padding: 5px 20px;
-          border-radius: 15px;
-          text-decoration: none;
-          &:hover {
-            background-color: #2a5447;
-          }
+    }
+    .load-more {
+      text-align: center;
+      padding: 10px;
+      margin: 0 0 1rem 0;
+      a {
+        color: #ffffff;
+        background-color: $primary-color;
+        padding: 5px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        &:hover {
+          background-color: #2a5447;
         }
-        @include media-breakpoint-down(sm) {
-          margin-top: 15px;
-        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 15px;
       }
     }
   }

@@ -36,6 +36,7 @@ const paths = {
       'third_party/modernizr.min.js',
       'third_party/slick/slick.min.js',
       'third_party/star-rating-svg-master/dist/jquery.star-rating-svg.min.js',
+      'third_party/jquery-ui-1.12.1/jquery-ui.min.js',
     ],
     dest: 'dist/'
   },
