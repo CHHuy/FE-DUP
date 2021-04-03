@@ -20,6 +20,9 @@ body,
   @media (max-width: 1024px) {
     height: 100%;
   }
+  &.background-login{
+    height: 100%;
+  }
 }
 
 .main-login {

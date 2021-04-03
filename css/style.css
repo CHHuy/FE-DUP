@@ -11473,6 +11473,10 @@ body,
   }
 }
 
+.background-wrapper.background-login {
+  height: 100%;
+}
+
 .main-login {
   display: -webkit-box;
   display: -webkit-flex;
@@ -12199,7 +12203,7 @@ body,
 .btn-switch {
   position: fixed;
   bottom: 5%;
-  left: 40%;
+  left: 42%;
   box-shadow: 0px 1px 2px 0px;
   background-color: #ffffff;
   border: none;
