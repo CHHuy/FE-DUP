@@ -12013,7 +12013,6 @@ body,
 
 .search-result .search-map {
   width: 50%;
-  padding: 2rem 0 2rem 0;
 }
 
 @media (max-width: 767.98px) {
@@ -12024,8 +12023,8 @@ body,
 
 .search-result .search-map #map {
   position: sticky !important;
-  top: 2rem;
-  height: 750px;
+  top: 0;
+  height: 100vh;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
@@ -12203,11 +12202,22 @@ body,
 .btn-switch {
   position: fixed;
   bottom: 5%;
-  left: 42%;
   box-shadow: 0px 1px 2px 0px;
   background-color: #ffffff;
   border: none;
   padding: 5px 10px;
+}
+
+@media (max-width: 991.98px) {
+  .btn-switch {
+    left: 47% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn-switch {
+    left: 42% !important;
+  }
 }
 
 .DV-Ban {
@@ -13783,9 +13793,15 @@ body,
   padding: 2rem 0 2rem 0;
 }
 
-@media (min-width: 768px) {
-  .result {
-    margin-left: 10px;
+@media (min-width: 992px) {
+  .agent-profile {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .agent-profile {
+    padding-top: 0;
   }
 }
 
@@ -13953,7 +13969,11 @@ body,
 
 .agent-list-news {
   margin-top: -36px;
-  padding-bottom: 12px;
+  padding-bottom: 20px;
+}
+
+.agent-list-news .row {
+  margin: 0 0;
 }
 
 .agent-list-news .agent-item {
@@ -14061,7 +14081,6 @@ body,
 
 @media (min-width: 768px) {
   .agent-list-news .agent-item .card-img .card-img-top {
-    width: 260px;
     height: 260px;
   }
 }
@@ -14112,7 +14131,7 @@ body,
     right: 0;
     color: #fff;
     background-color: #497f70;
-    padding: 10px;
+    padding: 7px 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
   }
@@ -14181,6 +14200,7 @@ body,
 }
 
 .agent-filter form .form-row {
+  margin: 0 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -14192,11 +14212,11 @@ body,
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
   -webkit-flex-wrap: nowrap;
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: none;
@@ -14221,6 +14241,7 @@ body,
 }
 
 .agent-filter form .form-row .form-group {
+  margin-right: 0.5rem;
   margin-bottom: 1rem;
 }
 
