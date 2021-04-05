@@ -60,6 +60,19 @@
       margin-right: 0;
       margin-left: 0;
     }
+    .form-control-wrap{
+      position: relative;
+      &:after{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        font-size: 1rem;
+        top: 7px;
+        right: 10px;
+        position: absolute;
+        color: #000000;
+      }
+    }
     .form-group {
       label {
         font-size: 16px;
@@ -102,6 +115,9 @@
       .form-control{
         border-radius: 0;
         border-color: $primary-color;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 0 2rem 0 0;
       }
     }
 

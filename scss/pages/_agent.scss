@@ -37,7 +37,7 @@
   position: absolute;
   bottom: -5%;
   @include media-breakpoint-up(md) {
-    bottom: -8%;
+    bottom: -10%;
   }
   left: 3%;
   @include media-breakpoint-up(md) {
@@ -347,7 +347,19 @@
       @include justify-content(flex-start);
       @include flex-wrap(nowrap);
       margin-bottom: 1rem;
-
+      .form-control-wrap{
+        position: relative;
+        &:after{
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f078";
+          font-size: 1rem;
+          top: 10px;
+          right: 8px;
+          position: absolute;
+          color: $primary-color;
+        }
+      }
       .form-group {
         margin-right: 0.5rem;
         @include media-breakpoint-down(md) {
@@ -371,6 +383,9 @@
         .form-control {
           color: #497f70;
           font-weight: 600;
+          -webkit-appearance: none;
+          appearance: none;
+          padding-right: 2rem;
         }
 
         margin-bottom: 1rem;

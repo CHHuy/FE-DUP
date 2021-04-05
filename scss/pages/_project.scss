@@ -31,6 +31,19 @@
       text-align: center;
       margin-bottom: 0;
       align-items: center;
+      .form-control-wrap{
+        position: relative;
+        &:after{
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f078";
+          font-size: 1rem;
+          top: 7px;
+          right: 10px;
+          position: absolute;
+          color: #000000;
+        }
+      }
       .form-group {
         margin-bottom: 1rem;
         padding: 1rem;
@@ -71,7 +84,9 @@
         }
 
         .form-control {
-          width: unset;
+          -webkit-appearance: none;
+          appearance: none;
+          padding: 0 2rem 0 0;
         }
 
         button.btn-filter-project {
