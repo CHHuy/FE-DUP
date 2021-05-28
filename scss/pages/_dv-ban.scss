@@ -161,7 +161,7 @@
           .nav-item {
             .nav-link {
               font-weight: bold;
-              color: $primary-color;
+              color: #2f1900 !important;
               border-radius: 0;
               border-color: $primary-color;
               @include media-breakpoint-down(sm) {
@@ -178,7 +178,7 @@
 
               &.active {
                 background-color: $primary-color;
-                color: #ffffff;
+                color: #2f1900 !important;
               }
             }
           }

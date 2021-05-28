@@ -358,6 +358,7 @@
           right: 8px;
           position: absolute;
           color: $primary-color;
+          z-index: -1;
         }
       }
       .form-group {
@@ -386,6 +387,7 @@
           -webkit-appearance: none;
           appearance: none;
           padding-right: 2rem;
+          background-color: transparent;
         }
 
         margin-bottom: 1rem;

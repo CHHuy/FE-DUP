@@ -42,6 +42,7 @@
           right: 10px;
           position: absolute;
           color: #000000;
+          z-index: -1;
         }
       }
       .form-group {
@@ -87,6 +88,7 @@
           -webkit-appearance: none;
           appearance: none;
           padding: 0 2rem 0 0;
+          background-color: transparent;
         }
 
         button.btn-filter-project {

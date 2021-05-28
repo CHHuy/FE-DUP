@@ -71,6 +71,7 @@
         right: 10px;
         position: absolute;
         color: #000000;
+        z-index: -1;
       }
     }
     .form-group {
@@ -113,11 +114,11 @@
         outline: none;
       }
       .form-control{
-        border-radius: 0;
         border-color: $primary-color;
         -webkit-appearance: none;
         appearance: none;
         padding: 0 2rem 0 10px;
+        background-color: transparent;
       }
     }
 
@@ -179,6 +180,11 @@
     width: 50%;
     @include media-breakpoint-down(sm) {
       width: 100%;
+    }
+    .filter-searching{
+      .form-control{
+        border-radius: 8px;
+      }
     }
 
     .list-group-result {

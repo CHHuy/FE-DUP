@@ -10146,6 +10146,11 @@ body {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #000000;
+}
+
+.modal-agent-profile .agent-profile-modal .slick-suggest-agent .list-agent-item a:hover {
+  text-decoration: none;
 }
 
 .modal-agent-profile .agent-profile-modal .slick-suggest-agent .slick-prev,
@@ -11928,6 +11933,7 @@ body,
   right: 10px;
   position: absolute;
   color: #000000;
+  z-index: -1;
 }
 
 .search-filter form .form-group label {
@@ -11973,11 +11979,11 @@ body,
 }
 
 .search-filter form .form-group .form-control {
-  border-radius: 0;
   border-color: #497f70;
   -webkit-appearance: none;
   appearance: none;
   padding: 0 2rem 0 10px;
+  background-color: transparent;
 }
 
 .search-filter form button {
@@ -12056,6 +12062,10 @@ body,
   .search-result .result {
     width: 100%;
   }
+}
+
+.search-result .result .filter-searching .form-control {
+  border-radius: 8px;
 }
 
 .search-result .result .list-group-result {
@@ -12425,7 +12435,7 @@ body,
 
 .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link {
   font-weight: bold;
-  color: #497f70;
+  color: #2f1900 !important;
   border-radius: 0;
   border-color: #497f70;
 }
@@ -12445,7 +12455,7 @@ body,
 
 .DV-Ban .dv-body .info-section .house-info .nav .nav-item .nav-link.active {
   background-color: #497f70;
-  color: #ffffff;
+  color: #2f1900 !important;
 }
 
 .DV-Ban .dv-body .info-section .house-info .nav-tabs {
@@ -14271,6 +14281,7 @@ body,
   right: 8px;
   position: absolute;
   color: #497f70;
+  z-index: -1;
 }
 
 .agent-filter form .form-row .form-group {
@@ -14302,6 +14313,7 @@ body,
   -webkit-appearance: none;
   appearance: none;
   padding-right: 2rem;
+  background-color: transparent;
 }
 
 @media (min-width: 1200px) {
@@ -14360,6 +14372,9 @@ body,
   background: linear-gradient(to right, #6f3f09, #8e632e, #ad8853, #cdae7b, #edd6a6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 0.7rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .dq-ban .dv-body .dv-body-content-mobile {
@@ -14569,7 +14584,9 @@ body,
 }
 
 .dq-ban .dv-body .info-section .house-info .tab-pane .list-group-item {
-  color: #6f3f09 !important;
+  color: #2f1900 !important;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .dq-ban .dv-body .info-section .contact-info {
@@ -15155,6 +15172,7 @@ body,
   right: 10px;
   position: absolute;
   color: #ffffff;
+  z-index: -1;
 }
 
 .homepage .home-search .home-filter .form-row .form-group .form-control {
@@ -15197,6 +15215,7 @@ body,
   position: absolute;
   width: 100%;
   height: 100%;
+  border-radius: 8px;
 }
 
 .homepage .homepage-suggest .header-suggest-wrap {
@@ -15596,10 +15615,11 @@ body,
 
 .homepage .become-member .image-section img {
   width: 100%;
-  height: 750px;
+  height: 650px;
 }
 
 .homepage .become-member .image-section .exclusive-text {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   position: absolute;
   top: 8%;
   right: -55%;
@@ -15639,6 +15659,7 @@ body,
 
 .homepage .become-member .info-section {
   width: 35%;
+  margin-top: 5%;
   margin-left: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -16586,6 +16607,7 @@ body,
   right: 10px;
   position: absolute;
   color: #000000;
+  z-index: -1;
 }
 
 .project .search-filter .form-row .form-group {
@@ -16635,6 +16657,7 @@ body,
   -webkit-appearance: none;
   appearance: none;
   padding: 0 2rem 0 0;
+  background-color: transparent;
 }
 
 .project .search-filter .form-row .form-group button.btn-filter-project {
